@@ -1,0 +1,303 @@
+
++---------------------------------------------------------------------------+
+|                                                                           |
+|                             FINAL FANTASY II                              |
+|                                                                           |
++---------------------------------------------------------------------------+
+| file: ff2-npc.txt                                                         |
+|                                                                           |
+| description: npc/event switch list and npc script data                    |
+|                                                                           |
+| created: 11/10/2021                                                       |
+|                                                                           |
+| author: everything8215@gmail.com                                          |
++---------------------------------------------------------------------------+
+
+
+=============================================================================
+                          | npc/event switch list |
+                          +-----------------------+
+
++----+-----------+---------+------------------------------------------------+
+| id | sram/init | address |                  description                   |
++----+-----------+---------+------------------------------------------------+
+| 00 | $6040.0   | 0E/9AA3 | no effect                                      |
+| 01 | $6040.1   | 0E/9AA4 | hilda (altair throne room)                     |
+|    |           | 0E/9255 |   keyword: mythril                             |
+| 02 | $6040.2 * | 0E/9B55 | hilda (dreadnought)                            |
+| 03 | $6040.3   | 0E/9B59 | hilda (altair hilda's room)                    |
+| 04 | $6040.4   | 0E/9B76 | hilda (camp)                                   |
+| 05 | $6040.5   | 0E/9B8B | hilda (fynn throne room)                       |
+| 06 | $6040.6 * | 0E/9C30 | chimera (deist cave)                           |
+| 07 | $6040.7 * | 0E/9C3F | cid (poft)                                     |
+| 08 | $6041.0 * | 0E/9C82 | minwu (altair throne room)                     |
+| 09 | $6041.1   | 0E/9CB2 | minwu (altair king's room)                     |
+| 0A | $6041.2 * | 0E/9CDF | minwu (sealed tower)                           |
+| 0B | $6041.3 * | 0E/9CE8 | gordon (altair exterior)                       |
+| 0C | $6041.4 * | 0E/9D15 | gordon (kashuan)                               |
+| 0D | $6041.5   | 0E/9D29 | gordon (altair throne room)                    |
+| 0E | $6041.6 * | 0E/9D60 | gordon (camp)                                  |
+| 0F | $6041.7   | 0E/9D64 | gordon (fynn throne room)                      |
+| 10 | $6042.0 * | 0E/9DCE | paul (altair)                                  |
+| 11 | $6042.1 * | 0E/9DD8 | paul (semitt falls)                            |
+| 12 | $6042.2   | 0E/9E13 | paul (fynn)                                    |
+|    |           | 0E/9265 |   keyword: cyclone, jade passage               |
+| 13 | $6042.3 * | 0E/9E55 | josef (salamand)                               |
+|    |           | 0E/927D |   keyword: goddess's bell                      |
+| 14 | $6042.4   | 0E/9E9A | leila (paloom)                                 |
+| 15 | $6042.5   | 0E/9EA8 |                                                |
+| 16 | $6042.6   | 0E/9B55 | leila (altair)                                 |
+| 17 | $6042.7 * | 0E/9EDD | leila (fynn castle 1F)                         |
+| 18 | $6043.0   | 0E/9EED | leila (fynn castle throne room)                |
+| 19 | $6043.1 * | 0E/9F1E | ricard (leviathan)                             |
+|    |           | 0E/93D1 |   item: crystal rod                            |
+| 1A | $6043.2 * | 0E/9F40 | dark knight (bafsk)                            |
+| 1B | $6043.3   | 0E/9F44 | dark knight (bafsk sewer)                      |
+| 1C | $6043.4   | 0E/9F56 |                                                |
+| 1D | $6043.5 * | 0E/9F5A | dark knight (palamecia)                        |
+| 1E | $6043.6 * | 0E/9C30 | fire mage (sealed tower)                       |
+| 1F | $6043.7 * | 0E/9C30 | ice mage (sealed tower)                        |
+| 20 | $6044.0 * | 0E/9F6B | king (altair)                                  |
+| 21 | $6044.1 * | 0E/9B55 | nelly (semitt falls)                           |
+| 22 | $6044.2   | 0E/9FB4 | nelly (salamand)                               |
+| 23 | $6044.3   | 0E/9B55 | borghen (bafsk)                                |
+| 24 | $6044.4   | 0E/9C30 | borghen (snow cavern)                          |
+| 25 | $6044.5 * | 0E/9FCE | wyvern (deist)                                 |
+|    |           | 0E/9298 |   keyword: wyvern                              |
+| 26 | $6044.6   | 0E/A009 | cid (paul's house)                             |
+| 27 | $6044.7 * | 0E/A017 | cid (dreadnought)                              |
+| 28 | $6045.0 * | 0E/9F44 | emperor                                        |
+| 29 | $6045.1 * | 0E/9B55 | emperor                                        |
+| 2A | $6045.2   | 0E/9C30 |                                                |
+| 2B | $6045.3 * | 0E/A024 | goddess' bell sign                             |
+| 2C | $6045.4 * | 0E/9B55 |                                                |
+| 2D | $6045.5 * | 0E/9B55 | jade passage sign                              |
+| 2E | $6045.6 * | 0E/A041 | fynn throne room secret passage                |
+|    |           | 0E/92B3 |   keyword: ekmet teloess                       |
+| 2F | $6045.7 * | 0E/9C30 | thunder mage (sealed tower)                    |
+| 30 | $6046.0 * | 0E/A04B | fynn barkeep                                   |
+|    |           | 0E/92C0 |   keyword: wild rose                           |
+| 31 | $6046.1 * | 0E/A055 | scott                                          |
+|    |           | 0E/92CD |   keyword: wild rose                           |
+| 32 | $6046.2 * | 0E/A068 | dreadnought guard                              |
+|    |           | 0E/92E4 |   keyword: wild rose                           |
+|    |           | 0E/93EC |   item: pass                                   |
+| 33 | $6046.3   | 0E/A078 | slaves (semitt falls)                          |
+| 34 | $6046.4 * | 0E/A07C | tobul                                          |
+|    |           | 0E/93FC |   item: mythril                                |
+| 35 | $6046.5 * | 0E/A09D | rebel spy (bafsk)                              |
+|    |           | 0E/92FD |   keyword: dreadnought                         |
+| 36 | $6046.6 * | 0E/A0C4 |                                                |
+| 37 | $6046.7 * | 0E/9B55 | girl in josef's house                          |
+| 38 | $6047.0 * | 0E/A0D8 | sunfire holder                                 |
+|    |           | 0E/943D |   item: egil's torch                           |
+| 39 | $6047.1 * | 0E/A0EB | dreadnought core                               |
+|    |           | 0E/945E |   item: sunfire                                |
+| 3A | $6047.2 * | 0E/A100 | dragoon corpse                                 |
+| 3B | $6047.3 * | 0E/A118 | life spring                                    |
+|    |           | 0E/946C |   item: wyvern egg                             |
+| 3C | $6047.4 * | 0E/A12D | dreadnought captains                           |
+| 3D | $6047.5 * | 0E/9F44 |                                                |
+| 3E | $6047.6 * | 0E/9F4D |                                                |
+| 3F | $6047.7 * | 0E/A137 | gottos                                         |
+| 40 | $6048.0 * | 0E/A195 | doppelganger                                   |
+|    |           | 0E/948A |   item: black mask                             |
+| 41 | $6048.1 * | 0E/A1AF | mysidian orb 1                                 |
+| 42 | $6048.2 * | 0E/A1B3 | mysidian orb 2                                 |
+| 43 | $6048.3 * | 0E/A1B7 | mysidian orb 3                                 |
+| 44 | $6048.4 * | 0E/A1BB | mysidian orb 4                                 |
+| 45 | $6048.5 * | 0E/A1ED | mysidian orb 5                                 |
+| 46 | $6048.6 * | 0E/A201 | fynn castle mirror                             |
+|    |           | 0E/9497 |   item: pendant                                |
+| 47 | $6048.7 * | 0E/9B55 |                                                |
+| 48 | $6049.0 * | 0E/9C30 | sergeant (semitt falls)                        |
+| 49 | $6049.1 * | 0E/9C30 | adamantoise (snow cavern)                      |
+| 4A | $6049.2 * | 0E/9C30 | red soul (kashuan keep)                        |
+| 4B | $6049.3 * | 0E/9C30 | big horn (tropical island)                     |
+| 4C | $6049.4 * | 0E/9C30 | roundworm (leviathan)                          |
+| 4D | $6049.5 * | 0E/A225 | chocobo                                        |
+| 4E | $6049.6 * | 0E/A23A | mysidia bookshelf                              |
+| 4F | $6049.7 * | 0E/9B55 |                                                |
+| 50 | $604A.0   | 0E/9B55 | can recruit minwu                              |
+| 51 | $604A.1   | 0E/9B55 | dreadnought launched                           |
+| 52 | $604A.2   | 0E/9B55 |                                                |
+| 53 | $604A.3 * | 0E/9B55 | girl outside josef's house                     |
+| 54 | $604A.4 * | 0E/A280 | kashuan keep door                              |
+|    |           | 0E/94B8 |   item: goddess's bell                         |
+| 55 | $604A.5 * | 0E/A28A | deist npc 1                                    |
+| 56 | $604A.6   | 0E/A292 | deist npc 2                                    |
+| 57 | $604A.7   | 0E/A29F | deist npc 3                                    |
+| 58 | $604B.0   | 0E/A29F | deist npc 4                                    |
+|    |           | 0E/9316 |   keyword: dragoon                             |
+| 59 | $604B.1 * | 0E/A2F4 | mysidian statue                                |
+|    |           | 0E/94C9 |   item: white mask                             |
+| 5A | $604B.2 * | 0E/9B55 |                                                |
+| 5B | $604B.3 * | 0E/9B55 |                                                |
+| 5C | $604B.4 * | 0E/9F62 |                                                |
+| 5D | $604B.5 * | 0E/9B55 | beavers                                        |
+| 5E | $604B.6 * | 0E/A2FE | beaver                                         |
+| 5F | $604B.7 * | 0E/A12D | imperial guards (fynn)                         |
++----+-----------+---------+------------------------------------------------+
+| 60 | $604C.0 * | 0E/A308 | altair base npc 1                              |
+| 61 | $604C.1 * | 0E/A308 | altair base npc 2                              |
+| 62 | $604C.2 * | 0E/A308 | altair base npc 3                              |
+| 63 | $604C.3 * | 0E/A308 | altair base npc 4                              |
+| 64 | $604C.4 * | 0E/A308 | altair base npc 5                              |
+| 65 | $604C.5 * | 0E/A308 | altair base npc 6                              |
+| 66 | $604C.6 * | 0E/A308 | altair base npc 7                              |
+| 67 | $604C.7   | 0E/A308 | altair base npc 8                              |
+| 68 | $604D.0   | 0E/A308 | altair base npc 9                              |
+| 69 | $604D.1   | 0E/A308 | altair base npc A                              |
+| 6A | $604D.2   | 0E/A308 | altair base npc B                              |
+| 6B | $604D.3   | 0E/A308 | altair base npc C                              |
+| 6C | $604D.4   | 0E/A308 | altair base npc D                              |
+| 6D | $604D.5 * | 0E/A308 | altair npc 1                                   |
+| 6E | $604D.6 * | 0E/A308 | altair npc 2                                   |
+| 6F | $604D.7 * | 0E/A308 | altair npc 3                                   |
+| 70 | $604E.0 * | 0E/A308 | gatrea npc 1                                   |
+| 71 | $604E.1 * | 0E/A308 | gatrea npc 2                                   |
+| 72 | $604E.2 * | 0E/A308 | gatrea npc 3                                   |
+| 73 | $604E.3 * | 0E/A308 | gatrea npc 4                                   |
+| 74 | $604E.4 * | 0E/A308 | paloom npc 1                                   |
+| 75 | $604E.5 * | 0E/A308 | paloom npc 2                                   |
+| 76 | $604E.6 * | 0E/A308 | paloom npc 3                                   |
+| 77 | $604E.7 * | 0E/A308 | paloom npc 4                                   |
+| 78 | $604F.0 * | 0E/A308 | paloom npc 5                                   |
+| 79 | $604F.1 * | 0E/A308 | paloom npc 6                                   |
+| 7A | $604F.2   | 0E/A308 | minwu (casting)                                |
+| 7B | $604F.3   | 0E/A308 | minwu (dead)                                   |
+| 7C | $604F.4 * | 0E/A308 | poft npc 1                                     |
+| 7D | $604F.5 * | 0E/A308 | poft npc 2                                     |
+| 7E | $604F.6 * | 0E/A308 | poft npc 3                                     |
+| 7F | $604F.7 * | 0E/A308 | poft npc 4                                     |
+| 80 | $6050.0 * | 0E/A37A |                                                |
+| 81 | $6050.1   | 0E/A37A | lightning bolt                                 |
+| 82 | $6050.2 * | 0E/A37E | salamand npc 1                                 |
+| 83 | $6050.3 * | 0E/A37E | salamand npc 2                                 |
+| 84 | $6050.4   | 0E/A37E | salamand npc 3                                 |
+| 85 | $6050.5   | 0E/A37E | salamand npc 4                                 |
+| 86 | $6050.6   | 0E/A37E | salamand npc 5                                 |
+| 87 | $6050.7   | 0E/A37E | salamand npc 6                                 |
+| 88 | $6051.0 * | 0E/A398 | bafsk npc 1                                    |
+| 89 | $6051.1 * | 0E/A398 | bafsk npc 2                                    |
+| 8A | $6051.2 * | 0E/A398 | bafsk npc 3                                    |
+| 8B | $6051.3 * | 0E/A398 | bafsk npc 4                                    |
+| 8C | $6051.4 * | 0E/A398 | bafsk npc 5                                    |
+| 8D | $6051.5 * | 0E/A398 | bafsk npc 6                                    |
+| 8E | $6051.6 * | 0E/A398 | bafsk npc 7                                    |
+| 8F | $6051.7 * | 0E/A398 | bafsk npc 8                                    |
+| 90 | $6052.0 * | 0E/A3C4 | camp npc 1                                     |
+| 91 | $6052.1 * | 0E/A3C4 | camp npc 2                                     |
+| 92 | $6052.2   | 0E/A3C8 | fynn npc 1                                     |
+| 93 | $6052.3   | 0E/A3C8 | fynn npc 2                                     |
+| 94 | $6052.4   | 0E/A3C8 | fynn npc 3                                     |
+| 95 | $6052.5   | 0E/A3C8 | fynn npc 4                                     |
+| 96 | $6052.6   | 0E/A3C8 | fynn npc 5                                     |
+| 97 | $6052.7   | 0E/A3C8 | fynn npc 6                                     |
+| 98 | $6053.0   | 0E/A3C4 | fynn npc 7                                     |
+| 99 | $6053.1   | 0E/A3C4 | fynn npc 8                                     |
+| 9A | $6053.2   | 0E/A3C8 | fynn castle npc 1                              |
+| 9B | $6053.3   | 0E/A3C8 | fynn castle npc 2                              |
+| 9C | $6053.4   | 0E/A3C8 | fynn castle npc 3                              |
+| 9D | $6053.5   | 0E/A3C8 | fynn castle npc 4                              |
+| 9E | $6053.6   | 0E/A3C8 | fynn castle npc 5                              |
+| 9F | $6053.7   | 0E/A3C8 | fynn castle npc 6                              |
+| A0 | $6054.0   | 0E/A3C4 | fynn castle npc 7                              |
+| A1 | $6054.1   | 0E/A3C4 | fynn castle npc 8                              |
+| A2 | $6054.2   | 0E/A3C8 | fynn castle npc 9                              |
+| A3 | $6054.3   | 0E/A3C8 | fynn castle npc A                              |
+| A4 | $6054.4   | 0E/A3C8 | fynn castle npc B                              |
+| A5 | $6054.5   | 0E/A3C8 | fynn castle npc C                              |
+| A6 | $6054.6   | 0E/A3C8 |                                                |
+| A7 | $6054.7   | 0E/A3C8 |                                                |
+| A8 | $6055.0   | 0E/A3C4 |                                                |
+| A9 | $6055.1   | 0E/A3C4 |                                                |
+| AA | $6055.2 * | 0E/A3ED | tropical island npc 1                          |
+| AB | $6055.3 * | 0E/A3ED | tropical island npc 2                          |
+| AC | $6055.4 * | 0E/A3ED | tropical island npc 3                          |
+| AD | $6055.5   | 0E/A3ED | altair npc 4 (after arena)                     |
+| AE | $6055.6 * | 0E/A3ED |                                                |
+| AF | $6055.7 * | 0E/A3ED |                                                |
+| B0 | $6056.0 * | 0E/A3ED | leviathan npc 1                                |
+| B1 | $6056.1 * | 0E/A3ED | leviathan npc 2                                |
+| B2 | $6056.2 * | 0E/A3ED | leviathan npc 3                                |
+| B3 | $6056.3 * | 0E/A3ED | leviathan npc 4                                |
+| B4 | $6056.4 * | 0E/A3ED | leviathan npc 5                                |
+| B5 | $6056.5 * | 0E/A3ED | leviathan npc 6                                |
+| B6 | $6056.6 * | 0E/A3ED | leviathan npc 7                                |
+| B7 | $6056.7 * | 0E/A3ED | leviathan npc 8                                |
+| B8 | $6057.0 * | 0E/A3F1 | mysidia npc 1                                  |
+| B9 | $6057.1 * | 0E/A3F1 | mysidia npc 2                                  |
+| BA | $6057.2 * | 0E/A3F1 | mysidia npc 3                                  |
+| BB | $6057.3 * | 0E/A3F1 | mysidia npc 4                                  |
+| BC | $6057.4 * | 0E/A3F1 | mysidia npc 5                                  |
+| BD | $6057.5 * | 0E/A3F1 | mysidia npc 6                                  |
+| BE | $6057.6 * | 0E/A3F1 | mysidia npc 7                                  |
+| BF | $6057.7 * | 0E/A3F1 | mysidia npc 8                                  |
++----+-----------+---------+------------------------------------------------+
+| C0 | $6058.0 * |         | altair weapon shop                             |
+| C1 | $6058.1 * |         | altair armor shop                              |
+| C2 | $6058.2 * |         | altair magic shop                              |
+| C3 | $6058.3   |         | altair mythril weapon shop                     |
+| C4 | $6058.4   |         | altair mythril armor shop                      |
+| C5 | $6058.5 * |         | gatrea weapon shop                             |
+| C6 | $6058.6 * |         | gatrea armor shop                              |
+| C7 | $6058.7 * |         | poft weapon shop                               |
+| C8 | $6059.0 * |         | poft armor shop                                |
+| C9 | $6059.1 * |         | poft magic shop                                |
+| CA | $6059.2   |         | unknown mythril weapon shop                    |
+| CB | $6059.3 * |         | salamand weapon shop                           |
+| CC | $6059.4 * |         | salamand armor shop                            |
+| CD | $6059.5 * |         | salamand magic shop                            |
+| CE | $6059.6 * |         | bafsk weapon shop                              |
+| CF | $6059.7 * |         | bafsk armor shop                               |
+| D0 | $605A.0 * |         | bafsk magic shop                               |
+| D1 | $605A.1   |         | fynn weapon shop                               |
+| D2 | $605A.2   |         | fynn armor shop                                |
+| D3 | $605A.3   |         | fynn magic shop                                |
+| D4 | $605A.4 * |         | mysidia weapon shop                            |
+| D5 | $605A.5 * |         | mysidia armor shop                             |
+| D6 | $605A.6 * |         | mysidia magic shop                             |
+| D7 | $605A.7 * |         | tropical island shop                           |
+| D8 | $605B.0 * |         | item shop 1                                    |
+| D9 | $605B.1 * |         | item shop 2                                    |
+| DA | $605B.2 * |         | item shop 3                                    |
+| DB | $605B.3 * |         | jade passage shop                              |
+| DC | $605B.4 * |         | ship ferry                                     |
+| DD | $605B.5 * |         | cid's airship ferry                            |
+| DE | $605B.6 * |         | inn                                            |
+| DF | $605B.7   |         | statue revive                                  |
++----+-----------+---------+------------------------------------------------+
+| E0 | $605C.0 * |         | hilda                                          |
+| E1 | $605C.1 * |         | minwu                                          |
+| E2 | $605C.2   |         | maria                                          |
+| E3 | $605C.3   |         | guy                                            |
+| E4 | $605C.4   |         |                                                |
+| E5 | $605C.5   |         | boulder                                        |
+| E6 | $605C.6   |         | josef                                          |
+| E7 | $605C.7   |         |                                                |
+| E8 | $605D.0   |         | flame                                          |
+| E9 | $605D.1   |         |                                                |
+| EA | $605D.2 * |         |                                                |
+| EB | $605D.3   |         |                                                |
+| EC | $605D.4   |         |                                                |
+| ED | $605D.5 * |         |                                                |
+| EE | $605D.6   |         | behemoth                                       |
+| EF | $605D.7   |         | dark knight                                    |
+| F0 | $605E.0   |         | arena guard                                    |
+| F1 | $605E.1   |         |                                                |
+| F2 | $605E.2   |         | leon                                           |
+| F3 | $605E.3   |         | paul                                           |
+| F4 | $605E.4 * |         | prison guard                                   |
+| F5 | $605E.5 * |         | hilda                                          |
+| F6 | $605E.6   |         |                                                |
+| F7 | $605E.7   |         |                                                |
+| F8 | $605F.0   |         |                                                |
+| F9 | $605F.1   |         |                                                |
+| FA | $605F.2   |         | emperor                                        |
+| FB | $605F.3   |         | flame                                          |
+| FC | $605F.4   |         | ricard                                         |
+| FD | $605F.5   |         | wyvern                                         |
+| FE | $605F.6   |         | wyvern                                         |
+| FF | $605F.7   |         |                                                |
++----+-----------+---------+------------------------------------------------+

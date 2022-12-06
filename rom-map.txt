@@ -1,0 +1,187 @@
+
++---------------------------------------------------------------------------+
+|                                                                           |
+|                             FINAL FANTASY II                              |
+|                                                                           |
++---------------------------------------------------------------------------+
+| file: rom-map.txt                                                         |
+|                                                                           |
+| description: rom map                                                      |
+|                                                                           |
+| created: 9/25/2021                                                        |
+|                                                                           |
+| author: everything8215@gmail.com                                          |
++---------------------------------------------------------------------------+
+
+=============================================================================
+                              | rom overview |
+                              +--------------+
+
++---------------+---------------+-------------------------------------------+
+|  nes address  |  rom address  |                description                |
++---------------+---------------+-------------------------------------------+
+|               | 000000-00000F | ines header                               |
+| 008000-0080FF | 000010-00010F | world map tile properties                 |
+| 008100-0082FF | 000110-00030F | world map tileset                         |
+| 008300-00837F | 000310-00038F | world map attribute table                 |
+| 008380-00839F | 000390-0003AF | world map palettes (8 * 4 bytes)          |
+| 0083A0-0083B1 | 0003B0-0003C1 | map character palettes (9 * 2 bytes)      |
+| 0083B2-0083C1 | 0003C2-0003D1 | menu sprite palettes (4 * 4 bytes)        |
+| 0083C2-0083C9 | 0003D2-0003D9 | fill tile attributes                      |
+| 0083CA-0083FF | 0003DA-00040F | unused                                    |
+| 008400-0084FF | 000410-00050F | exterior 16x16 tileset (4 * 64 bytes)     |
+| 008500-0085FF | 000510-00060F | interior 16x16 tileset (4 * 64 bytes)     |
+| 008600-0086FF | 000610-00070F | common 16x16 tileset (4 * 64 bytes)       |
+| 008700-0087FF | 000710-00080F | exterior 32x32 tileset (4 * 64 bytes)     |
+| 008800-0088FF | 000810-00090F | interior 32x32 tileset (4 * 64 bytes)     |
+| 008900-0089FF | 000910-000A0F | common 32x32 tileset (4 * 64 bytes)       |
+| 008A00-008ABF | 000A10-000ACF | map bg attribute tables (3 * 64 bytes)    |
+| 008AC0-008AFF | 000AD0-000B0F | initial event switches                    |
+| 008B00-008BFF | 000B10-000C0F | map tile properties (1 * 256 bytes)       |
+| 008C00-008CFF | 000C10-000D0F | treasure properties                       |
+| 008D00-008DFF | 000D10-000E0F | graphics id for each npc                  |
+| 008E00-008F7F | 000E10-000F8F | map palettes                              |
+| 008F80-0090FF | 000F90-00110F | character properties (3 * 128 bytes)      |
+| 009100-0093FF | 001110-00140F | guest character properties (6 * 128 bytes)|
+| 009400-0094FF | 001410-00150F | battle bg for each map                    |
+| 009500-00957F | 001510-00158F | battle bg for each world map tile         |
+| 009580-0096FF | 001590-00170F | ship graphics                             |
+| 009700-00987F | 001710-00188F | battle palettes (3 * 128 bytes)           |
+| 009880-009BFF | 001890-001C0F | character stats code                      |
+| 009C00-009FFF | 001C10-00200F | map init code                             |
+| 00A000-00AFFF | 002010-00300F | map properties (256 * 16 bytes)           |
+| 00B000-00B0FF | 003010-00310F | map initial x positions and fill tile     |
+| 00B100-00B1FF | 003110-00320F | map initial y positions                   |
+| 00B200-00B2FF | 003210-00330F | bg tilemap id for each map                |
+| 00B300-00B3FF | 003310-00340F | tileset id for each map                   |
+| 00B400-00B43F | 003410-00344F | world map entrance x positions            |
+| 00B440-00B47F | 003450-00348F | world map entrance y positions            |
+| 00B480-00B4BF | 003490-0034CF | world map entrance map ids                |
+| 00B4C0-00B4DF | 0034D0-0034EF | map exit x positions (to world map)       |
+| 00B4E0-00B4FF | 0034F0-00350F | map exit x positions (to world map)       |
+| 00B500-00BDFF | 003510-003E0F | multi npc properties (64 * 36 bytes)      |
+| 00BE00-00BEBF | 003E10-003ECF | single npc properties (64 * 3 bytes)      |
+| 00BEC0-00BFFF | 003ED0-00400F | equipment code                            |
+| 018000-0181FF | 004010-00420F | pointers to world tilemaps                |
+| 018200-01BC4D | 004210-007C5D | world tilemaps                            |
+| 01BC4E-01BEFF | 007C5E-007F0F | stale world tilemap data                  |
+| 01BF00-01BFAF | 007F10-007FBF |                                           |
+| 01BFB0-01BFFF | 007FC0-00800F | world tilemap decompression code          |
+| 028000-028FFF | 008010-00900F | world bg graphics                         |
+| 029000-029AFF | 009010-009B0F | world sprite graphics                     |
+| 029B00-02BFFF | 009B10-00C00F | map sprite graphics                       |
+| 038000-03847F | 00C010-00C48F | common map bg graphics (2 * 576 bytes)    |
+| 038480-038BFF | 00C490-00CC0F | small map bg graphics (10 * 192 bytes)    |
+| 038C00-039EBF | 00CC10-00DECF | large map bg graphics (4 * 960 bytes)     |
+| 039EC0-039FFF | 00DED0-00E00F | map fill tile graphics (10 * 32 bytes)    |
+| 03A000-03B99F | 00E010-00F9AF | event code                                |
+| 03B9A0-03BDFF | 00F9B0-00FE0F | stale data ???                            |
+| 03BE00-03BEFF | 00FE10-00FF0F | movement/animation speeds for each npc id |
+| 03BF00-03BF7F | 00FF10-00FF8F |                                           |
+| 03BF80-03BFFF | 00FF90-01000F | stale data ???                            |
+| 048000-0480BF | 010010-0100CF | pointers to map bg tilemaps 1             |
+| 0480C0-04BBFF | 0100D0-013C0F | map bg tilemaps 1                         |
+| 04BC00-04BD4C | 013C10-013D5C | epilogue text                             |
+| 04BD4D-04BFFF | 013D5D-01400F | unused                                    |
+| 058000-05807F | 014010-01408F | pointers to map bg tilemaps 2             |
+| 058080-059D7F | 014090-015D8F | map bg tilemaps 2                         |
+| 059D80-059EFF | 015D90-015F0F | unused                                    |
+| 059F00-05AC43 | 015F10-016C53 | battle message code                       |
+| 05AC44-05AD43 | 016C54-016D53 | pointers to monster names                 |
+| 05AD44-05B0BA | 016D54-0170CA | monster names (128 items)                 |
+| 05B0BB-05B146 | 0170CB-017156 | pointers to attack names                  |
+| 05B147-05B294 | 017157-0172A4 | attack names (70 items)                   |
+| 05B295-05B37C | 0172A5-01738C | pointers to battle text                   |
+| 05B37D-05B6FF | 01738D-01770F | battle text (116 items)                   |
+| 05B700-05B77F | 017710-01778F | monster levels                            |
+| 05B780-05B7FF | 017790-01780F | item set for each monster                 |
+| 05B800-05B9DF | 017810-0179EF | monster item sets (28 * 8 bytes)          |
+| 05B9E0-05B9FF | 0179F0-017A0F | monster gil (16 * 2 bytes)                |
+| 05BA00-05BB5E | 017A10-017B6E | sound effect code                         |
+| 05BB5F-05BBA0 | 017B6F-017BB0 | pointers to sound effect scripts          |
+| 05BBA1-05BFFF | 017BB1-01800F | sound effect scripts (33 items)           |
+| 068000-0681FF | 018010-01820F | pointers to text 1                        |
+| 068200-06BFFF | 018210-01C00F | text 1 (256 items)                        |
+| 078000-07B7FF | 01C010-01F80F | monster graphics bank 1                   |
+| 07B800-07BFFF | 01F810-02000F | battle bg graphics bank 1                 |
+| 088000-08B7FF | 020010-02380F | monster graphics bank 2                   |
+| 08B800-08BFFF | 023810-02400F | battle bg graphics bank 2                 |
+| 098000-09883F | 024010-02484F | portrait graphics (11 * 192 bytes)        |
+| 098840-       | 024850-       | misc. menu/battle sprite graphics ???     |
+| 0989C0-0989FF | 0249D0-024A0F | cursor graphics (battle/menu)             |
+| 098A00-09931F | 024A10-02532F | window/text graphics                      |
+| 099320-099DFF | 025330-025E0F | battle animation graphics                 |
+| 099E00-09AFFF | 025E10-02700F | battle character graphics (9 * 512 bytes) |
+| 09B000-09B3FF | 027010-02740F | ending graphics                           |
+| 09B400-09B7FF | 027410-02780F | minimap name table                        |
+|               |               |                                           |
+| 09BA00-09BDD0 | 027A10-027DE0 | minimap code                              |
+| 09BDD1-09BEFF | 027DE1-027F0F | stale data                                |
+| 09BF00-09BF4F | 027F10-027F5F | minimap sprite graphics                   |
+| 09BF50-09BF5F | 027F60-027F6F | minimap palettes                          |
+| 09BF60-09BF6F | 027F70-027F7F | minimap sprite data                       |
+| 09BF70-09BF7F | 027F80-027F8F | unused                                    |
+| 09BF80-09BFFF | 027F90-02800F |                                           |
+| 0A8000-0A85FF | 028010-02860F | pointers to text 2                        |
+| 0A8600-0ABFFF | 028610-02C00F | text 2 (768 items)                        |
+| 0B8000-0B80FF | 02C010-02C10F | map random battle rates (256 * 1 byte)    |
+| 0B8100-0B81FF | 02C110-02C20F | normal map battle groups (256 * 1 byte)   |
+| 0B8200-0B827F | 02C210-02C28F | world map battle groups (128 * 1 byte)    |
+| 0B8280-0B861F | 02C290-02C62F | random battle groups (116 * 8 bytes)      |
+| 0B8620-0B8A1F | 02C630-02CA2F | battle properties (128 * 8 bytes)         |
+| 0B8A20-0B8A9F | 02CA30-02CAAF | surprise rate for each battle             |
+| 0B8AA0-0B8B9F | 02CAB0-02CBAF | monster sets (64 * 4 bytes)               |
+| 0B8BA0-0B8D87 | 02CBB0-02CD97 | monster min/max counts (122 * 4 bytes)    |
+| 0B8D88-0B8DBD | 02CD98-02CDCD |                                           |
+| 0B8DBE-0B8DCD | 02CDCE-02CDDD | monster widths                            |
+| 0B8DCE-0B8DDD | 02CDDE-02CDED | monster heights                           |
+| 0B8DDE-0B9215 | 02CDEE-02D225 | boss tilemaps (6 * 144 bytes)             |
+| 0B9216-       | 02D226-       | (??? * 9 bytes)                           |
+|               |               |                                           |
+| 0B9264-0B9287 | 02D274-02D297 | (6 * 6 bytes)                             |
+| 0B9288-0B92A7 | 02D298-02D2B7 | (8 * 6 bytes)                             |
+| 0B92A8-0B92F3 | 02D2B8-02D303 | status info (4 * 15 bytes, see 0B/9BB4)   |
+| 0B92F4-0B9305 | 02D304-02D315 | (3 * 6 bytes)                             |
+| 0B9306-0B930A | 02D316-02D31A | battle songs                              |
+| 0B930B-0B9332 | 02D31B-02D342 | battle sound effects                      |
+| 0B9333-       | 02D343-       |                                           |
+|               |               |                                           |
+| 0B934B-       | 02D35B-       |                                           |
+|               |               |                                           |
+| 0B9350-0B9354 | 02D360-02D364 | spell targeting (1 bit per spell)         |
+|               |               |                                           |
+| 0B9600-0BBFFF | 02D610-03000F | battle graphics code                      |
+| 0C8000-0C80F5 | 030010-030105 | armor properties (41 * 6 bytes)           |
+| 0C80F6-0C8335 | 030106-030345 | weapon properties (64 * 9 bytes)          |
+| 0C8336-0C85D8 | 030346-0305E8 | item/attack properties (135 * 5 bytes)    |
+| 0C85D9-0C87C2 | 0305E9-0307D2 | magic properties (70 * 7 bytes)           |
+| 0C87C3-0C8CC2 | 0307D3-030CD2 | monster properties (128 * 10 bytes)       |
+| 0C8CC3-0C8D02 | 030CD3-030D12 | monster hp/mp values (32 * 2 bytes)       |
+| 0C8D03-0C8D72 | 030D13-030D82 | monster stat values (7 * 16 bytes)        |
+| 0C8D73-0C8F42 | 030D83-030F52 | monster special attacks (58 * 8 bytes)    |
+| 0C8F43-0CBFFF | 030F53-03400F | battle main code                          |
+| 0D8000-0D87E0 | 034010-0347F0 | event scripts (26 items)                  |
+| 0D87E1-0D87EB | 0347F1-0347FB | stale data ???                            |
+| 0D87EC-0D97F4 | 0347FC-035804 | event dialogue (81 items)                 |
+| 0D97F5-0D97FF | 035805-03580F | stale data ???                            |
+| 0D9800-0D9E0C | 035810-035E1C | music code                                |
+| 0D9E0D-0D9E4A | 035E1D-035E5A | pointers to song data (31 items)          |
+| 0D9E4B-0DBD03 | 035E5B-037D13 | song data                                 |
+| 0DBD04-0DBEFF | 037D14-037F0F | volume/pitch envelope data                |
+| 0DBF00-0DBFBF | 037F10-037FCF | pointers to event dialogue                |
+| 0DBFC0-0DBFFF | 037FD0-03800F | pointers to event scripts                 |
+| 0E8000-0E81FF | 038010-03820F | item prices (256 * 2 bytes)               |
+| 0E8200-0E837F | 038210-03838F | pointers to npc scripts                   |
+| 0E8380-0E8381 | 038390-038391 | pointer to shop/ferry data                |
+| 0E8382-0E860C | 038392-03861C | npc scripts                               |
+| 0E860D-0E86FE | 03861D-03870E | shop/ferry data (32 * 8 bytes)            |
+| 0E86FF-0E87FF | 03870F-03880F | stale/unused data                         |
+| 0E8800-0EBFFF | 038810-03C00F | map/menu code                             |
+| 0FC000-0FF7FF | 03C010-03F80F | map/menu code                             |
+| 0FF800-0FF8FF | 03F810-03F90F | unused code                               |
+| 0FF900-0FF9FF | 03F910-03FA0F | random number table                       |
+| 0FFA00-0FFDFF | 03FA10-03FE0F | battle code                               |
+| 0FFE00-0FFFDF | 03FE10-03FFEF | system code                               |
+| 0FFFE0-0FFFF9 | 03FFF0-040009 | rom info                                  |
+| 0FFFFA-0FFFFF | 04000A-04000F | interrupt vectors                         |
++---------------+---------------+-------------------------------------------+

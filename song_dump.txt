@@ -1,0 +1,357 @@
+*** square 1 start ***
+
+q52 o1 {a16 b16 o2 c16} d32 e32 f#32 g#32 [0]
+|: o2 a2. o3 e4 o2 b2. e4 o3 c4 o2 b4 a4 b4 g2 e2 |
+f2 t8 f8 a8 o3 c8 e4 d4 g4 f4 eb1. o2 b4 o3 e0 :|
+o2 f2 t8 f8 g8 a8 o3 c4 o2 bb4 a4 g#4 a4. b8 o3 c4. d8 e1 o1
+{b16 o2 c16 d16 e16 f#16 g#16} j[0]
+
+0D/9FF8: F6 B0 43 BD C7 BE  set envelopes
+0D/9FFE: E0 34              q52
+0D/A000: F1                 o1
+0D/A001: 9C                 {a16
+0D/A002: BC                 b16
+0D/A003: F2                 o2
+0D/A004: 0C                 c16}
+0D/A005: 2D                 d32
+0D/A006: 4D                 e32
+0D/A007: 6D                 f#32
+0D/A008: 8D                 g#32
+0D/A009: F8                 repeat start
+0D/A00A: F2                 o2
+0D/A00B: 91                 a2.
+0D/A00C: F3                 o3
+0D/A00D: 45                 e4
+0D/A00E: F2                 o2
+0D/A00F: B1                 b2.
+0D/A010: 45                 e4
+0D/A011: F3                 o3
+0D/A012: 05                 c4
+0D/A013: F2                 o2
+0D/A014: B5                 b4
+0D/A015: 95                 a4
+0D/A016: B5                 b4
+0D/A017: 72                 g2
+0D/A018: 42                 e2
+0D/A019: FD 2E A0           on 2nd repeat jump to $A02E
+0D/A01C: 52                 f2
+0D/A01D: D8                 t8
+0D/A01E: 58                 f8
+0D/A01F: 98                 a8
+0D/A020: F3                 o3
+0D/A021: 08                 c8
+0D/A022: 45                 e4
+0D/A023: 25                 d4
+0D/A024: 75                 g4
+0D/A025: 55                 f4
+0D/A026: 31                 eb1.
+0D/A027: F2                 o2
+0D/A028: B5                 b4
+0D/A029: F3                 o3
+0D/A02A: 40                 e0
+0D/A02B: FC 0A A0           jump to $A00A
+0D/A02E: F2                 o2
+0D/A02F: 52                 f2
+0D/A030: D8                 t8
+0D/A031: 58                 f8
+0D/A032: 78                 g8
+0D/A033: 98                 a8
+0D/A034: F3                 o3
+0D/A035: 05                 c4
+0D/A036: F2                 o2
+0D/A037: A5                 bb4
+0D/A038: 95                 a4
+0D/A039: 85                 g#4
+0D/A03A: 93                 a4.
+0D/A03B: B8                 b8
+0D/A03C: F3                 o3
+0D/A03D: 03                 c4.
+0D/A03E: 28                 d8
+0D/A03F: 41                 e1
+0D/A040: F1                 o1
+0D/A041: BC                 {b16
+0D/A042: F2                 o2
+0D/A043: 0C                 c16
+0D/A044: 2C                 d16
+0D/A045: 4C                 e16
+0D/A046: 6C                 f#16
+0D/A047: 8C                 g#16}
+0D/A048: FE 09 A0           jump to $A009
+
+*** square 2 start ***
+
+r8 j[0]
+
+0D/A04B: F6 B0 43 BD E0 BE  set envelopes
+0D/A051: E9                 set volume
+0D/A052: C8                 r8
+0D/A053: FE FE 9F           jump to $9FFE
+
+*** triangle start ***
+
+o4 {b32} r4 [1]
+|: o2 a16 r16 o3 e16 r16 f16 r16 e16 r16 o2 a16 r16 o3 e16 r16 f16 r16 e16 r16
+o2 g16 r16 o3 e16 r16 f16 r16 e16 r16 o2 g16 r16 o3 e16 r16 f16 r16 e16 r16
+o2 f16 r16 o3 d16 r16 e16 r16 d16 r16 o2 f16 r16 o3 d16 r16 e16 r16 d16 r16
+o2 e16 r16 o3 d16 r16 e16 r16 d16 r16 o2 e16 r16 o3 c#16 r16 d16 r16 c#16 r16 |
+o2 d16 r16 b16 r16 o3 c16 r16 e16 r16 o2 c16 r16 a16 r16 o3 c16 r16 e16 r16
+o1 b16 r16 o2 b16 r16 o3 d16 r16 f16 r16 o1 bb16 r16 o3 c16 r16 d16 r16 f16 r16
+o2 eb16 r16 a16 r16 bb16 r16 o3 eb16 r16 o1 b16 r16 o2 f#16 r16 b16 r16 o3 d#16 r16
+o2 e16 r16 a16 r16 b16 r16 o3 e16 r16 d16 r16 o2 b16 r16 g#16 r16 e16 r16 :|
+o2 d16 r16 b16 r16 o3 c16 r16 e16 r16 o2 c16 r16 a16 r16 o3 c16 r16 e16 r16
+o1 bb16 r16 o2 a16 r16 o3 d16 r16 f16 r16 o1 b16 r16 o2 a16 r16 b16 r16 o3 e16 r16
+q51 o2 a16 r16 b16 r16 q50 o3 e16 r16 f16 r16 q49 o2 f16 r16 a16 r16 q48 b16 r16 o3 f16 r16
+q47 o2 e16 r16 q46 a16 r16 q44 b16 r16 q40 o3 d16 r16 q35 e4 q52 t8 r8 j[1]
+
+0D/A056: F6 FF FF FF E4 BE  set envelopes
+0D/A05C: C5                 r4
+0D/A05D: F8                 repeat start
+0D/A05E: F2                 o2
+0D/A05F: 9B                 a16
+0D/A060: CB                 r16
+0D/A061: F3                 o3
+0D/A062: 4B                 e16
+0D/A063: CB                 r16
+0D/A064: 5B                 f16
+0D/A065: CB                 r16
+0D/A066: 4B                 e16
+0D/A067: CB                 r16
+0D/A068: F2                 o2
+0D/A069: 9B                 a16
+0D/A06A: CB                 r16
+0D/A06B: F3                 o3
+0D/A06C: 4B                 e16
+0D/A06D: CB                 r16
+0D/A06E: 5B                 f16
+0D/A06F: CB                 r16
+0D/A070: 4B                 e16
+0D/A071: CB                 r16
+0D/A072: F2                 o2
+0D/A073: 7B                 g16
+0D/A074: CB                 r16
+0D/A075: F3                 o3
+0D/A076: 4B                 e16
+0D/A077: CB                 r16
+0D/A078: 5B                 f16
+0D/A079: CB                 r16
+0D/A07A: 4B                 e16
+0D/A07B: CB                 r16
+0D/A07C: F2                 o2
+0D/A07D: 7B                 g16
+0D/A07E: CB                 r16
+0D/A07F: F3                 o3
+0D/A080: 4B                 e16
+0D/A081: CB                 r16
+0D/A082: 5B                 f16
+0D/A083: CB                 r16
+0D/A084: 4B                 e16
+0D/A085: CB                 r16
+0D/A086: F2                 o2
+0D/A087: 5B                 f16
+0D/A088: CB                 r16
+0D/A089: F3                 o3
+0D/A08A: 2B                 d16
+0D/A08B: CB                 r16
+0D/A08C: 4B                 e16
+0D/A08D: CB                 r16
+0D/A08E: 2B                 d16
+0D/A08F: CB                 r16
+0D/A090: F2                 o2
+0D/A091: 5B                 f16
+0D/A092: CB                 r16
+0D/A093: F3                 o3
+0D/A094: 2B                 d16
+0D/A095: CB                 r16
+0D/A096: 4B                 e16
+0D/A097: CB                 r16
+0D/A098: 2B                 d16
+0D/A099: CB                 r16
+0D/A09A: F2                 o2
+0D/A09B: 4B                 e16
+0D/A09C: CB                 r16
+0D/A09D: F3                 o3
+0D/A09E: 2B                 d16
+0D/A09F: CB                 r16
+0D/A0A0: 4B                 e16
+0D/A0A1: CB                 r16
+0D/A0A2: 2B                 d16
+0D/A0A3: CB                 r16
+0D/A0A4: F2                 o2
+0D/A0A5: 4B                 e16
+0D/A0A6: CB                 r16
+0D/A0A7: F3                 o3
+0D/A0A8: 1B                 c#16
+0D/A0A9: CB                 r16
+0D/A0AA: 2B                 d16
+0D/A0AB: CB                 r16
+0D/A0AC: 1B                 c#16
+0D/A0AD: CB                 r16
+0D/A0AE: FD 05 A1           on 2nd repeat jump to $A105
+0D/A0B1: F2                 o2
+0D/A0B2: 2B                 d16
+0D/A0B3: CB                 r16
+0D/A0B4: BB                 b16
+0D/A0B5: CB                 r16
+0D/A0B6: F3                 o3
+0D/A0B7: 0B                 c16
+0D/A0B8: CB                 r16
+0D/A0B9: 4B                 e16
+0D/A0BA: CB                 r16
+0D/A0BB: F2                 o2
+0D/A0BC: 0B                 c16
+0D/A0BD: CB                 r16
+0D/A0BE: 9B                 a16
+0D/A0BF: CB                 r16
+0D/A0C0: F3                 o3
+0D/A0C1: 0B                 c16
+0D/A0C2: CB                 r16
+0D/A0C3: 4B                 e16
+0D/A0C4: CB                 r16
+0D/A0C5: F1                 o1
+0D/A0C6: BB                 b16
+0D/A0C7: CB                 r16
+0D/A0C8: F2                 o2
+0D/A0C9: BB                 b16
+0D/A0CA: CB                 r16
+0D/A0CB: F3                 o3
+0D/A0CC: 2B                 d16
+0D/A0CD: CB                 r16
+0D/A0CE: 5B                 f16
+0D/A0CF: CB                 r16
+0D/A0D0: F1                 o1
+0D/A0D1: AB                 bb16
+0D/A0D2: CB                 r16
+0D/A0D3: F3                 o3
+0D/A0D4: 0B                 c16
+0D/A0D5: CB                 r16
+0D/A0D6: 2B                 d16
+0D/A0D7: CB                 r16
+0D/A0D8: 5B                 f16
+0D/A0D9: CB                 r16
+0D/A0DA: F2                 o2
+0D/A0DB: 3B                 eb16
+0D/A0DC: CB                 r16
+0D/A0DD: 9B                 a16
+0D/A0DE: CB                 r16
+0D/A0DF: AB                 bb16
+0D/A0E0: CB                 r16
+0D/A0E1: F3                 o3
+0D/A0E2: 3B                 eb16
+0D/A0E3: CB                 r16
+0D/A0E4: F1                 o1
+0D/A0E5: BB                 b16
+0D/A0E6: CB                 r16
+0D/A0E7: F2                 o2
+0D/A0E8: 6B                 f#16
+0D/A0E9: CB                 r16
+0D/A0EA: BB                 b16
+0D/A0EB: CB                 r16
+0D/A0EC: F3                 o3
+0D/A0ED: 3B                 d#16
+0D/A0EE: CB                 r16
+0D/A0EF: F2                 o2
+0D/A0F0: 4B                 e16
+0D/A0F1: CB                 r16
+0D/A0F2: 9B                 a16
+0D/A0F3: CB                 r16
+0D/A0F4: BB                 b16
+0D/A0F5: CB                 r16
+0D/A0F6: F3                 o3
+0D/A0F7: 4B                 e16
+0D/A0F8: CB                 r16
+0D/A0F9: 2B                 d16
+0D/A0FA: CB                 r16
+0D/A0FB: F2                 o2
+0D/A0FC: BB                 b16
+0D/A0FD: CB                 r16
+0D/A0FE: 8B                 g#16
+0D/A0FF: CB                 r16
+0D/A100: 4B                 e16
+0D/A101: CB                 r16
+0D/A102: FC 5E A0           jump to $A05E
+0D/A105: F2                 o2
+0D/A106: 2B                 d16
+0D/A107: CB                 r16
+0D/A108: BB                 b16
+0D/A109: CB                 r16
+0D/A10A: F3                 o3
+0D/A10B: 0B                 c16
+0D/A10C: CB                 r16
+0D/A10D: 4B                 e16
+0D/A10E: CB                 r16
+0D/A10F: F2                 o2
+0D/A110: 0B                 c16
+0D/A111: CB                 r16
+0D/A112: 9B                 a16
+0D/A113: CB                 r16
+0D/A114: F3                 o3
+0D/A115: 0B                 c16
+0D/A116: CB                 r16
+0D/A117: 4B                 e16
+0D/A118: CB                 r16
+0D/A119: F1                 o1
+0D/A11A: AB                 bb16
+0D/A11B: CB                 r16
+0D/A11C: F2                 o2
+0D/A11D: 9B                 a16
+0D/A11E: CB                 r16
+0D/A11F: F3                 o3
+0D/A120: 2B                 d16
+0D/A121: CB                 r16
+0D/A122: 5B                 f16
+0D/A123: CB                 r16
+0D/A124: F1                 o1
+0D/A125: BB                 b16
+0D/A126: CB                 r16
+0D/A127: F2                 o2
+0D/A128: 9B                 a16
+0D/A129: CB                 r16
+0D/A12A: BB                 b16
+0D/A12B: CB                 r16
+0D/A12C: F3                 o3
+0D/A12D: 4B                 e16
+0D/A12E: CB                 r16
+0D/A12F: E0 33              q51
+0D/A131: F2                 o2
+0D/A132: 9B                 a16
+0D/A133: CB                 r16
+0D/A134: BB                 b16
+0D/A135: CB                 r16
+0D/A136: E0 32              q50
+0D/A138: F3                 o3
+0D/A139: 4B                 e16
+0D/A13A: CB                 r16
+0D/A13B: 5B                 f16
+0D/A13C: CB                 r16
+0D/A13D: E0 31              q49
+0D/A13F: F2                 o2
+0D/A140: 5B                 f16
+0D/A141: CB                 r16
+0D/A142: 9B                 a16
+0D/A143: CB                 r16
+0D/A144: E0 30              q48
+0D/A146: BB                 b16
+0D/A147: CB                 r16
+0D/A148: F3                 o3
+0D/A149: 5B                 f16
+0D/A14A: CB                 r16
+0D/A14B: E0 2F              q47
+0D/A14D: F2                 o2
+0D/A14E: 4B                 e16
+0D/A14F: CB                 r16
+0D/A150: E0 2E              q46
+0D/A152: 9B                 a16
+0D/A153: CB                 r16
+0D/A154: E0 2C              q44
+0D/A156: BB                 b16
+0D/A157: CB                 r16
+0D/A158: E0 28              q40
+0D/A15A: F3                 o3
+0D/A15B: 2B                 d16
+0D/A15C: CB                 r16
+0D/A15D: E0 23              q35
+0D/A15F: 45                 e4
+0D/A160: E0 34              q52
+0D/A162: D8                 t8
+0D/A163: C8                 r8
+0D/A164: FE 5D A0           jump to $A05D

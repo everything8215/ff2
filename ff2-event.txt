@@ -1,0 +1,2067 @@
+
++---------------------------------------------------------------------------+
+|                                                                           |
+|                             FINAL FANTASY II                              |
+|                                                                           |
++---------------------------------------------------------------------------+
+| file: ff2-event.txt                                                       |
+|                                                                           |
+| description: event script                                                 |
+|                                                                           |
+| created: 10/24/2021                                                       |
+|                                                                           |
+| author: everything8215@gmail.com                                          |
++---------------------------------------------------------------------------+
+
+
+=============================================================================
+                           | event command list |
+                           +--------------------+
+
+
++----------+---------+------------------------------------------------------+
+| 00-BF    | 03/AD48 | npc commands (high nybble is npc number)             |
+|          |         |   0: move right                                      |
+|          |         |   1: move left                                       |
+|          |         |   2: move down                                       |
+|          |         |   3: move up                                         |
+|          |         |   4: face right                                      |
+|          |         |   5: face left                                       |
+|          |         |   6: face down                                       |
+|          |         |   7: face up                                         |
+|          |         |   8: show npc (face right)                           |
+|          |         |   9: show npc (face left)                            |
+|          |         |   A: show npc (face down)                            |
+|          |         |   B: show npc (face up)                              |
+|          |         |   C: start animation                                 |
+|          |         |   D: stop animation                                  |
+|          |         |   E: hide npc                                        |
+|          |         |   F: hide npc                                        |
+| C0-CF    | 03/A07F | player commands                                      |
+|          |         |   C0-C7: same as npc commands                        |
+|          |         |      C8: press A button                              |
+|          |         |      C9: press B button                              |
+|          |         |      CA: press start button                          |
+|          |         |      CB: press select button                         |
+|          |         |   CC-CE: no effect                                   |
+|          |         |      CF: stop moving                                 |
+| D0-DF    | 03/B4F7 | toggle bit in +$6012                                 |
+|    E0    | 03/B585 | shake screen                                         |
+|    E1    | 03/B588 | dreadnought launch animation                         |
+|    E2    | 03/B591 | dreadnought explosion animation                      |
+|    E3    | 03/B59A | filter map bg palette (red)                          |
+|    E4    | 03/B59E | npc dance                                            |
+|    E5    | 03/B5A1 | pandaemonium castle animation                        |
+|    E6    | 03/B5A4 | flash screen                                         |
+|    E7    | 03/B5A7 | end credits                                          |
+|    E8    | 03/B5AA | filter map bg palette (blue)                         |
+|    E9    | 03/B5AE | leviathan waves animation                            |
+| EA-EC    | 03/B5B3 | restore saved guest character properties             |
+|    ED    | 03/B5B6 | add leila to party                                   |
+|    EE    | 03/B5C0 | add leon to party                                    |
+|    EF    | 03/B5C7 | remove guest character                               |
+|    F0 xx | 03/B5F0 | event dialogue                                       |
+|    F1 xx | 03/B5F5 | exit (to world map)                                  |
+|    F2 xx | 03/B5FE | entrance                                             |
+|    F3 xx | 03/B607 | battle                                               |
+|    F4 xx | 03/B610 | entrance                                             |
+|    F5 xx | 03/B619 | play song                                            |
+|    F6 xx | 03/B61E | set event switch                                     |
+|    F7 xx | 03/B623 | toggle event switch                                  |
+|    F8 xx | 03/B628 | wait                                                 |
+|    F9 xx | 0F/DB75 | repeat previous command                              |
+| FA-FC xx | 03/B650 | no effect                                            |
+|    FD    | 03/B651 | exit (to previous map)                               |
+|    FE    | 03/B656 | repeat forever (unused)                              |
+|    FF    | 03/B664 | end of script                                        |
++----------+---------+------------------------------------------------------+
+
+
+=============================================================================
+                        | event script disassembly |
+                        +--------------------------+
+
+
+-------------------------[ event $01: leila's ship ]-------------------------
+
+0D/8000: C2     move down
+0D/8001: F9 07  repeat 7 times
+0D/8003: C0     move right
+0D/8004: F9 02  repeat 2 times
+0D/8006: C2     move down
+0D/8007: F9 04  repeat 4 times
+0D/8009: C0     move right
+0D/800A: C0     move right
+0D/800B: C1     move left
+0D/800C: C2     move down
+0D/800D: F9 05  repeat 5 times
+0D/800F: F8 40  wait 64 frames
+0D/8011: E6     flash screen
+0D/8012: E6     flash screen
+0D/8013: F4 0A  entrance $0A
+0D/8015: 0A     show npc 0 (face down)
+0D/8016: F8 40  wait 64 frames
+0D/8018: 8B     show npc 8 (face up)
+0D/8019: 85     npc 8: face left
+0D/801A: F8 20  wait 32 frames
+0D/801C: 7B     show npc 7 (face up)
+0D/801D: 74     npc 7: face right
+0D/801E: F8 20  wait 32 frames
+0D/8020: 6B     show npc 6 (face up)
+0D/8021: 65     npc 6: face left
+0D/8022: F8 20  wait 32 frames
+0D/8024: 5B     show npc 5 (face up)
+0D/8025: 54     npc 6: face right
+0D/8026: F8 20  wait 32 frames
+0D/8028: 4B     show npc 4 (face up)
+0D/8029: 45     npc 4: face left
+0D/802A: F8 20  wait 32 frames
+0D/802C: 3B     show npc 3 (face up)
+0D/802D: 34     npc 3: face right
+0D/802E: F8 20  wait 32 frames
+0D/8030: 2B     show npc 2 (face up)
+0D/8031: 26     npc 2: face down
+0D/8032: F8 20  wait 32 frames
+0D/8034: 1B     show npc 1 (face up)
+0D/8035: 16     npc 1: face down
+0D/8036: F8 40  wait 64 frames
+0D/8038: F0 01  event dialogue $01:
+                  Leila:Give up all yer loot
+                  or else!
+                  A fight ye wantin'?
+                  Ye fools…Get 'em,boys!
+0D/803A: F3 74  battle $74
+0D/803C: F8 20  wait 32 frames
+0D/803E: F0 02  event dialogue $02:
+                  Leila:Fine,ye win…
+                  Go on…Just make it quick.
+                  Why aren't ye killing us…?
+                  Ye want to fight the
+                  Empire…together!?
+                  With outcasts like us?
+0D/8040: 15     npc 1: face left
+0D/8041: 25     npc 2: face left
+0D/8042: 35     npc 3: face left
+0D/8043: 45     npc 4: face left
+0D/8044: 55     npc 5: face left
+0D/8045: 65     npc 6: face left
+0D/8046: 75     npc 7: face left
+0D/8047: 85     npc 8: face left
+0D/8048: F8 10  wait 16 frames
+0D/804A: 14     npc 1: face right
+0D/804B: 24     npc 2: face right
+0D/804C: 34     npc 3: face right
+0D/804D: 44     npc 4: face right
+0D/804E: 54     npc 5: face right
+0D/804F: 64     npc 6: face right
+0D/8050: 74     npc 7: face right
+0D/8051: 84     npc 8: face right
+0D/8052: F8 20  wait 32 frames
+0D/8054: 15     npc 1: face left
+0D/8055: 25     npc 2: face left
+0D/8056: 35     npc 3: face left
+0D/8057: 45     npc 4: face left
+0D/8058: 55     npc 5: face left
+0D/8059: 65     npc 6: face left
+0D/805A: 75     npc 7: face left
+0D/805B: 85     npc 8: face left
+0D/805C: F8 10  wait 16 frames
+0D/805E: 14     npc 1: face right
+0D/805F: 24     npc 2: face right
+0D/8060: 34     npc 3: face right
+0D/8061: 44     npc 4: face right
+0D/8062: 54     npc 5: face right
+0D/8063: 64     npc 6: face right
+0D/8064: 74     npc 7: face right
+0D/8065: 84     npc 8: face right
+0D/8066: F8 20  wait 32 frames
+0D/8068: 15     npc 1: face left
+0D/8069: 25     npc 2: face left
+0D/806A: 35     npc 3: face left
+0D/806B: 45     npc 4: face left
+0D/806C: 55     npc 5: face left
+0D/806D: 65     npc 6: face left
+0D/806E: 75     npc 7: face left
+0D/806F: 85     npc 8: face left
+0D/8070: F8 10  wait 16 frames
+0D/8072: 14     npc 1: face right
+0D/8073: 24     npc 2: face right
+0D/8074: 34     npc 3: face right
+0D/8075: 44     npc 4: face right
+0D/8076: 54     npc 5: face right
+0D/8077: 64     npc 6: face right
+0D/8078: 74     npc 7: face right
+0D/8079: 84     npc 8: face right
+0D/807A: F8 40  wait 64 frames
+0D/807C: F5 4A  play song $0A
+0D/807E: F0 03  event dialogue $03:
+                  Alright!We'll take ye
+                  anywhere ye wish!
+                    Leila joins the party!
+0D/8080: 0F     hide npc 0
+0D/8081: F8 40  wait 64 frames
+0D/8083: F7 15  toggle event switch $15 ($6042.5)
+0D/8085: ED     add leila to party
+0D/8086: FD     exit (to previous map)
+0D/8087: FF     end of script
+
+-------------------------------[ event $01:  ]-------------------------------
+
+0D/8088: C0     move right
+0D/8089: F9 18  repeat 24 times
+0D/808B: C3     move up
+0D/808C: F9 20  repeat 32 times
+0D/808E: C0     move right
+0D/808F: F9 0C  repeat 12 times
+0D/8091: C3     move up
+0D/8092: F9 04  repeat 4 times
+0D/8094: C1     move left
+0D/8095: C1     move left
+0D/8096: C3     move up
+0D/8097: FF     end of script
+
+-------------------------------[ event $02:  ]-------------------------------
+
+0D/8098: C0     move right
+0D/8099: C0     move right
+0D/809A: C2     move down
+0D/809B: F9 11  repeat 17 times
+0D/809D: C1     move left
+0D/809E: F9 04  repeat 4 times
+0D/80A0: C2     move down
+0D/80A1: F9 13  repeat 19 times
+0D/80A3: C1     move left
+0D/80A4: F9 21  repeat 33 times
+0D/80A6: FF     end of script
+
+--------------------------[ event $03: game start ]--------------------------
+
+0D/80A7: F8 40  wait 64 frames
+0D/80A9: 13     npc 1: move up
+0D/80AA: 22     npc 2: move down
+0D/80AB: 10     npc 1: move right
+0D/80AC: 21     npc 2: move left
+0D/80AD: 10     npc 1: move right
+0D/80AE: 21     npc 2: move left
+0D/80AF: 16     npc 1: face down
+0D/80B0: 27     npc 2: face up
+0D/80B1: F8 40  wait 64 frames
+0D/80B3: F0 04  event dialogue $04:
+                  Hilda:Will he live?
+                  Minwu:Yes.I sense a strong
+                  life force within him.He
+                  should wake up soon.
+                  Hilda:We found them
+                  gravely injured when we
+                  fled from Fynn…
+0D/80B5: E6     flash screen
+0D/80B6: E6     flash screen
+0D/80B7: F0 05  event dialogue $05:
+                  Minwu:Let him be for now.
+                  This sigil will strengthen
+                  him.
+                  Hilda:Yes…Let's join the
+                  others.If the Empire
+                  completes the Dreadnought
+                  they're building in Bafsk…
+                  the attack will begin in
+                  earnest.We can't sit idly
+                  by and watch.We must act!
+0D/80B9: 1C     npc 1: start animation
+0D/80BA: 2C     npc 2: start animation
+0D/80BB: 10     npc 1: move right
+0D/80BC: 12     npc 1: move down
+0D/80BD: 12     npc 1: move down
+0D/80BE: 12     npc 1: move down
+0D/80BF: 11     npc 1: move left
+0D/80C0: 12     npc 1: move down
+0D/80C1: 22     npc 2: move down
+0D/80C2: 12     npc 1: move down
+0D/80C3: 22     npc 2: move down
+0D/80C4: 22     npc 2: move down
+0D/80C5: 12     npc 1: move down
+0D/80C6: 22     npc 2: move down
+0D/80C7: 12     npc 1: move down
+0D/80C8: 1F     hide npc 1
+0D/80C9: F8 20  wait 32 frames
+0D/80CB: 24     npc 2: face right
+0D/80CC: 27     npc 2: face up
+0D/80CD: F8 40  wait 64 frames
+0D/80CF: 22     npc 2: move down
+0D/80D0: 2F     hide npc 2
+0D/80D1: F7 E0  toggle event switch $E0 ($605C.0)
+0D/80D3: F7 E1  toggle event switch $E1 ($605C.1)
+0D/80D5: F6 01  set event switch $01 ($6040.1)
+0D/80D7: F8 40  wait 64 frames
+0D/80D9: C5     face left
+0D/80DA: F8 10  wait 16 frames
+0D/80DC: C4     face right
+0D/80DD: F8 10  wait 16 frames
+0D/80DF: C5     face left
+0D/80E0: F8 10  wait 16 frames
+0D/80E2: C4     face right
+0D/80E3: F8 10  wait 16 frames
+0D/80E5: F0 06  event dialogue $06:
+                  Firion:W-Where am I?
+                  Where is everyone…?
+0D/80E7: C2     move down
+0D/80E8: C4     face right
+0D/80E9: F0 07  event dialogue $07:
+                  Leon!
+0D/80EB: C2     move down
+0D/80EC: C5     face left
+0D/80ED: F0 08  event dialogue $08:
+                  Maria!
+0D/80EF: C2     move down
+0D/80F0: F0 09  event dialogue $09:
+                  Guy!
+0D/80F2: C2     move down
+0D/80F3: F6 DF  set event switch $DF ($605B.7)
+0D/80F5: C2     move down
+0D/80F6: C2     move down
+0D/80F7: F5 59  play song $19
+0D/80F9: 09     show npc 0 (face left)
+0D/80FA: 19     show npc 1 (face left)
+0D/80FB: C2     move down
+0D/80FC: C2     move down
+0D/80FD: C2     move down
+0D/80FE: C4     face right
+0D/80FF: F0 0A  event dialogue $0A:
+                  Maria:Firion!You're
+                  alive!I th-thought you…
+0D/8101: 01     npc 0: move left
+0D/8102: 11     npc 1: move left
+0D/8103: 01     npc 0: move left
+0D/8104: 11     npc 1: move left
+0D/8105: C0     move right
+0D/8106: C0     move right
+0D/8107: F0 0B  event dialogue $0B:
+                  Firion:Maria!Guy!
+                  Where's Leon?
+                  Guy:Princess of Fynn
+                  save us.But Leon not 
+                  here.
+                  Firion:I see…I'm sure he's
+                  safe.
+0D/8109: 0F     hide npc 0
+0D/810A: 1F     hide npc 1
+0D/810B: F5 51  play song $11
+0D/810D: C0     move right
+0D/810E: F9 07  repeat 7 times
+0D/8110: C3     move up
+0D/8111: F9 04  repeat 4 times
+0D/8113: C1     move left
+0D/8114: C1     move left
+0D/8115: C3     move up
+0D/8116: F9 03  repeat 3 times
+0D/8118: F0 0C  event dialogue $0C:
+                  Hilda:You're all okay?
+                  Good.
+                  Firion:Thank you,Your
+                  Highness.Please,let us 
+                  join the rebel army!
+                  Hilda:I can't allow that.
+                  You would only be throwing
+                  your lives away.You need
+                  to return home.
+                  Maria:But…we have no
+                  homes.Not anymore…
+                  The Empire attacked,and
+                  our parents…
+                  Hilda:I'm truly sorry…
+                  You're welcome to stay
+                  here in Altair.If you
+                  know our password,you
+                  should be able to get by
+                  well enough.The password
+                  is Wild Rose.
+0D/811A: FF     end of script
+
+--------------------------[ event $03: josef dies ]--------------------------
+
+0D/811B: F8 10  wait 16 frames
+0D/811D: E0     shake screen
+0D/811E: E0     shake screen
+0D/811F: E0     shake screen
+0D/8120: F5 5A  play song $1A
+0D/8122: 18     show npc 1 (face right)
+0D/8123: E0     shake screen
+0D/8124: 12     npc 1: move down
+0D/8125: 12     npc 1: move down
+0D/8126: 12     npc 1: move down
+0D/8127: E0     shake screen
+0D/8128: 12     npc 1: move down
+0D/8129: 12     npc 1: move down
+0D/812A: 12     npc 1: move down
+0D/812B: E0     shake screen
+0D/812C: 12     npc 1: move down
+0D/812D: C2     move down
+0D/812E: 12     npc 1: move down
+0D/812F: C2     move down
+0D/8130: 12     npc 1: move down
+0D/8131: C2     move down
+0D/8132: C7     face up
+0D/8133: E0     shake screen
+0D/8134: 12     npc 1: move down
+0D/8135: C2     move down
+0D/8136: 12     npc 1: move down
+0D/8137: C2     move down
+0D/8138: 12     npc 1: move down
+0D/8139: C2     move down
+0D/813A: 12     npc 1: move down
+0D/813B: E0     shake screen
+0D/813C: 12     npc 1: move down
+0D/813D: E0     shake screen
+0D/813E: C2     move down
+0D/813F: C7     face up
+0D/8140: F0 0E  event dialogue $0E:
+                  Josef:Dammit!
+0D/8142: 2B     show npc 2 (face up)
+0D/8143: C2     move down
+0D/8144: E0     shake screen
+0D/8145: E0     shake screen
+0D/8146: F0 0F  event dialogue $0F:
+                  Josef:Go on!Get out!
+                  Guy:We not leave you!
+                  Josef:Can't…hold…much
+                  longer!Run!
+0D/8148: C2     move down
+0D/8149: F9 04  repeat 4 times
+0D/814B: C0     move right
+0D/814C: C5     face left
+0D/814D: F0 10  event dialogue $10:
+                  Josef:It's up to…you
+                  now…Firion.My sweet
+                  Nelly…
+                    Josef is crushed under
+                    the boulder.
+                  Firion:Josef!
+0D/814F: E0     shake screen
+0D/8150: E6     flash screen
+0D/8151: 2F     hide npc 2
+0D/8152: 12     npc 1: move down
+0D/8153: 12     npc 1: move down
+0D/8154: 12     npc 1: move down
+0D/8155: E0     shake screen
+0D/8156: 12     npc 1: move down
+0D/8157: F9 03  repeat 3 times
+0D/8159: E0     shake screen
+0D/815A: E6     flash screen
+0D/815B: 1F     hide npc 1
+0D/815C: F5 56  play song $16
+0D/815E: F6 37  set event switch $37 ($6046.7)
+0D/8160: F7 53  toggle event switch $53 ($604A.3)
+0D/8162: EF     remove guest character
+0D/8163: FF     end of script
+
+----------------------[ event $05: king of fynn dies ]-----------------------
+
+0D/8164: F8 10  wait 16 frames
+0D/8166: F0 11  event dialogue $11:
+                  King:Guy…Minwu…Firion…
+                  I have a favor to ask…
+0D/8168: C3     move up
+0D/8169: C1     move left
+0D/816A: C3     move up
+0D/816B: C3     move up
+0D/816C: 2B     show npc 2 (face up)
+0D/816D: 2D     npc 2: stop animation
+0D/816E: 12     npc 1: move down
+0D/816F: 12     npc 1: move down
+0D/8170: 12     npc 1: move down
+0D/8171: 17     npc 1: face up
+0D/8172: F8 60  wait 96 frames
+0D/8174: F0 12  event dialogue $12:
+                  King:Guy…you've grown
+                  so strong…Please lead our
+                  army…help Hilda…
+                  Gordon:I swear on my life
+                  that I will!
+                  King:Minwu…You know of the
+                  seal that binds Ultima…
+                  It can only be broken when
+                  the world stands at the
+                  brink of destruction…
+                  I believe that time has
+                  come…Do you agree?
+                  Minwu:I do.The time to
+                  break the seal has come!
+                  King:Firion…Head to Deist,
+                  home of the Dragoons…
+                  The Empire claims to have
+                  wiped out the Dragoons…
+                  There has to be some
+                  survivors…If we're to
+                  defeat the Empire,we'll
+                  need the help of the
+                  Dragoons and their
+                  Wyverns.With our combined
+                  forces…victory will
+                  come!
+0D/8176: C3     move up
+0D/8177: 23     npc 2: move up
+0D/8178: 13     npc 1: move up
+0D/8179: 23     npc 2: move up
+0D/817A: 13     npc 1: move up
+0D/817B: 24     npc 2: face right
+0D/817C: 15     npc 1: face left
+0D/817D: 33     npc 3: move up
+0D/817E: 31     npc 3: move left
+0D/817F: 31     npc 3: move left
+0D/8180: 33     npc 3: move up
+0D/8181: F9 05  repeat 5 times
+0D/8183: 34     npc 3: face right
+0D/8184: 43     npc 4: move up
+0D/8185: F9 06  repeat 6 times
+0D/8187: 45     npc 4: face left
+0D/8188: F8 40  wait 64 frames
+0D/818A: F0 13  event dialogue $13:
+                  Take care…of…Hilda…
+0D/818C: F7 20  toggle event switch $20 ($6044.0)
+0D/818E: 0F     hide npc 0
+0D/818F: F5 56  play song $16
+0D/8191: 41     npc 4: move left
+0D/8192: 30     npc 3: move right
+0D/8193: F8 40  wait 64 frames
+0D/8195: F0 14  event dialogue $14:
+                  Soldiers:Your Majesty!
+0D/8197: F8 FF  wait 255 frames
+0D/8199: F0 15  event dialogue $15:
+                  Gordon:A terrible loss,but
+                  we must move on.The King
+                  gave us orders,and we must
+                  fulfill them!
+0D/819B: 2C     npc 2: start animation
+0D/819C: 22     npc 2: move down
+0D/819D: 22     npc 2: move down
+0D/819E: 20     npc 2: move right
+0D/819F: 20     npc 2: move right
+0D/81A0: 22     npc 2: move down
+0D/81A1: F9 03  repeat 3 times
+0D/81A3: 2F     hide npc 2
+0D/81A4: 1C     npc 1: start animation
+0D/81A5: 12     npc 1: move down
+0D/81A6: F9 05  repeat 5 times
+0D/81A8: 1F     hide npc 1
+0D/81A9: C0     move right
+0D/81AA: C2     move down
+0D/81AB: F9 07  repeat 7 times
+0D/81AD: F7 E9  toggle event switch $E9 ($605D.1)
+0D/81AF: F7 09  toggle event switch $09 ($6041.1)
+0D/81B1: F6 0D  set event switch $0D ($6041.5)
+0D/81B3: F6 14  set event switch $14 ($6042.4)
+0D/81B5: EF     remove guest character
+0D/81B6: FF     end of script
+
+---------------------[ event $06: emperor's tournament ]---------------------
+
+0D/81B7: F8 10  wait 16 frames
+0D/81B9: E0     shake screen
+0D/81BA: 2A     show npc 2 (face down)
+0D/81BB: E0     shake screen
+0D/81BC: 3A     show npc 3 (face down)
+0D/81BD: 4A     show npc 4 (face down)
+0D/81BE: F0 16  event dialogue $16:
+                  Emperor:Now fight!
+                  The victor wins Princess
+                  Hilda!
+0D/81C0: C2     move down
+0D/81C1: F9 05  repeat 5 times
+0D/81C3: 5A     show npc 5 (face down)
+0D/81C4: 52     npc 5: move down
+0D/81C5: 51     npc 5: move left
+0D/81C6: E0     shake screen
+0D/81C7: C4     face right
+0D/81C8: 51     npc 5: move left
+0D/81C9: E0     shake screen
+0D/81CA: 51     npc 5: move left
+0D/81CB: E0     shake screen
+0D/81CC: 51     npc 5: move left
+0D/81CD: E0     shake screen
+0D/81CE: 51     npc 5: move left
+0D/81CF: E0     shake screen
+0D/81D0: 51     npc 5: move left
+0D/81D1: E0     shake screen
+0D/81D2: 51     npc 5: move left
+0D/81D3: E0     shake screen
+0D/81D4: F8 20  wait 32 frames
+0D/81D6: F3 77  battle $77
+0D/81D8: 5F     hide npc 5
+0D/81D9: 2F     hide npc 2
+0D/81DA: 3F     hide npc 3
+0D/81DB: 4F     hide npc 4
+0D/81DC: F0 17  event dialogue $17:
+                  Emperor:You may now claim
+                  your reward!
+                    This is your chance to
+                    slay the Emperor!
+0D/81DE: C3     move up
+0D/81DF: F9 09  repeat 9 times
+0D/81E1: F0 18  event dialogue $18:
+                  Emperor:What a show,
+                  Firion!Surprised I know
+                  your name?
+0D/81E3: E6     flash screen
+0D/81E4: E6     flash screen
+0D/81E5: 0F     hide npc 0
+0D/81E6: C2     move down
+0D/81E7: 6A     show npc 6 (face down)
+0D/81E8: 78     show npc 7 (face right)
+0D/81E9: 89     show npc 8 (face left)
+0D/81EA: 9B     show npc 9 (face up)
+0D/81EB: 60     npc 6: move right
+0D/81EC: 70     npc 7: move right
+0D/81ED: 81     npc 8: move left
+0D/81EE: 93     npc 9: move up
+0D/81EF: 60     npc 6: move right
+0D/81F0: 70     npc 7: move right
+0D/81F1: 81     npc 8: move left
+0D/81F2: 93     npc 9: move up
+0D/81F3: 62     npc 6: move down
+0D/81F4: 70     npc 7: move right
+0D/81F5: 81     npc 8: move left
+0D/81F6: 93     npc 9: move up
+0D/81F7: 62     npc 6: move down
+0D/81F8: 62     npc 6: move down
+0D/81F9: 61     npc 6: move left
+0D/81FA: 61     npc 6: move left
+0D/81FB: 66     npc 6: face down
+0D/81FC: C7     face up
+0D/81FD: F8 40  wait 64 frames
+0D/81FD: F0 19  event dialogue $19:
+                  Dark Knight:Hmph.
+                  Lock 'em up.
+0D/8201: F8 20  wait 32 frames
+0D/8203: F7 28  toggle event switch $28 ($6045.0)
+0D/8205: F2 6D  entrance $6D
+0D/8207: FF     end of script
+
+---------------------[ event $07: first emperor battle ]---------------------
+
+0D/8208: C3     move up
+0D/8209: F9 04  repeat 4 times
+0D/820B: F0 1A  event dialogue $1A:
+                  Emperor:I'm not wasting my
+                  time on you.Men,take them
+                  out!
+0D/820D: F8 40  wait 64 frames
+0D/820F: F3 6D  battle $6D
+0D/8211: C3     move up
+0D/8212: F0 1B  event dialogue $1B:
+                  Emperor:Not bad…Let's see
+                  how you do against this!
+0D/8214: F8 40  wait 64 frames
+0D/8216: F3 6D  battle $6D
+0D/8218: C3     move up
+0D/8219: F0 1C  event dialogue $1C:
+                  Emperor:Fine…
+                  I'll do it myself!
+0D/821B: F8 40  wait 64 frames
+0D/821D: F3 FD  battle $FD
+0D/821F: E0     shake screen
+0D/8220: F0 48  event dialogue $48:
+                  Emperor:I…won't…die!
+0D/8222: 0F     hide npc 0
+0D/8223: F7 29  toggle event switch $29 ($6045.1)
+0D/8225: F6 26  set event switch $26 ($6044.6)
+0D/8227: F8 80  wait 128 frames
+0D/8229: F0 1D  event dialogue $1D:
+                  Firion:Let's get back to
+                  Fynn!
+0D/822B: F2 49  entrance $49
+0D/822D: C3     move up
+0D/822E: F9 0D  repeat 13 times
+0D/8230: 02     npc 0: move down
+0D/8231: 12     npc 1: move down
+0D/8232: 00     npc 0: move right
+0D/8233: 11     npc 1: move left
+0D/8234: 00     npc 0: move right
+0D/8235: 02     npc 0: move down
+0D/8236: 12     npc 1: move down
+0D/8237: 02     npc 0: move down
+0D/8238: 12     npc 1: move down
+0D/8239: 02     npc 0: move down
+0D/823A: F8 40  wait 64 frames
+0D/823C: F0 1E  event dialogue $1E:
+                  Hilda:Thanks to you,peace
+                  has been restored.Let us
+                  celebrate!
+0D/823E: 03     npc 0: move up
+0D/823F: 06     npc 0: face down
+0D/8240: 2A     show npc 2 (face down)
+0D/8241: 3A     show npc 3 (face down)
+0D/8242: 4A     show npc 4 (face down)
+0D/8243: 5A     show npc 5 (face down)
+0D/8244: 6A     show npc 6 (face down)
+0D/8245: 7A     show npc 7 (face down)
+0D/8246: F5 5B  play song $1B
+0D/8248: 0C     npc 0: start animation
+0D/8249: 1C     npc 1: start animation
+0D/824A: 2C     npc 2: start animation
+0D/824B: 3C     npc 3: start animation
+0D/824C: 4C     npc 4: start animation
+0D/824D: 5C     npc 5: start animation
+0D/824E: 6C     npc 6: start animation
+0D/824F: 7C     npc 7: start animation
+0D/8250: E4     npc dance
+0D/8251: 0D     npc 0: stop animation
+0D/8252: 1D     npc 1: stop animation
+0D/8253: 2D     npc 2: stop animation
+0D/8254: 3D     npc 3: stop animation
+0D/8255: 4D     npc 4: stop animation
+0D/8256: 5D     npc 5: stop animation
+0D/8257: 6D     npc 6: stop animation
+0D/8258: 7D     npc 7: stop animation
+0D/8259: F5 4E  play song $0E
+0D/825B: AB     show npc A (face up)
+0D/825C: A3     npc 3: move up
+0D/825D: F9 08  repeat 8 times
+0D/825F: A0     npc A: move right
+0D/8260: A3     npc 3: move up
+0D/8261: F9 05  repeat 5 times
+0D/8263: 27     npc 2: face up
+0D/8264: 37     npc 3: face up
+0D/8265: 47     npc 4: face up
+0D/8266: 57     npc 5: face up
+0D/8267: 67     npc 6: face up
+0D/8268: 77     npc 7: face up
+0D/8269: F8 40  wait 64 frames
+0D/826B: F0 1F  event dialogue $1F:
+                  Soldier:Your Highness!
+                  The…Dark Knight…Leon has
+                  declared…himself Emperor!
+                  Urgh…
+0D/826D: AF     hide npc A
+0D/826E: F8 80  wait 128 frames
+0D/8270: F0 20  event dialogue $20:
+                  Hilda:No!Will the war ever
+                  end? And Leon…!
+0D/8272: F8 40  wait 64 frames
+0D/8274: F2 49  entrance $49
+0D/8276: C3     move up
+0D/8277: F9 0D  repeat 13 times
+0D/8279: F6 1D  set event switch $1D ($6043.5)
+0D/827B: F7 47  toggle event switch $47 ($6048.7)
+0D/827D: D2     toggle $6012.2
+0D/827E: FF     end of script
+
+----------------------[ event $08: dreadnought launch ]----------------------
+
+0D/827F: F8 10  wait 16 frames
+0D/8281: 03     npc 0: move up
+0D/8282: F9 03  repeat 3 times
+0D/8284: 0F     hide npc 0
+0D/8285: 19     show npc 1 (face left)
+0D/8286: 11     move left
+0D/8287: F9 09  repeat 9 times
+0D/8289: 16     npc 1: face down
+0D/828A: F0 21  event dialogue $21:
+                  Borghen:Ha!
+                  Serves you right!
+0D/828C: 13     npc 1: move up
+0D/828D: F9 03  repeat 3 times
+0D/828F: 1F     hide npc 1
+0D/8290: F8 10  wait 16 frames
+0D/8292: C3     move up
+0D/8293: F9 04  repeat 4 times
+0D/8295: C2     move down
+0D/8296: F6 51  set event switch $51 ($604A.1)
+0D/8298: F6 6A  set event switch $6A ($604D.2)
+0D/829A: F6 6B  set event switch $6B ($604D.3)
+0D/829C: F6 6C  set event switch $6C ($604D.4)
+0D/829E: F7 23  toggle event switch $23 ($6044.3)
+0D/82A0: F7 1B  toggle event switch $1B ($6043.3)
+0D/82A2: F7 6D  toggle event switch $6D ($604D.5)
+0D/82A4: F7 6E  toggle event switch $6E ($604D.6)
+0D/82A6: F7 6F  toggle event switch $6F ($604D.7)
+0D/82A8: F7 71  toggle event switch $71 ($604E.1)
+0D/82AA: F7 72  toggle event switch $72 ($604E.2)
+0D/82AC: F7 73  toggle event switch $73 ($604E.3)
+0D/82AE: F7 77  toggle event switch $77 ($604E.7)
+0D/82B0: F7 78  toggle event switch $78 ($604F.0)
+0D/82B2: F7 79  toggle event switch $79 ($604F.1)
+0D/82B4: F7 7D  toggle event switch $7D ($604F.5)
+0D/82B6: F7 7E  toggle event switch $7E ($604F.6)
+0D/82B8: F7 7F  toggle event switch $7F ($604F.7)
+0D/82BA: F7 88  toggle event switch $88 ($6051.0)
+0D/82BC: F7 89  toggle event switch $89 ($6051.1)
+0D/82BE: F7 8A  toggle event switch $8A ($6051.2)
+0D/82C0: F7 8B  toggle event switch $8B ($6051.3)
+0D/82C2: F7 0B  toggle event switch $0B ($6041.3)
+0D/82C4: E1     dreadnought launch animation
+0D/82C5: FF     end of script
+
+-----------------[ event $09: sunfire destroys dreadnought ]-----------------
+
+0D/82C6: F7 39  toggle event switch $39 ($6047.1)
+0D/82C8: 0F     hide npc 0
+0D/82C9: 1F     hide npc 1
+0D/82CA: 2F     hide npc 2
+0D/82CB: 3F     hide npc 3
+0D/82CC: F8 40  wait 64 frames
+0D/82CE: E0     shake screen
+0D/82CF: E6     flash screen
+0D/82D0: E0     shake screen
+0D/82D1: E6     flash screen
+0D/82D2: 5A     show npc 5 (face down)
+0D/82D3: 6A     show npc 6 (face down)
+0D/82D4: 7A     show npc 7 (face down)
+0D/82D5: 8A     show npc 8 (face down)
+0D/82D6: E0     shake screen
+0D/82D7: E6     flash screen
+0D/82D8: E0     shake screen
+0D/82D9: E6     flash screen
+0D/82DA: 49     show npc 4 (face left)
+0D/82DB: 41     npc 4: move left
+0D/82DC: F9 07  repeat 7 times
+0D/82DE: 46     npc 4: face down
+0D/82DF: F0 22  event dialogue $22:
+                  Dark Knight:Don't consider
+                  this a victory!
+                  Maria:That voice sounded
+                  like…my brother's?!
+                  Firion:Nevermind that!Let's
+                  hurry to Cid's Airship!
+0D/82E1: E0     shake screen
+0D/82E2: C2     move down
+0D/82E3: F9 04  repeat 4 times
+0D/82E5: E0     shake screen
+0D/82E6: C2     move down
+0D/82E7: F9 03  repeat 3 times
+0D/82E9: F6 03  set event switch $03 ($6040.3)
+0D/82EB: F6 DD  set event switch $DD ($605B.5)
+0D/82ED: F6 07  set event switch $07 ($6040.7)
+0D/82EF: DC     toggle $6013.4
+0D/82F0: FD     exit (to previous map)
+0D/82F1: F8 10  wait 16 frames
+0D/82F3: E0     shake screen
+0D/82F4: FD     exit (to previous map)
+0D/82F5: F8 0A  wait 10 frames
+0D/82F7: E0     shake screen
+0D/82F8: FD     exit (to previous map)
+0D/82F9: F8 05  wait 5 frames
+0D/82FB: E0     shake screen
+0D/82FC: FD     exit (to previous map)
+0D/82FD: F8 03  wait 3 frames
+0D/82FF: E0     shake screen
+0D/8300: FD     exit (to previous map)
+0D/8301: F8 02  wait 2 frames
+0D/8303: E0     shake screen
+0D/8304: FD     exit (to previous map)
+0D/8305: F8 01  wait 1 frame
+0D/8307: E0     shake screen
+0D/8308: FD     exit (to previous map)
+0D/8309: E2     dreadnought explosion animation
+0D/830A: FF     end of script
+
+-------------------------[ event $0A: lamia battle ]-------------------------
+
+0D/830B: F8 40  wait 64 frames
+0D/830D: 03     npc 0: move up
+0D/830E: F9 05  repeat 5 times
+0D/8310: 01     npc 0: move left
+0D/8311: 06     npc 0: face down
+0D/8312: F8 40  wait 64 frames
+0D/8314: F0 24  event dialogue $24:
+                  Hilda:Come to me,Firion…
+0D/8316: C3     move up
+0D/8317: F9 04  repeat 4 times
+0D/8319: C6     face down
+0D/831A: 3A     show npc 3 (face down)
+0D/831B: 32     npc 3: move down
+0D/831C: 4A     show npc 4 (face down)
+0D/831D: 32     npc 3: move down
+0D/831E: 42     npc 4: move down
+0D/831F: 5A     show npc 5 (face down)
+0D/8320: 32     npc 3: move down
+0D/8321: 42     npc 4: move down
+0D/8322: 52     npc 5: move down
+0D/8323: 32     npc 3: move down
+0D/8324: 42     npc 4: move down
+0D/8325: 52     npc 5: move down
+0D/8326: 32     npc 3: move down
+0D/8327: 42     npc 4: move down
+0D/8328: 52     npc 5: move down
+0D/8329: 32     npc 3: move down
+0D/832A: 42     npc 4: move down
+0D/832B: 52     npc 5: move down
+0D/832C: 3F     hide npc 3
+0D/832D: 42     npc 4: move down
+0D/832E: 57     npc 5: face up
+0D/832F: 4F     hide npc 4
+0D/8330: F8 80  wait 128 frames
+0D/8332: 52     npc 5: move down
+0D/8333: 52     npc 5: move down
+0D/8334: 5F     hide npc 5
+0D/8335: F5 57  play song $17
+0D/8337: E3     filter map bg palette (red)
+0D/8338: C5     face left
+0D/8339: F8 20  wait 32 frames
+0D/833B: C4     face right
+0D/833C: F8 20  wait 32 frames
+0D/833E: C5     face left
+0D/833F: F8 20  wait 32 frames
+0D/8341: C4     face right
+0D/8342: F8 20  wait 32 frames
+0D/8344: C5     face left
+0D/8345: F8 80  wait 128 frames
+0D/8347: F0 25  event dialogue $25:
+                  Hilda:What's wrong?
+                  Come closer…
+                  Firion:W-Why…
+                  Hilda:Don't keep a lady
+                  waiting…
+                  Firion:Gulp…
+0D/8349: F8 40  wait 64 frames
+0D/834B: C1     move left
+0D/834C: C7     face up
+0D/834D: F8 20  wait 32 frames
+0D/834F: F0 4A  event dialogue $4A:
+                  Hilda:Now you're mine,
+                  Firion!
+                  Firion:What've you done
+                  with the Princess?
+                  Leila:Not so fast,ye
+                  scurvy snake!
+0D/8351: 5B     show npc 5 (face up)
+0D/8352: 53     npc 5: move up
+0D/8353: 4B     show npc 4 (face up)
+0D/8354: 53     npc 5: move up
+0D/8355: 43     npc 4: move up
+0D/8356: 3B     show npc 3 (face up)
+0D/8357: 53     npc 5: move up
+0D/8358: 43     npc 4: move up
+0D/8359: 33     npc 3: move up
+0D/835A: 53     npc 5: move up
+0D/835B: 43     npc 4: move up
+0D/835C: 33     npc 3: move up
+0D/835D: 53     npc 5: move up
+0D/835E: 43     npc 4: move up
+0D/835F: 33     npc 3: move up
+0D/8360: 53     npc 5: move up
+0D/8361: 43     npc 4: move up
+0D/8362: 33     npc 3: move up
+0D/8363: 0F     hide npc 0
+0D/8364: F3 76  battle $76
+0D/8366: F7 03  toggle event switch $03 ($6040.3)
+0D/8368: C0     move right
+0D/8369: C6     face down
+0D/836A: F0 4B  event dialogue $4B:
+                  Firion:Thanks,Leila.
+                  Leila:Don't let ye guard
+                  down around pretty ladies!
+                  Guy:Princess where?
+0D/836C: F8 80  wait 128 frames
+0D/836E: 31     npc 3: move left
+0D/836F: 41     npc 4: move left
+0D/8370: 51     npc 5: move left
+0D/8371: 34     npc 3: face right
+0D/8372: 44     npc 4: face right
+0D/8373: 54     npc 5: face right
+0D/8374: 1B     show npc 1 (face up)
+0D/8375: 13     npc 1: move up
+0D/8376: 13     npc 1: move up
+0D/8377: 13     npc 1: move up
+0D/8378: F0 26  event dialogue $26:
+                  Bad news!
+                  A tournament is being held
+                  in Palamecia…and Princess
+                  Hilda is the prize!
+0D/837A: 10     npc 1: move right
+0D/837B: 15     npc 1: face left
+0D/837C: 2B     show npc 2 (face up)
+0D/837D: 23     npc 2: move up
+0D/837E: F9 03  repeat 3 times
+0D/8380: F0 27  event dialogue $27:
+                  Gordon:Let me come.
+                  I must rescue Hilda.
+                  Leila:I know how ye feel,
+                  Prince.I'll stay and watch
+                  yer army.
+0D/8382: F8 40  wait 64 frames
+0D/8384: 23     npc 2: move up
+0D/8385: 2F     hide npc 2
+0D/8386: F5 4A  play song $0A
+0D/8388: 30     npc 3: move right
+0D/8389: 40     npc 4: move right
+0D/838A: 43     npc 4: move up
+0D/838B: 33     npc 3: move up
+0D/838C: 4F     hide npc 4
+0D/838D: 33     npc 3: move up
+0D/838E: 3F     hide npc 3
+0D/838F: C2     move down
+0D/8390: F9 06  repeat 6 times
+0D/8392: F6 16  set event switch $16 ($6042.6)
+0D/8394: F7 ED  toggle event switch $ED ($605D.5)
+0D/8396: F7 0D  toggle event switch $0D ($6041.5)
+0D/8398: EC     restore saved guest character properties
+0D/8399: DD     toggle $6013.5
+0D/839A: FF     end of script
+
+--------------------[ event $0B: escape from jail cell ]---------------------
+
+0D/839B: F8 40  wait 64 frames
+0D/839D: 3A     show npc 3 (face down)
+0D/839E: 32     npc 3: move down
+0D/839F: F9 06  repeat 6 times
+0D/83A1: F8 60  wait 96 frames
+0D/83A3: 32     npc 3: move down
+0D/83A4: F9 03  repeat 3 times
+0D/83A6: F8 20  wait 32 frames
+0D/83A8: 34     npc 3: face right
+0D/83A9: F8 20  wait 32 frames
+0D/83AB: 35     npc 3: face left
+0D/83AC: F8 20  wait 32 frames
+0D/83AE: 34     npc 3: face right
+0D/83AF: F8 20  wait 32 frames
+0D/83B1: 35     npc 3: face left
+0D/83B2: F8 40  wait 64 frames
+0D/83B4: 24     npc 2: face right
+0D/83B5: F0 3F  event dialogue $3F:
+                  ???
+0D/83B7: 33     npc 3: move up
+0D/83B8: 33     npc 3: move up
+0D/83B9: 34     npc 3: face right
+0D/83BA: 20     npc 2: move right
+0D/83BB: 20     npc 2: move right
+0D/83BC: F8 20  wait 32 frames
+0D/83BE: F0 3F  event dialogue $3F:
+                  ???
+0D/83C0: 25     npc 2: face left
+0D/83C1: 32     npc 3: move down
+0D/83C2: 32     npc 3: move down
+0D/83C3: 21     npc 2: move left
+0D/83C4: 32     npc 3: move down
+0D/83C5: 31     npc 3: move left
+0D/83C6: 31     npc 3: move left
+0D/83C7: F0 28  event dialogue $28:
+                  POW!BAM!
+0D/83C9: 2F     hide npc 2
+0D/83CA: F8 40  wait 64 frames
+0D/83CC: 31     npc 3: move left
+0D/83CD: 31     npc 3: move left
+0D/83CE: 37     npc 3: face up
+0D/83CF: F0 29  event dialogue $29:
+                  Paul:I owed you one for
+                  saving me from the mines.
+                  You'd better get moving!
+0D/83D1: 0F     hide npc 0
+0D/83D2: 1F     hide npc 1
+0D/83D3: C2     move down
+0D/83D4: C2     move down
+0D/83D5: 30     npc 3: move right
+0D/83D6: F9 03  repeat 3 times
+0D/83D8: C2     move down
+0D/83D9: C4     face right
+0D/83DA: 30     npc 3: move right
+0D/83DB: F9 04  repeat 4 times
+0D/83DD: 3F     hide npc 3
+0D/83DE: F7 3D  toggle event switch $3D ($6047.5)
+0D/83E0: F7 F4  toggle event switch $F4 ($605E.4)
+0D/83E1: FF     end of script
+
+-------------------------[ event $0C: rescue hilda ]-------------------------
+
+0D/83E3: 0F     hide npc 0
+0D/83E4: 1F     hide npc 1
+0D/83E5: F8 20  wait 32 frames
+0D/83E7: C3     move up
+0D/83E8: 3B     show npc 3 (face up)
+0D/83E9: 33     npc 3: move up
+0D/83EA: 33     npc 3: move up
+0D/83EB: 22     npc 2: move down
+0D/83EC: 33     npc 3: move up
+0D/83ED: 21     npc 2: move left
+0D/83EE: 33     npc 3: move up
+0D/83EF: 34     npc 3: face right
+0D/83F0: F8 40  wait 64 frames
+0D/83F2: F0 2A  event dialogue $2A:
+                  Gordon:Hilda,are you
+                  alright?
+                  Hilda:G-Gordon?!You came
+                  for…me?
+0D/83F4: C3     move up
+0D/83F5: C3     move up
+0D/83F6: C3     move up
+0D/83F7: C1     move left
+0D/83F8: C3     move up
+0D/83F9: C4     face right
+0D/83FA: 35     npc 3: face left
+0D/83FB: F8 20  wait 32 frames
+0D/83FD: F0 2B  event dialogue $2B:
+                  Firion:Gordon,take the
+                  Princess and go!We'll
+                  distract the guards while
+                  you escape.
+                  Gordon:Got it.Be careful!
+0D/83FF: 32     npc 3: move down
+0D/8400: 21     npc 2: move left
+0D/8401: 32     npc 3: move down
+0D/8402: 22     npc 2: move down
+0D/8403: C0     move right
+0D/8404: 32     npc 3: move down
+0D/8405: 22     npc 2: move down
+0D/8406: C2     move down
+0D/8407: 32     npc 3: move down
+0D/8408: 22     npc 2: move down
+0D/8409: C2     move down
+0D/840A: 32     npc 3: move down
+0D/840B: 22     npc 2: move down
+0D/840C: C2     move down
+0D/840D: 31     npc 3: move left
+0D/840E: 22     npc 2: move down
+0D/840F: C2     move down
+0D/8410: 31     npc 3: move left
+0D/8411: 21     npc 2: move left
+0D/8412: C2     move down
+0D/8413: C5     face left
+0D/8414: 31     npc 3: move left
+0D/8415: 21     npc 2: move left
+0D/8416: 31     npc 3: move left
+0D/8417: 21     npc 2: move left
+0D/8418: 31     npc 3: move left
+0D/8419: 21     npc 2: move left
+0D/841A: 31     npc 3: move left
+0D/841B: 21     npc 2: move left
+0D/841C: 31     npc 3: move left
+0D/841D: 21     npc 2: move left
+0D/841E: 31     npc 3: move left
+0D/841F: 21     npc 2: move left
+0D/8420: 31     npc 3: move left
+0D/8421: 21     npc 2: move left
+0D/8422: 3F     hide npc 3
+0D/8423: 21     npc 2: move left
+0D/8424: 2F     hide npc 2
+0D/8425: F6 04  set event switch $04 ($6040.4)
+0D/8427: F6 AD  set event switch $AD ($6055.5)
+0D/8429: F7 F5  toggle event switch $F5 ($605E.5)
+0D/842B: F7 16  toggle event switch $16 ($6042.6)
+0D/842D: F7 60  toggle event switch $60 ($604C.0)
+0D/842F: F7 61  toggle event switch $61 ($604C.1)
+0D/8431: F7 62  toggle event switch $62 ($604C.2)
+0D/8433: F7 63  toggle event switch $63 ($604C.3)
+0D/8435: F7 64  toggle event switch $64 ($604C.4)
+0D/8437: F7 65  toggle event switch $65 ($604C.5)
+0D/8439: F7 66  toggle event switch $66 ($604C.6)
+0D/843B: F7 67  toggle event switch $67 ($604C.7)
+0D/843D: F7 68  toggle event switch $68 ($604D.0)
+0D/843F: F7 69  toggle event switch $69 ($604D.1)
+0D/8441: F7 6A  toggle event switch $6A ($604D.2)
+0D/8443: F7 6B  toggle event switch $6B ($604D.3)
+0D/8445: F7 6C  toggle event switch $6C ($604D.4)
+0D/8447: D4     toggle $6012.4
+0D/8448: D1     toggle $6012.1
+0D/8449: F7 3E  toggle event switch $3E ($6047.6)
+0D/844B: EF     remove guest character
+0D/844C: FF     end of script
+
+----------------------[ event $0D: emperor resurrected ]---------------------
+
+0D/844D: F8 80  wait 128 frames
+0D/844F: C2     move down
+0D/8450: F9 04  repeat 4 times
+0D/8452: C7     face up
+0D/8453: 02     npc 0: move down
+0D/8454: 02     npc 0: move down
+0D/8455: 02     npc 0: move down
+0D/8456: 02     npc 0: move down
+0D/8457: F8 40  wait 64 frames
+0D/8459: AB     show npc 10 (face up)
+0D/845A: F8 80  wait 128 frames
+0D/845C: F0 2D  event dialogue $2D:
+                  Maria:Stop!Both of you!
+                  Why do you insist on
+                  fighting,Leon?
+                  Leon:Do you know what
+                  rules the world? Sheer
+                  power!It belongs to me!
+                  Step aside,Maria!
+0D/845E: E0     shake screen
+0D/845F: E0     shake screen
+0D/8460: E0     shake screen
+0D/8461: F5 5C  play song $1C
+0D/8463: 1A     show npc 1 (face down)
+0D/8464: 1F     hide npc 1
+0D/8465: 1A     show npc 1 (face down)
+0D/8466: 1F     hide npc 1
+0D/8467: 1A     show npc 1 (face down)
+0D/8468: 1F     hide npc 1
+0D/8469: 1A     show npc 1 (face down)
+0D/846A: 1F     hide npc 1
+0D/846B: 1A     show npc 1 (face down)
+0D/846C: E6     flash screen
+0D/846D: E0     shake screen
+0D/846E: F8 20  wait 32 units
+0D/8470: 07     npc 0: face up
+0D/8471: E6     flash screen
+0D/8472: E0     shake screen
+0D/8473: E6     flash screen
+0D/8474: E0     shake screen
+0D/8475: E6     flash screen
+0D/8476: E0     shake screen
+0D/8477: F8 80  wait 128 frames
+0D/8479: F0 2E  event dialogue $2E:
+                  Emperor:From Hell I rise
+                  to claim this world.
+                  You,Leon? Emperor? Ha!
+                  That's laughable!
+0D/847B: E6     flash screen
+0D/847C: E6     flash screen
+0D/847D: A1     npc A: move left
+0D/847E: A2     npc A: move down
+0D/847F: A2     npc A: move down
+0D/8480: A0     npc A: move right
+0D/8481: A7     npc A: face up
+0D/8482: F8 80  wait 128 frames
+0D/8484: F0 2F  event dialogue $2F:
+                  Leon:How are you…!?
+                  The Empire is mine!
+0D/8486: F8 40  wait 64 frames
+0D/8488: E0     shake screen
+0D/8489: 3A     show npc 3 (face down)
+0D/848A: F8 40  wait 64 frames
+0D/848C: E0     shake screen
+0D/848D: 2A     show npc 2 (face down)
+0D/848E: F8 40  wait 64 frames
+0D/8490: E0     shake screen
+0D/8491: 7A     show npc 7 (face down)
+0D/8492: F8 40  wait 64 frames
+0D/8494: E0     shake screen
+0D/8495: 4A     show npc 4 (face down)
+0D/8496: F8 40  wait 64 frames
+0D/8498: E0     shake screen
+0D/8499: 5A     show npc 5 (face down)
+0D/849A: F8 40  wait 64 frames
+0D/849C: E0     shake screen
+0D/849D: 6A     show npc 6 (face down)
+0D/849E: F8 80  wait 128 frames
+0D/84A0: F0 30  event dialogue $30:
+                  Emperor:The Empire? Ha!
+                  I've no need for such
+                  trifles.The world shall
+                  fall,starting with you!
+0D/84A2: E6     flash screen
+0D/84A3: E6     flash screen
+0D/84A4: F8 20  wait 32 frames
+0D/84A6: E0     shake screen
+0D/84A7: E6     flash screen
+0D/84A8: 32     npc 3: move down
+0D/84A9: 72     npc 7: move down
+0D/84AA: 22     npc 2: move down
+0D/84AB: F8 20  wait 32 frames
+0D/84AD: 02     npc 0: move down
+0D/84AE: 07     npc 0: face up
+0D/84AF: F8 40  wait 64 frames
+0D/84B1: E0     shake screen
+0D/84B2: E6     flash screen
+0D/84B3: 32     npc 3: move down
+0D/84B4: 72     npc 7: move down
+0D/84B5: 22     npc 2: move down
+0D/84B6: F8 80  wait 128 frames
+0D/84B8: E0     shake screen
+0D/84B9: E6     flash screen
+0D/84BA: 88     show npc 8 (face right)
+0D/84BB: 9B     show npc 9 (face up)
+0D/84BC: 93     npc 9: move up
+0D/84BD: 93     npc 9: move up
+0D/84BE: 93     npc 9: move up
+0D/84BF: 91     npc 9: move left
+0D/84C0: 96     npc 9: face down
+0D/84C1: F8 80  wait 128 frames
+0D/84C3: F0 31  event dialogue $31:
+                  Richard:Get on the Wyvern!
+                  Firion:Richard!What're you
+                  doing?!
+0D/84C5: 93     npc 9: move up
+0D/84C6: 93     npc 9: move up
+0D/84C7: F8 40  wait 64 frames
+0D/84C9: E0     shake screen
+0D/84CA: E6     flash screen
+0D/84CB: E0     shake screen
+0D/84CC: E6     flash screen
+0D/84CD: E0     shake screen
+0D/84CE: E6     flash screen
+0D/84CF: F8 80  wait 128 frames
+0D/84D1: F0 32  event dialogue $32:
+                  Richard:I'm sending you
+                  back to where you belong!
+                  Emperor:Fool!
+                  Richard:Gaaaah!
+                  Maria:Richard!
+0D/84D3: F8 20  wait 32 frames
+0D/84D5: 83     npc 8: move up
+0D/84D6: 80     npc 8: move right
+0D/84D7: 0F     hide npc 0
+0D/84D8: 80     npc 8: move right
+0D/84D9: 82     npc 8: move down
+0D/84DA: 82     npc 8: move down
+0D/84DB: 81     npc 8: move left
+0D/84DC: AF     hide npc A
+0D/84DD: 83     npc 8: move up
+0D/84DE: F1 07  exit (to world map)
+0D/84E0: E5     pandaemonium castle animation
+0D/84E1: F8 28  wait 40 frames
+0D/84E3: F4 1F  entrance $1F
+0D/84E5: 0B     show npc 0 (face up)
+0D/84E6: 1B     show npc 1 (face up)
+0D/84E7: 2B     show npc 2 (face up)
+0D/84E8: 3B     show npc 3 (face up)
+0D/84E9: C7     face up
+0D/84EA: 32     npc 3: move down
+0D/84EB: 30     npc 3: move right
+0D/84EC: 30     npc 3: move right
+0D/84ED: 3C     npc 3: start animation
+0D/84EE: 32     npc 3: move down
+0D/84EF: F9 0F  repeat 15 times
+0D/84F1: 3D     npc 3: stop animation
+0D/84F2: F8 80  wait 128 frames
+0D/84F4: F0 33  event dialogue $33:
+                  Hilda:Firion!
+                  …
+                  The Dark Knight!
+                  What's going on?
+                  Firion:The Emperor…has
+                  resurrected…
+                  
+                  
+                  Maria:And the Dragoon
+                  sacrificed himself to save
+                  us…
+                  
+                  Josef,Minwu,Cid,Richard…
+                  How many more must die?  
+0D/84F6: F8 20  wait 32 frames
+0D/84F8: 24     npc 2: face right
+0D/84F9: F0 4C  event dialogue $4C:
+                  Leon:While the Emperor
+                  lives,more will die.
+                  Firion:Leon…
+                  Princess,please let Leon
+                  join us.
+                  Hilda:The Dark Knight? I…
+                  It's your decision.
+                  Maria:Brother…please.
+0D/84FB: 04     npc 0: face right
+0D/84FC: F8 80  wait 128 frames
+0D/84FE: 25     npc 2: face left
+0D/84FF: F0 0D  event dialogue $0D:
+                  Leon:Alright,Maria.
+0D/8501: 0F     hide npc 0
+0D/8502: 1F     hide npc 1
+0D/8503: 2F     hide npc 2
+0D/8504: C2     move down
+0D/8505: C2     move down
+0D/8506: C2     move down
+0D/8507: F6 2A  set event switch $2A ($6045.2)
+0D/8509: F7 1D  toggle event switch $1D ($6043.5)
+0D/850B: EF     remove guest character
+0D/850C: D5     toggle $6012.5
+0D/850D: EE     add leon to party
+0D/850E: FF     end of script
+
+------------------------[ event $0E: wyvern hatches ]------------------------
+
+0D/850F: E6     flash screen
+0D/8510: E6     flash screen
+0D/8511: E6     flash screen
+0D/8512: 28     show npc 2 (face right)
+0D/8513: F8 80  wait 128 frames
+0D/8515: F0 2C  event dialogue $2C:
+                  A Wyvern shines in the
+                  mirror.
+                  The last Wyvern egg has
+                  hatched!
+0D/8517: 2F     hide npc 2
+0D/8518: F8 80  wait 128 frames
+0D/851A: 9A     show npc 9 (face down)
+0D/851B: 92     npc 9: move down
+0D/851C: F9 05  repeat 5 times
+0D/851E: 90     npc 9: move right
+0D/851F: F9 06  repeat 6 times
+0D/8521: 93     npc 9: move up
+0D/8522: 93     npc 9: move up
+0D/8523: 93     npc 9: move up
+0D/8524: 91     npc 9: move left
+0D/8525: F9 03  repeat 3 times
+0D/8527: 92     npc 9: move down
+0D/8528: 92     npc 9: move down
+0D/8529: 94     npc 9: face right
+0D/852A: C5     face left
+0D/852B: F0 34  event dialogue $34:
+                  Wyvern and Dragoon are
+                  united once more!
+0D/852D: 9F     hide npc 9
+0D/852E: F7 46  toggle event switch $46 ($6048.6)
+0D/8530: FF     end of script
+
+--------------------[ event $0F: final battle and ending ]-------------------
+
+0D/8531: F8 40  wait 64 frames
+0D/8533: F0 37  event dialogue $37:
+                  Emperor:So you've made it…
+                  This time,you will die!
+0D/8535: F3 7E  battle $7E
+0D/8537: E0     shake screen
+0D/8538: F8 20  wait 32 frames
+0D/853A: F0 38  event dialogue $38:
+                  Emperor:Unbelievable…
+                  Defeated by you…twice!
+                  What…are…you?
+                  Ungaaah!
+0D/853C: 0F     hide npc 0
+0D/853D: E0     shake screen
+0D/853E: E6     flash screen
+0D/853F: F0 39  event dialogue $39:
+                  Firion:Let's get out of
+                  here!
+0D/8541: F2 FF  entrance $FF
+0D/8543: F5 51  play song $11
+0D/8545: 0B     show npc 0 (face up)
+0D/8546: 1B     show npc 1 (face up)
+0D/8547: 2B     show npc 2 (face up)
+0D/8548: C7     face up
+0D/8549: 3A     show npc 3 (face down)
+0D/854A: 4A     show npc 4 (face down)
+0D/854B: 59     show npc 5 (face left)
+0D/854C: 69     show npc 6 (face left)
+0D/854D: 75     npc 7: face left
+0D/854E: 8F     hide npc 8
+0D/854F: 9F     hide npc 9
+0D/8550: F8 40  wait 64 frames
+0D/8552: 03     npc 0: move up
+0D/8553: 13     npc 1: move up
+0D/8554: 23     npc 2: move up
+0D/8555: C3     move up
+0D/8556: 03     npc 0: move up
+0D/8557: 13     npc 1: move up
+0D/8558: 23     npc 2: move up
+0D/8559: C3     move up
+0D/855A: 03     npc 0: move up
+0D/855B: 13     npc 1: move up
+0D/855C: 23     npc 2: move up
+0D/855D: C3     move up
+0D/855E: 03     npc 0: move up
+0D/855F: 13     npc 1: move up
+0D/8560: 23     npc 2: move up
+0D/8561: C3     move up
+0D/8562: 03     npc 0: move up
+0D/8563: 13     npc 1: move up
+0D/8564: 23     npc 2: move up
+0D/8565: C3     move up
+0D/8566: 03     npc 0: move up
+0D/8567: 13     npc 1: move up
+0D/8568: 23     npc 2: move up
+0D/8569: C3     move up
+0D/856A: 03     npc 0: move up
+0D/856B: 13     npc 1: move up
+0D/856C: 23     npc 2: move up
+0D/856D: C3     move up
+0D/856E: 03     npc 0: move up
+0D/856F: 13     npc 1: move up
+0D/8570: 23     npc 2: move up
+0D/8571: C3     move up
+0D/8572: 03     npc 0: move up
+0D/8573: 13     npc 1: move up
+0D/8574: 23     npc 2: move up
+0D/8575: C3     move up
+0D/8576: 03     npc 0: move up
+0D/8577: 13     npc 1: move up
+0D/8578: C3     move up
+0D/8579: 03     npc 0: move up
+0D/857A: 13     npc 1: move up
+0D/857B: C3     move up
+0D/857C: 03     npc 0: move up
+0D/857D: 13     npc 1: move up
+0D/857E: C3     move up
+0D/857F: 20     npc 2: move right
+0D/8580: F9 03  repeat 3 times
+0D/8582: 25     npc 2: face left
+0D/8583: 32     npc 3: move down
+0D/8584: 42     npc 4: move down
+0D/8585: 32     npc 3: move down
+0D/8586: 42     npc 4: move down
+0D/8587: 32     npc 3: move down
+0D/8588: 42     npc 4: move down
+0D/8589: 30     npc 3: move right
+0D/858A: 41     npc 4: move left
+0D/858B: 32     npc 3: move down
+0D/858C: 42     npc 4: move down
+0D/858D: F8 80  wait 128 frames
+0D/858F: F0 3A  event dialogue $3A:
+                  Hilda:You've made it back!
+                  Gordon:Congratulations!
+0D/8591: 33     npc 3: move up
+0D/8592: 43     npc 4: move up
+0D/8593: 33     npc 3: move up
+0D/8594: 43     npc 4: move up
+0D/8595: 33     npc 3: move up
+0D/8596: 43     npc 4: move up
+0D/8597: 36     npc 3: face down
+0D/8598: 46     npc 4: face down
+0D/8599: 5C     npc 5: start animation
+0D/859A: 51     npc 5: move left
+0D/859B: 52     npc 5: move down
+0D/859C: 52     npc 5: move down
+0D/859D: 51     npc 5: move left
+0D/859E: 51     npc 5: move left
+0D/859F: 51     npc 5: move left
+0D/85A0: 56     npc 5: face down
+0D/85A1: F0 3B  event dialogue $3B:
+                  Paul:Wow!You're either
+                  brave or just lucky.
+                  Take care!
+0D/85A3: 51     npc 5: move left
+0D/85A4: 51     npc 5: move left
+0D/85A5: 52     npc 5: move down
+0D/85A6: F9 03  repeat 3 times
+0D/85A8: 52     npc 5: move down
+0D/85A9: 54     npc 5: face right
+0D/85AA: 57     npc 5: face up
+0D/85AB: 55     npc 5: face left
+0D/85AC: 56     npc 5: face down
+0D/85AD: F8 04  wait 4 frames
+0D/85AF: 54     npc 5: face right
+0D/85B0: 57     npc 5: face up
+0D/85B1: 55     npc 5: face left
+0D/85B2: 56     npc 5: face down
+0D/85B3: 52     npc 5: move down
+0D/85B4: F9 06  repeat 6 times
+0D/85B6: 5F     hide npc 5
+0D/85B7: 6C     npc 6: start animation
+0D/85B8: 61     npc 6: move left
+0D/85B9: 62     npc 6: move down
+0D/85BA: 61     npc 6: move left
+0D/85BB: 61     npc 6: move left
+0D/85BC: 61     npc 6: move left
+0D/85BD: 66     npc 6: face down
+0D/85BE: F0 3C  event dialogue $3C:
+                  Leila:Ye did great!
+                  Keep in touch!
+0D/85C0: 60     npc 6: move right
+0D/85C1: 60     npc 6: move right
+0D/85C2: 62     npc 6: move down
+0D/85C3: 62     npc 6: move down
+0D/85C4: 62     npc 6: move down
+0D/85C5: 65     npc 6: face left
+0D/85C6: 67     npc 6: face up
+0D/85C7: F8 80  wait 128 frames
+0D/85C9: 62     npc 6: move down
+0D/85CA: F9 05  repeat 5 times
+0D/85CC: 6F     hide npc 6
+0D/85CD: 7C     npc 7: start animation
+0D/85CE: 71     npc 7: move left
+0D/85CF: F9 03  repeat 3 times
+0D/85D1: 76     npc 7: face down
+0D/85D2: F0 3D  event dialogue $3D:
+                  Nelly:Daddy would be
+                  proud!Now I wanna help the
+                  Princess!
+0D/85D4: F8 40  wait 64 frames
+0D/85D6: 8A     show npc 8 (face down)
+0D/85D7: 8F     hide npc 8
+0D/85D8: 8A     show npc 8 (face down)
+0D/85D9: 8F     hide npc 8
+0D/85DA: 8A     show npc 8 (face down)
+0D/85DB: 8F     hide npc 8
+0D/85DC: 8A     show npc 8 (face down)
+0D/85DD: 8F     hide npc 8
+0D/85DE: 8A     show npc 8 (face down)
+0D/85DF: F0 3E  event dialogue $3E:
+                  Josef?
+0D/85E0: 8F     hide npc 8
+0D/85E1: 71     npc 7: move left
+0D/85E2: 73     npc 7: move up
+0D/85E3: 73     npc 7: move up
+0D/85E4: 73     npc 7: move up
+0D/85E5: 76     npc 7: face down
+0D/85E6: F8 80  wait 128 frames
+0D/85E8: F0 40  event dialogue $40:
+                  Hilda:We'll work hard to
+                  restore what was lost.
+                  Let's hope for the best!
+0D/85EA: F8 40  wait 64 frames
+0D/85EC: 31     npc 3: move left
+0D/85ED: 71     npc 7: move left
+0D/85EE: 41     npc 4: move left
+0D/85EF: 31     npc 3: move left
+0D/85F0: 71     npc 7: move left
+0D/85F1: 41     npc 4: move left
+0D/85F2: 31     npc 3: move left
+0D/85F3: 71     npc 7: move left
+0D/85F4: 41     npc 4: move left
+0D/85F5: 31     npc 3: move left
+0D/85F6: 71     npc 7: move left
+0D/85F7: 41     npc 4: move left
+0D/85F8: 31     npc 3: move left
+0D/85F9: 71     npc 7: move left
+0D/85FA: 41     npc 4: move left
+0D/85FB: 31     npc 3: move left
+0D/85FC: 71     npc 7: move left
+0D/85FD: 41     npc 4: move left
+0D/85FE: 31     npc 3: move left
+0D/85FF: 71     npc 7: move left
+0D/8600: 41     npc 4: move left
+0D/8601: 31     npc 3: move left
+0D/8602: 71     npc 7: move left
+0D/8603: 41     npc 4: move left
+0D/8604: 3F     hide npc 3
+0D/8605: 71     npc 7: move left
+0D/8606: 41     npc 4: move left
+0D/8607: 7F     hide npc 7
+0D/8608: 41     npc 4: move left
+0D/8609: 4F     hide npc 4
+0D/860A: 14     npc 1: face right
+0D/860B: C5     face left
+0D/860C: F0 41  event dialogue $41:
+                  Guy:War finally over!
+                  Firion:Yes!
+0D/860E: 05     npc 0: face left
+0D/8610: C4     face right
+0D/8611: F0 42  event dialogue $42:
+                  Maria:We can all be
+                  together again…
+                  Firion:…
+0D/8613: 04     npc 0: face right
+0D/8614: F0 43  event dialogue $43:
+                  Maria:Right,Leon?
+0D/8616: 21     npc 2: move left
+0D/8617: F9 05  repeat 5 times
+0D/8619: C6     face down
+0D/861A: 06     npc 0: face down
+0D/861B: 16     npc 1: face down
+0D/861C: 27     npc 2: face up
+0D/861D: F8 80  wait 128 frames
+0D/861F: F0 44  event dialogue $44:
+                  Leon:We can't.
+                  Not after all this…
+0D/8621: 26     npc 2: face down
+0D/8622: F0 45  event dialogue $45:
+                  Maria:But…why?
+                  Wait!Firion,stop him!
+                  Firion:No…Leon is right.
+0D/8624: 22     npc 2: move down
+0D/8625: F9 03  repeat 3 times
+0D/8627: F0 46  event dialogue $46:
+                  Firion:We'll meet again,
+                  Leon.
+0D/8629: 22     npc 2: move down
+0D/862A: 2F     hide npc 2
+0D/862B: F8 C0  wait 192 frames
+0D/862D: C2     move down
+0D/862E: 02     npc 0: move down
+0D/862F: 12     npc 1: move down
+0D/8630: F8 40  wait 64 frames
+0D/8632: AA     show npc A (face down)
+0D/8633: AF     hide npc A
+0D/8634: AA     show npc A (face down)
+0D/8635: AF     hide npc A
+0D/8636: AA     show npc A (face down)
+0D/8637: AF     hide npc A
+0D/8638: AA     show npc A (face down)
+0D/8639: 02     npc 0: move down
+0D/863A: 12     npc 1: move down
+0D/863B: C2     move down
+0D/863C: 9A     show npc 9 (face down)
+0D/863D: 9F     hide npc 9
+0D/863E: 9A     show npc 9 (face down)
+0D/863F: 9F     hide npc 9
+0D/8640: 9A     show npc 9 (face down)
+0D/8641: 9F     hide npc 9
+0D/8642: 9A     show npc 9 (face down)
+0D/8643: 02     npc 0: move down
+0D/8644: 12     npc 1: move down
+0D/8645: C2     move down
+0D/8646: BA     show npc B (face down)
+0D/8647: BF     hide npc B
+0D/8648: BA     show npc B (face down)
+0D/8649: BF     hide npc B
+0D/864A: BA     show npc B (face down)
+0D/864B: BF     hide npc B
+0D/864C: BA     show npc B (face down)
+0D/864D: 02     npc 0: move down
+0D/864E: 12     npc 1: move down
+0D/864F: C2     move down
+0D/8650: 8A     show npc 8 (face down)
+0D/8651: 8F     hide npc 8
+0D/8652: 8A     show npc 8 (face down)
+0D/8653: 8F     hide npc 8
+0D/8654: 8A     show npc 8 (face down)
+0D/8655: 8F     hide npc 8
+0D/8656: 8A     show npc 8 (face down)
+0D/8657: 02     npc 0: move down
+0D/8658: 12     npc 1: move down
+0D/8659: C2     move down
+0D/865A: F8 C0  wait 192 frames
+0D/865C: C7     face up
+0D/865D: F8 40  wait 64 frames
+0D/865F: AF     hide npc A
+0D/8660: F8 40  wait 64 frames
+0D/8662: 9F     hide npc 9
+0D/8663: F8 40  wait 64 frames
+0D/8665: BF     hide npc B
+0D/8666: F8 40  wait 64 frames
+0D/8668: 8F     hide npc 8
+0D/8669: F8 40  wait 64 frames
+0D/866B: 07     npc 0: face up
+0D/866C: 17     npc 1: face up
+0D/866D: F8 80  wait 128 frames
+0D/866F: 05     npc 0: face left
+0D/8670: 14     npc 1: face right
+0D/8671: F8 40  wait 64 frames
+0D/8673: C4     face right
+0D/8674: F8 80  wait 128 frames
+0D/8676: C7     face up
+0D/8677: C5     face left
+0D/8678: F8 80  wait 128 frames
+0D/867A: C6     face down
+0D/867B: F0 47  event dialogue $47:
+                  Firion:Let's get going!
+0D/867D: 02     npc 0: move down
+0D/867E: 12     npc 1: move down
+0D/867F: C2     move down
+0D/8680: 02     npc 0: move down
+0D/8681: 12     npc 1: move down
+0D/8682: C2     move down
+0D/8682: 02     npc 0: move down
+0D/8682: 12     npc 1: move down
+0D/8682: C2     move down
+0D/8682: 02     npc 0: move down
+0D/8682: 12     npc 1: move down
+0D/8682: C2     move down
+0D/8682: 02     npc 0: move down
+0D/8682: 12     npc 1: move down
+0D/8682: C2     move down
+0D/8682: F5 5D  play song $1D
+0D/8682: E7     end credits
+0D/8682: FF     end of script
+
+-------------------------------[ event $10:  ]-------------------------------
+
+0D/8690: E6     flash screen
+0D/8691: E0     shake screen
+0D/8692: E6     flash screen
+0D/8693: E0     shake screen
+0D/8694: E6     flash screen
+0D/8695: E0     shake screen
+0D/8696: D2     toggle $6012.2
+0D/8697: D6     toggle $6012.6
+0D/8698: D7     toggle $6012.7
+0D/8699: D8     toggle $6013.0
+0D/869A: D9     toggle $6013.1
+0D/869B: F7 41  toggle event switch $41 ($6048.1)
+0D/869D: F7 42  toggle event switch $42 ($6048.2)
+0D/869F: F7 43  toggle event switch $43 ($6048.3)
+0D/86A1: F7 44  toggle event switch $44 ($6048.4)
+0D/86A3: F7 45  toggle event switch $45 ($6048.5)
+0D/86A5: F7 92  toggle event switch $92 ($6052.2)
+0D/86A7: F7 93  toggle event switch $93 ($6052.3)
+0D/86A9: F7 94  toggle event switch $94 ($6052.4)
+0D/86AB: F7 95  toggle event switch $95 ($6052.5)
+0D/86AD: F7 96  toggle event switch $96 ($6052.6)
+0D/86AF: F7 97  toggle event switch $97 ($6052.7)
+0D/86B1: F1 09  exit (to world map)
+0D/86B3: FF     end of script
+
+--------------------[ event $11: pandaemonium entrance ]---------------------
+
+0D/86B4: E6     flash screen
+0D/86B5: C4     face right
+0D/86B6: E6     flash screen
+0D/86B7: C6     face down
+0D/86B8: E6     flash screen
+0D/86B9: C5     face left
+0D/86BA: E6     flash screen
+0D/86BB: C7     face up
+0D/86BC: E6     flash screen
+0D/86BD: C4     face right
+0D/86BE: E6     flash screen
+0D/86BF: C6     face down
+0D/86C0: E6     flash screen
+0D/86C1: C5     face left
+0D/86C2: E6     flash screen
+0D/86C3: C7     face up
+0D/86C4: E6     flash screen
+0D/86C5: C4     face right
+0D/86C6: E6     flash screen
+0D/86C7: C6     face down
+0D/86C8: E6     flash screen
+0D/86C9: C5     face left
+0D/86CA: E6     flash screen
+0D/86CB: C7     face up
+0D/86CC: E6     flash screen
+0D/86CD: F2 ED  entrance $ED
+0D/86CF: E6     flash screen
+0D/86D0: C4     face right
+0D/86D1: E6     flash screen
+0D/86D2: C6     face down
+0D/86D3: E6     flash screen
+0D/86D4: C5     face left
+0D/86D5: E6     flash screen
+0D/86D6: C7     face up
+0D/86D7: E6     flash screen
+0D/86D8: C4     face right
+0D/86D9: E6     flash screen
+0D/86DA: C6     face down
+0D/86DB: E6     flash screen
+0D/86DC: C5     face left
+0D/86DD: E6     flash screen
+0D/86DE: C7     face up
+0D/86DF: E6     flash screen
+0D/86E0: C4     face right
+0D/86E1: E6     flash screen
+0D/86E2: C6     face down
+0D/86E3: E6     flash screen
+0D/86E4: C5     face left
+0D/86E5: E6     flash screen
+0D/86E6: C7     face up
+0D/86E7: E6     flash screen
+0D/86E8: F0 36  event dialogue $36:
+                  The castle of Hell…
+                  Pandaemonium!
+0D/86EA: FF     end of script
+
+------------------[ event $12: minwu opens door and dies ]-------------------
+
+0D/86EB: F8 40  wait 64 frames
+0D/86EC: C1     move left
+0D/86ED: C1     move left
+0D/86EE: C4     face right
+0D/86EF: 0F     hide npc 0
+0D/86F0: 3A     show npc 3 (face down)
+0D/86F1: F5 5E  play song $1E
+0D/86F3: 5A     show npc 5 (face down)
+0D/86F4: 6A     show npc 6 (face down)
+0D/86F5: 7A     show npc 7 (face down)
+0D/86F6: 8A     show npc 8 (face down)
+0D/86F7: E6     flash screen
+0D/86F8: E0     shake screen
+0D/86F9: 1F     hide npc 1
+0D/86FA: E6     flash screen
+0D/86FB: E0     shake screen
+0D/86FC: 2F     hide npc 2
+0D/86FD: E6     flash screen
+0D/86FE: 5F     hide npc 5
+0D/86FF: 6F     hide npc 6
+0D/8700: 7F     hide npc 7
+0D/8701: 8F     hide npc 8
+0D/8702: 3F     hide npc 3
+0D/8703: 4A     show npc 4 (face down)
+0D/8704: C0     move right
+0D/8705: C0     move right
+0D/8706: C7     face up
+0D/8707: F0 35  event dialogue $35:
+                  Maria:Minwu!
+                  Minwu:Go…through…the door…
+                  This…was my…destiny…
+                  Firion:Minwu!
+0D/8709: 4F     hide npc 4
+0D/870A: F5 56  play song $16
+0D/870C: F8 FF  wait 255 frames
+0D/870E: C3     move up
+0D/870F: F9 04  repeat 4 times
+0D/8711: F7 80  toggle event switch $80 ($6050.0)
+0D/8713: F7 4F  toggle event switch $4F ($6049.7)
+0D/8715: F7 0A  toggle event switch $0A ($6041.2)
+0D/8717: FF     end of script
+
+------------------------[ event $13: fall down hole ]------------------------
+
+0D/8719: F8 20  wait 32 frames
+0D/871B: C4     face right
+0D/871C: C6     face down
+0D/871D: C5     face left
+0D/871E: C7     face up
+0D/871F: C4     face right
+0D/8720: C6     face down
+0D/8721: C5     face left
+0D/8722: C7     face up
+0D/8723: C4     face right
+0D/8724: C6     face down
+0D/8725: C5     face left
+0D/8726: C7     face up
+0D/8727: F2 3F  entrance $3F
+0D/8729: C4     face right
+0D/872A: C6     face down
+0D/872B: C5     face left
+0D/872C: C7     face up
+0D/872D: C4     face right
+0D/872E: C6     face down
+0D/872F: C5     face left
+0D/8730: C7     face up
+0D/8731: C4     face right
+0D/8732: C6     face down
+0D/8733: C5     face left
+0D/8734: C7     face up
+0D/8735: C4     face right
+0D/8736: C6     face down
+0D/8737: C5     face left
+0D/8738: C7     face up
+0D/8739: C4     face right
+0D/873A: C6     face down
+0D/873B: C5     face left
+0D/873C: C7     face up
+0D/873D: C4     face right
+0D/873E: C6     face down
+0D/873F: C5     face left
+0D/8740: C7     face up
+0D/8741: C4     face right
+0D/8742: C6     face down
+0D/8743: C5     face left
+0D/8744: C7     face up
+0D/8745: C4     face right
+0D/8746: C6     face down
+0D/8747: C5     face left
+0D/8748: C7     face up
+0D/8749: C4     face right
+0D/874A: C6     face down
+0D/874B: C5     face left
+0D/874C: C7     face up
+0D/874D: C4     face right
+0D/874E: C6     face down
+0D/874F: C5     face left
+0D/8750: C7     face up
+0D/8751: F2 73  entrance $73
+0D/8753: C4     face right
+0D/8754: C6     face down
+0D/8755: C5     face left
+0D/8756: C7     face up
+0D/8757: C4     face right
+0D/8758: C6     face down
+0D/8759: F8 20  wait 32 frames
+0D/875B: F0 49  event dialogue $49:
+                  Fell to 1F.
+0D/875D: FF     end of script
+
+-----------------------------[ event $14: inn ]------------------------------
+
+0D/875E: C2     move down
+0D/875F: C1     move left
+0D/8760: F9 04  repeat 4 times
+0D/8762: C3     move up 
+0D/8763: F9 04  repeat 4 times
+0D/8765: C0     move right
+0D/8766: C6     face down
+0D/8767: C5     face left
+0D/8768: E8     filter map bg palette (blue)
+0D/8769: C1     move left
+0D/876A: C6     face down
+0D/876B: F8 20  repeat 32 times
+0D/876D: FD     exit (to previous map)
+0D/876E: FF     end of script
+
+-----------------------[ event $15: revive at statue ]-----------------------
+
+0D/876F: E6     flash screen
+0D/8770: E6     flash screen
+0D/8771: 3A     show npc 3 (face down)
+0D/8772: 32     npc 3: move down
+0D/8773: F9 08  repeat 8 times
+0D/8775: E6     flash screen
+0D/8776: E6     flash screen
+0D/8777: F5 42  play song $02
+0D/8779: 3F     hide npc 3
+0D/877A: F8 20  wait 32 frames
+0D/877C: CA     press start button
+0D/877D: FF     end of script
+
+----------------------[ event $16: leviathan entrance ]----------------------
+
+0D/877E: E9     leviathan waves animation
+0D/877F: F4 17  entrance $17
+0D/8781: F8 80  wait 128 frames
+0D/8783: F0 4E  event dialogue $4E:
+                  Firion:Where are we?
+                  …Where's Leila?!
+0D/8785: F6 18  set event switch $18 ($6043.0)
+0D/8787: EF     remove guest character
+0D/8788: FF     end of script
+
+------------------------[ event $17: gottos battle ]-------------------------
+
+0D/8789: F3 78  battle $78
+0D/878B: F0 4D  event dialogue $4D:
+                  Defeated enemy commander!
+0D/878D: F2 49  entrance $49
+0D/878F: FF     end of script
+
+-------------------------[ event $18: doppelganger ]-------------------------
+
+0D/8790: 05     npc 0: face left
+0D/8791: F0 4F  event dialogue $4F:
+                  Doppelganger:Out of OUR
+                  way!
+0D/8793: C1     move left
+0D/8794: 01     npc 0: move left
+0D/8795: C1     move left
+0D/8796: 01     npc 0: move left
+0D/8797: C1     move left
+0D/8798: 01     npc 0: move left
+0D/8799: F8 10  wait 16 frames
+0D/879B: C3     move up
+0D/879C: 03     npc 0: move up
+0D/879D: C3     move up
+0D/879E: 03     npc 0: move up
+0D/879F: F8 10  wait 16 frames
+0D/87A1: C2     move down
+0D/87A2: C2     move down
+0D/87A3: C4     face right
+0D/87A4: 02     npc 0: move down
+0D/87A5: 02     npc 0: move down
+0D/87A6: 04     npc 0: face right
+0D/87A7: F8 10  wait 16 frames
+0D/87A9: C6     face down
+0D/87AA: C5     face left
+0D/87AB: C7     face up
+0D/87AC: C4     face right
+0D/87AD: C6     face down
+0D/87AE: C5     face left
+0D/87AF: C7     face up
+0D/87B0: C4     face right
+0D/87B1: F8 10  wait 16 frames
+0D/87B3: 06     npc 0: face down
+0D/87B4: 05     npc 0: face left
+0D/87B5: 07     npc 0: face up
+0D/87B6: 04     npc 0: face right
+0D/87B7: 06     npc 0: face down
+0D/87B8: 05     npc 0: face left
+0D/87B9: 07     npc 0: face up
+0D/87BA: 04     npc 0: face right
+0D/87BB: F8 10  wait 16 frames
+0D/87BD: 00     npc 0: move right
+0D/87BE: C0     move right
+0D/87BF: 00     npc 0: move right
+0D/87C0: C0     move right
+0D/87C1: 00     npc 0: move right
+0D/87C2: C0     move right
+0D/87C3: 05     npc 0: face left
+0D/87C4: FF     end of script
+
+---------------------------[ event $19: cid dies ]---------------------------
+
+0D/87C5: 2C     npc 2: start animation
+0D/87C6: 22     npc 2: move down
+0D/87C7: 22     npc 2: move down
+0D/87C8: F9 03  repeat 3 times
+0D/87CA: 20     npc 2: move right
+0D/87CB: 25     npc 2: face left
+0D/87CC: 2D     npc 2: stop animation
+0D/87CD: F8 40  wait 64 frames
+0D/87CF: C2     move down
+0D/87D1: F9 04  repeat 4 times
+0D/87D3: C4     face right
+0D/87D4: F0 50  event dialogue $50:
+                  Guy:Cid okay?
+0D/87D6: 24     npc 2: face right
+0D/87D7: F8 80  wait 128 frames
+0D/87D9: F0 23  event dialogue $23:
+                  Cid:I'm a mess…
+                  But…my Airship's okay…
+                  You can borrow her…until I
+                  get better…
+                  Take…good…care…of…her…
+0D/87DB: 2F       hide npc 2
+0D/87DC: F5 56    play song $16
+0D/87DE: F7 26    toggle event switch $26 ($6044.6)
+0D/87E0: FF       end of script
+
+-----------------------------------------------------------------------------

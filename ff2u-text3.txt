@@ -1,0 +1,736 @@
+monster names
+0x0000: LegEater
+0x0001: VmpThorn
+0x0002: Hornet
+0x0003: QueenBee
+0x0004: Snowman
+0x0005: Sasquach
+0x0006: Icicle
+0x0007: Stalactite
+0x0008: Stalagmite
+0x0009: Sprinter
+0x000A: Phoracos
+0x000B: Admantose
+0x000C: LandTrtl
+0x000D: Ogre
+0x000E: OgreMage
+0x000F: OgreChief
+0x0010: DualHead
+0x0011: DualDead
+0x0012: Wererat
+0x0013: Stunner
+0x0014: DeadHead
+0x0015: Skull
+0x0016: Zombie
+0x0017: Ghoul
+0x0018: Ghast
+0x0019: Revenant
+0x001A: Shadow
+0x001B: Wraith
+0x001C: Spectre
+0x001D: Ghost
+0x001E: Antlion
+0x001F: Blade
+0x0020: Gottos
+0x0021: BstDemon
+0x0022: Chimera
+0x0023: Rhyos
+0x0024: ChSphinx
+0x0025: DethFlowr
+0x0026: DvilBloom
+0x0027: KillerFish
+0x0028: BoltFish
+0x0029: Helldiver
+0x002A: Cocatric
+0x002B: Pirate
+0x002C: Bucaneer
+0x002D: Borghen
+0x002E: ZomBorgn
+0x002F: BigHorn
+0x0030: WildHorn
+0x0031: Gigatoad
+0x0032: Poi\xF3Toad
+0x0033: SeaSnake
+0x0034: SeaDragn
+0x0035: LandRay
+0x0036: MantaRay
+0x0037: FlyngRay
+0x0038: Changer
+0x0039: Brain
+0x003A: Parasite
+0x003B: MegaPrste
+0x003C: Werewolf
+0x003D: DevilWolf
+0x003E: Imp
+0x003F: PitFiend
+0x0040: Malboro
+0x0041: TerraMlbr
+0x0042: GrMalbro
+0x0043: Basilisk
+0x0044: Salamandr
+0x0045: IceLizard
+0x0046: Eyemoeba
+0x0047: Hecteyes
+0x0048: Roundwrm
+0x0049: SandWorm
+0x004A: AbysWorm
+0x004B: GrnSlime
+0x004C: YelloJelly
+0x004D: RedMouss
+0x004E: BlkFlan
+0x004F: RedSoul
+0x0050: GreenSoul
+0x0051: YelloSoul
+0x0052: VampGirl
+0x0053: VampLady
+0x0054: 
+0x0055: EmpShade
+0x0056: Mantis
+0x0057: MntisKing
+0x0058: MntisDevil
+0x0059: RoylGuard
+0x005A: BlkKnght
+0x005B: DethRider
+0x005C: WdGolem
+0x005D: SteelGolem
+0x005E: MythGolem
+0x005F: Goblin
+0x0060: GblinGuard
+0x0061: GblinPrnc
+0x0062: Balloon
+0x0063: Grenade
+0x0064: Mine
+0x0065: Bomb
+0x0066: Soldier
+0x0067: Sergeant
+0x0068: Captain
+0x0069: General
+0x006A: Magician
+0x006B: Sorcerer
+0x006C: Wizard
+0x006D: Werepanthr
+0x006E: Coeurl
+0x006F: Lamia
+0x0070: QnLamia
+0x0071: HillGigas
+0x0072: FireGigas
+0x0073: IceGigas
+0x0074: ThundrGigs
+0x0075: Behemoth
+0x0076: KingBhmth
+0x0077: WhDragon
+0x0078: GnDragon
+0x0079: BlDragon
+0x007A: RdDragon
+0x007B: 
+0x007C: 
+0x007D: 
+0x007E: 
+0x007F: 
+
+text 4
+
+spell names
+0x0000: Fire
+0x0001: Thundr
+0x0002: Blizzrd
+0x0003: Scrg
+0x0004: Drain
+0x0005: Osmse
+0x0006: Flare
+0x0007: Sleep
+0x0008: Stun
+0x0009: Stop
+0x000A: Cnfse
+0x000B: Blind
+0x000C: Curse
+0x000D: Toad
+0x000E: Break
+0x000F: Death
+0x0010: Warp
+0x0011: Bsrk
+0x0012: Haste
+0x0013: Aura
+0x0014: Cure
+0x0015: Life
+0x0016: Basuna
+0x0017: Esuna
+0x0018: Barrier 
+0x0019: Blink
+0x001A: Prtec
+0x001B: Shell
+0x001C: Wall
+0x001D: Dspel
+0x001E: Mini
+0x001F: Silenc
+0x0020: Sap
+0x0021: Fog
+0x0022: Slow
+0x0023: Swap
+0x0024: Fear
+0x0025: Holy
+0x0026: Telept
+0x0027: Ultima
+items
+0x0028: Heal
+0x0029: EyeD
+0x002A: Antd
+0x002B: Cross
+0x002C: Hammr
+0x002D: Kiss
+0x002E: Needle
+0x002F: Rvive
+0x0030: Ether
+0x0031: Elixir
+0x0032: Abilty
+0x0033: Abilty
+0x0034: Drink
+monster attacks
+0x0035: Blaze
+0x0036: Freez
+0x0037: Bolt
+0x0038: P\xF3Cl
+0x0039: Bre\xEEth
+0x003A: Gaze
+0x003B: Chrm
+0x003C: Destr
+0x003D: X
+0x003E: Quak
+0x003F: Cy\xEAo
+0x0040: T\xEF\xF0\xF1mi8
+0x0041: Garlic 3
+0x0042: Bow
+0x0043: Rock
+0x0044: Blastr
+0x0045: Meteo
+
+text 5
+
+battle text
+0x0000: Attack
+0x0001: Flee
+0x0002: Magic
+0x0003: Items
+0x0004: R.Hand
+0x0005: L.Hand
+0x0006: Items
+0x0007: MP Cost
+0x0008: No Magic…
+0x0009: Preemptive Strike
+0x000A: Ambushed!
+0x000B: xHit
+0x000C:  DMG
+0x000D: Critical Hit!
+0x000E: Miss…
+0x000F: Escaped
+0x0010: Can't escape!
+0x0011: Asleep
+0x0012: Paralyzed
+0x0013: Nothing happened.
+0x0014: Not effective.
+0x0015:  fell!
+0x0016:  collapsed…
+0x0017:  lost.
+0x0018: You won!
+0x0019: Collapsed
+0x001A: Stopped
+0x001B: Toad
+0x001C: Amnesia
+0x001D: Cursed
+0x001E: Poisoned
+0x001F: Blinded
+0x0020: Confused
+0x0021: Paralyzed
+0x0022: Shrank
+0x0023: Silenced
+0x0024: Fell asleep
+0x0025: Envenomed
+0x0026: Rose!
+0x0027: Unpetrified
+0x0028: Back to human
+0x0029: Cured of
+0x002A: Uncursed
+0x002B: Cured of poison
+0x002C: Regained vision
+0x002D: Came to senses
+0x002E: Deparalyzed
+0x002F: Normal size
+0x0030: Desilenced
+0x0031: Woke up
+0x0032: Devenomed
+0x0033: Terrified enemy
+0x0034: Easy to dodge
+0x0035: M.Res up
+0x0036:  fell
+0x0037: Swapped HP/MP
+0x0038: B.Magic Wall
+0x0039: Wall broken
+0x003A: Magic blocked
+0x003B: Splitted
+0x003C:  Lv.up!
+0x003D: Can hit
+0x003E:  less
+0x003F:  more
+0x0040: Ice
+0x0041: Body
+0x0042: Poison
+0x0043: Death
+0x0044: Thunder
+0x0045: Mind
+0x0046: Fire
+0x0047: Matter
+0x0048:  resist!
+0x0049: White
+0x004A: Yellow
+0x004B: Green
+0x004C: Black
+0x004D: Blue
+0x004E: Orange
+0x004F: Red
+0x0050: Purple
+0x0051:  Aura
+0x0052: Ice
+0x0053: Body
+0x0054: Poison
+0x0055: Death
+0x0056: Thunder
+0x0057: Mind
+0x0058: Fire
+0x0059: Matter
+0x005A:  Res.Down
+0x005B: Attack
+0x005C: Defense
+0x005D: HP
+0x005E: MP
+0x005F: Strength
+0x0060: Intellect
+0x0061: Spirit
+0x0062: Agility
+0x0063: Stamina
+0x0064: M.Power
+0x0065:  up!
+0x0066:  up!
+0x0067:  down
+0x0068:  drained
+0x0069:  absorbed!
+0x006A:  up!
+0x006B:  gil found.
+0x006C: \unarmed
+0x006D: \shield
+0x006E: \knife
+0x006F: \staff
+0x0070: \spear
+0x0071: \sword
+0x0072: \axe
+0x0073: \bow
+
+event dialogue
+0x0000:  
+0x0001: Leila:Give up all yer loot
+        or else!
+        
+        
+        A fight ye wantin'?
+        Ye fools…Get 'em,boys!
+        
+0x0002: Leila:Fine,ye win…
+        Go on…Just make it quick.
+        
+        
+        Why aren't ye killing us…?
+        
+        
+        
+        Ye want to fight the
+        Empire…together!?
+        With outcasts like us?
+        
+0x0003: Alright!We'll take ye
+        anywhere ye wish!
+        
+        
+        
+          Leila joins the party!
+        
+0x0004: \x18[0xEF]:Will he live?
+        
+        
+        
+        Minwu:Yes.I sense a strong
+        life force within him.He
+        should wake up soon.
+        
+        \x18[0xEF]:We found them
+        gravely injured when we
+        fled from \x18[0x2F]…
+        
+0x0005: Minwu:Let him be for now.
+        This sigil will strengthen
+        him.
+        
+        \x18[0xEF]:Yes…Let's join the
+        others.If the Empire
+        completes the \x18[0xF3]
+        they're building in Bafsk…
+        the attack will begin in
+        earnest.We can't sit idly
+        by and watch.We must act!
+        
+0x0006: \x10\x02:W-Where am I?
+        Where is everyone…?
+0x0007: \x07!
+0x0008: \x11\x02!
+0x0009: \x12\x02!
+0x000A: \x11\x02:\x10\x02!You're
+        alive!I th-thought you…
+0x000B: \x10\x02:\x11\x02!\x12\x02!
+        Where's \x07?
+        
+        
+        \x12\x02:\x18[0xED] of \x18[0x2F]
+        save us.But \x07 not 
+        here.
+        
+        \x10\x02:I see…I'm sure he's
+        safe.
+        
+0x000C: \x18[0xEF]:You're all okay?
+        Good.
+        
+        
+        \x10\x02:Thank you,Your
+        Highness.Please,let us 
+        join the rebel army!
+        
+        \x18[0xEF]:I can't allow that.
+        You would only be throwing
+        your lives away.You need
+        to return home.
+        \x11\x02:But…we have no
+        homes.Not anymore…
+        The Empire attacked,and
+        our parents…
+        \x18[0xEF]:I'm truly sorry…
+        You're welcome to stay
+        here in Altair.If you
+        know our password,you
+        should be able to get by
+        well enough.The password
+        is \x18[0xF1].
+        
+0x000D: \x07:Alright,\x11\x02.
+0x000E: \x13\x02:Dammit!
+0x000F: \x13\x02:Go on!Get out!
+        \x12\x02:We not leave you!
+        \x13\x02:Can't…hold…much
+        longer!Run!
+0x0010: \x13\x02:It's up to…you
+        now…\x10\x02.My sweet
+        Nelly…
+        
+        
+          \x13\x02 is crushed under
+          the boulder.
+        
+        \x10\x02:\x13\x02!
+        
+0x0011: King:\x13\x02…Minwu…\x10\x02…
+        I have a favor to ask…
+0x0012: King:\x13\x02…you've grown
+        so strong…Please lead our
+        army…help \x18[0xEF]…
+        
+        \x18[0xEB]:I swear on my life
+        that I will!
+        
+        
+        King:Minwu…You know of the
+        seal that binds \bookUltima…
+        It can only be broken when
+        the world stands at the
+        brink of destruction…
+        I believe that time has
+        come…Do you agree?
+        
+        Minwu:I do.The time to
+        break the seal has come!
+        
+        
+        King:\x10\x02…Head to Deist,
+        home of the \x18[0xFA]s…
+        The Empire claims to have
+        wiped out the \x18[0xFA]s…
+        There has to be some
+        survivors…If we're to
+        defeat the Empire,we'll
+        need the help of the
+        \x18[0xFA]s and their
+        \x18[0xFB]s.With our combined
+        forces…victory will
+        come!
+0x0013: Take care…of…\x18[0xEF]…
+0x0014: Soldiers:Your Majesty!
+0x0015: \x18[0xEB]:A terrible loss,but
+        we must move on.The King
+        gave us orders,and we must
+        fulfill them!
+0x0016: \x18[0xF0]:Now fight!
+        The victor wins \x18[0xED]
+        \x18[0xEF]!
+0x0017: \x18[0xF0]:You may now claim
+        your reward!
+        
+        
+        
+          This is your chance to
+          slay the \x18[0xF0]!
+        
+0x0018: \x18[0xF0]:What a show,
+        \x10\x02!Surprised I know
+        your name?
+0x0019: \x18[0xEE]:Hmph.
+        Lock 'em up.
+0x001A: \x18[0xF0]:I'm not wasting my
+        time on you.Men,take them
+        out!
+0x001B: \x18[0xF0]:Not bad…Let's see
+        how you do against this!
+0x001C: \x18[0xF0]:Fine…
+        I'll do it myself!
+0x001D: \x10\x02:Let's get back to
+        \x18[0x2F]!
+0x001E: \x18[0xEF]:Thanks to you,peace
+        has been restored.Let us
+        celebrate!
+0x001F: Soldier:Your Highness!
+        The…\x18[0xEE]…\x07 has
+        declared…himself \x18[0xF0]!
+        Urgh…
+0x0020: \x18[0xEF]:No!Will the war ever
+        end? And \x07…!
+0x0021: Borghen:Ha!
+        Serves you right!
+0x0022: \x18[0xEE]:Don't consider
+        this a victory!
+        
+        
+        \x11\x02:That voice sounded
+        like…my brother's?!
+        
+        
+        \x10\x02:Nevermind that!Let's
+        hurry to Cid's \x18[0xF5]!
+        
+0x0023: Cid:I'm a mess…
+        
+        
+        
+        But…my \x18[0xF5]'s okay…
+        
+        
+        
+        You can borrow her…until I
+        get better…
+        
+        
+        Take…good…care…of…her…
+        
+0x0024: \x18[0xEF]:Come to me,\x10\x02…
+0x0025: \x18[0xEF]:What's wrong?
+        Come closer…
+        
+        
+        \x10\x02:W-Why…
+        
+        
+        
+        \x18[0xEF]:Don't keep a lady
+        waiting…
+        
+        
+        \x10\x02:Gulp…
+        
+0x0026: Bad news!
+        A tournament is being held
+        in \x18[0xF4]…and \x18[0xED]
+        \x18[0xEF] is the prize!
+0x0027: \x18[0xEB]:Let me come.
+        I must rescue \x18[0xEF].
+        
+        
+        \x13\x02:I know how ye feel,
+        Prince.I'll stay and watch
+        yer army.
+        
+0x0028: POW!BAM!
+0x0029: Paul:I owed you one for
+        saving me from the mines.
+        You'd better get moving!
+0x002A: \x18[0xEB]:\x18[0xEF],are you
+        alright?
+        \x18[0xEF]:G-\x18[0xEB]?!You came
+        for…me?
+0x002B: \x10\x02:\x18[0xEB],take the
+        \x18[0xED] and go!We'll
+        distract the guards while
+        you escape.
+        \x18[0xEB]:Got it.Be careful!
+        
+0x002C: A \x18[0xFB] shines in the
+        mirror.
+        
+        
+        The last \x18[0xFB] egg has
+        hatched!
+        
+0x002D: \x11\x02:Stop!Both of you!
+        Why do you insist on
+        fighting,\x07?
+        
+        \x07:Do you know what
+        rules the world? Sheer
+        power!It belongs to me!
+        Step aside,\x11\x02!
+0x002E: \x18[0xF0]:From Hell I rise
+        to claim this world.
+        You,\x07? Emperor? Ha!
+        That's laughable!
+0x002F: \x07:How are you…!?
+        The Empire is mine!
+0x0030: \x18[0xF0]:The Empire? Ha!
+        I've no need for such
+        trifles.The world shall
+        fall,starting with you!
+0x0031: \x13\x02:Get on the \x18[0xFB]!
+        \x10\x02:\x13\x02!What're you
+        doing?!
+0x0032: \x13\x02:I'm sending you
+        back to where you belong!
+        \x18[0xF0]:Fool!
+        \x13\x02:Gaaaah!
+        \x11\x02:\x13\x02!
+        
+0x0033: \x18[0xEF]:\x10\x02!
+        …
+        The \x18[0xEE]!
+        What's going on?
+        \x10\x02:The \x18[0xF0]…has
+        resurrected…
+        
+        
+        \x11\x02:And the \x18[0xFA]
+        sacrificed himself to save
+        us…
+        
+        Josef,Minwu,Cid,\x13\x02…
+        How many more must die?  
+        
+0x0034: \x18[0xFB] and \x18[0xFA] are
+        united once more!
+0x0035: \x11\x02:Minwu!
+        
+        
+        
+        Minwu:Go…through…the door…
+        This…was my…destiny…
+        
+        
+        \x10\x02:Minwu!
+        
+0x0036: The castle of Hell…
+        Pandaemonium!
+0x0037: \x18[0xF0]:So you've made it…
+        This time,you will die!
+0x0038: \x18[0xF0]:Unbelievable…
+        Defeated by you…twice!
+        What…are…you?
+        Ungaaah!
+0x0039: \x10\x02:Let's get out of
+        here!
+0x003A: \x18[0xEF]:You've made it back!
+        \x18[0xEB]:Congratulations!
+0x003B: Paul:Wow!You're either
+        brave or just lucky.
+        Take care!
+0x003C: Leila:Ye did great!
+        Keep in touch!
+0x003D: Nelly:Daddy would be
+        proud!Now I wanna help the
+        \x18[0xED]!
+0x003E: Josef?
+0x003F: ???
+0x0040: \x18[0xEF]:We'll work hard to
+        restore what was lost.
+        Let's hope for the best!
+0x0041: \x12\x02:War finally over!
+        \x10\x02:Yes!
+0x0042: \x11\x02:We can all be
+        together again…
+        \x10\x02:…
+0x0043: \x11\x02:Right,\x07?
+0x0044: \x07:We can't.
+        Not after all this…
+0x0045: \x11\x02:But…why?
+        Wait!\x10\x02,stop him!
+        \x10\x02:No…\x07 is right.
+0x0046: \x10\x02:We'll meet again,
+        \x07.
+0x0047: \x10\x02:Let's get going!
+0x0048: \x18[0xF0]:I…won't…die!
+0x0049: Fell to 1F.
+0x004A: \x18[0xEF]:Now you're mine,
+        \x10\x02!
+        
+        
+        \x10\x02:What've you done
+        with the \x18[0xED]?
+        
+        
+        \x13\x02:Not so fast,ye
+        scurvy snake!
+        
+0x004B: \x10\x02:Thanks,\x13\x02.
+        
+        
+        
+        \x13\x02:Don't let ye guard
+        down around pretty ladies!
+        
+        
+        \x12\x02:\x18[0xED] where?
+        
+0x004C: \x07:While the \x18[0xF0]
+        lives,more will die.
+        
+        
+        \x10\x02:\x07…
+        \x18[0xED],please let \x07
+        join us.
+        
+        \x18[0xEF]:The \x18[0xEE]? I…
+        It's your decision.
+        
+        
+        \x11\x02:Brother…please.
+        
+0x004D: Defeated enemy commander!
+0x004E: \x10\x02:Where are we?
+        …Where's \x13\x02?!
+0x004F: Doppelganger:Out of OUR
+        way!
+0x0050: \x12\x02:Cid okay?
+0x0051:  
+0x0052:  
+0x0053:  
+0x0054:  
+0x0055:  
+0x0056:  
+0x0057:  
+0x0058:  
+0x0059:  
+0x005A:  
+0x005B:  
+0x005C:  
+0x005D:  
+0x005E:  
+0x005F: 

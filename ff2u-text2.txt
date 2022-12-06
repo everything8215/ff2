@@ -1,0 +1,1307 @@
+dialogue (npc $60-$BF)
+0x0000: 
+0x0001: This is the King's room.
+        His Majesty was gravely
+        wounded in the flight from
+        \x18[0x2F].
+0x0002: This is the meeting room.
+0x0003: Paloom lies east.You can't
+        get there without a \x18[0x02].
+0x0004: Off to \x18[0x2F]? Bad idea!
+        The city's crawling with
+        the Empire's monsters.
+        
+        You'd be lucky to make it
+        to Gatrea up north!
+        
+0x0005: You're in the rebel
+        hideout of Altair.
+0x0006: Prince Gordon of Kashuan
+        is hiding here in Altair.
+        Something's made him
+        lose faith in himself.
+0x0007: \x18[0xED] \x18[0xEF] escaped to
+        this town when \x18[0x2F] was
+        sacked.
+        
+        She is leading the rebels
+        while the King recovers.
+        
+        
+0x0008: This is the town of
+        Altair.The imperial forces
+        haven't been deployed this
+        far.
+0x0009: Tobul,the man in the
+        weapon shop,is a skilled
+        blacksmith.
+        
+        Something's been bothering
+        him lately.
+        
+0x000A: You can trust Paul.He only
+        steals from the Empire.
+0x000B: \x18[0x2F]'s been taken over by
+        the Empire…
+0x000C: Gatrea and Altair haven't
+        fallen to the Empire…yet.
+        
+0x000D: There's a pub on the
+        outskirts of Fynn.When
+        the Empire invaded,the
+        owner didn't make it out
+        in time.Now he's serving
+        drinks to the imperials.
+        
+0x000E: This is the village of
+        Gatrea.\x18[0x2F] is across
+        the lake,see?
+0x000F: The King is most pleased
+        with your work!
+0x0010: The weapons we have
+        are no match for the
+        Empire's…
+        If only we had \x18[0xF2]…
+0x0011: Please bring \x18[0xF2]
+        back to Altair!
+0x0012: Off to Salamand? Go east
+        to Paloom,and take a ship
+        from there.You'd never
+        make it there on foot!
+0x0013: The Empire has enslaved
+        the town of Bafsk,and is
+        forcing them to build the
+        \x18[0xF3].
+0x0014: Use that \x18[0x02] to cross
+        the lake to the east to
+        reach Paloom.
+0x0015: If you can find some
+        \x18[0xF2] to give to Tobul,
+        he'll be able to make
+        some superb weapons.
+0x0016: Will the war ever end?
+0x0017: \x18[0xF2]? What's that?
+        Does it taste good?
+0x0018: In Paloom,take a ship
+        to Poft.From there,head
+        north to reach Salamand.
+0x0019: You've seen the \x18[0xF5]
+        flying about? A man named
+        Cid pilots it.
+0x001A: It's the warriors who've
+        caught the eye of \x18[0xED]
+        \x18[0xEF]!
+0x001B: Overthrow the Emperor and
+        restore peace to the
+        world!
+0x001C: Is that Scott's \x18[0x01]?
+        There's this spell that he
+        would say to the \x18[0x01] and
+        it would show a map.
+        It went like:
+        Tceles Nottub B
+        
+        
+0x001D: The ship headin' out of
+        here will take ye to
+        Poft.
+0x001E: This is the port town of
+        Paloom.
+0x001F: The cities past Poft are
+        occupied by the Empire.
+0x0020: Paloom and Poft haven't
+        been attacked yet.
+0x0021: Paloom's a town of
+        freedom.Wanna settle
+        down here with me,cutie?
+0x0022: Pirate:Now there's a
+        fine lass.Lemme buy you
+        a drink!
+        
+        \x11\x02:With you? No way!
+        
+0x0023: This is the port of Poft.
+        Salamand is to the north,
+        and to our east is Bafsk.
+0x0024: Have you seen the
+        \x18[0xF5]?
+        
+        
+        It was built by Cid,who
+        lives here in Poft.
+        Only he can fly it.
+        
+0x0025: You lookin' for Cid? He's
+        probably over in the pub.
+        A few gil will get you a
+        ride on his \x18[0xF5].
+0x0026: Bafsk,the city to our
+        east,is occupied by the
+        Empire.They're building
+        something terrible there…
+0x0027: His Majesty is greatly
+        reassured by your
+        wonderful work.
+0x0028: Please destroy the
+        \x18[0xF3]!
+0x0029: If the Empire completes
+        the \x18[0xF3],then
+        Altair,Poft…all will be
+        lost.
+0x002A: I can see…A great evil in
+        the skies,like roiling
+        storm clouds.
+0x002B: Bafsk is controlled by
+        the \x18[0xEE].
+        
+        
+        He used hypnosis to
+        manipulate the minds of
+        the townspeople.
+        
+0x002C: Blow that \x18[0xF3]
+        to bits!
+0x002D: They say Borghen's
+        replaced the \x18[0xEE]
+        as commander in Bafsk.
+0x002E: I'm gonna join the rebel
+        army and fight!
+0x002F: You must destroy the
+        \x18[0xF3] before it's
+        completed.
+0x0030: I heard of the rebel army,
+        so I joined!
+0x0031: They're building the
+        \x18[0xF3] in Bafsk.
+0x0032: Is Altair gonna be taken
+        over by the Empire?
+0x0033: Tobul's making lots of
+        weapons with that \x18[0xF2]
+        you found.
+0x0034: The King's condition has
+        worsened…
+0x0035: Blew up the \x18[0xF3],
+        did you? I knew you had
+        it in you!
+0x0036: The Princess is safe,
+        but the King is not well…
+0x0037: You did it!You destroyed
+        the \x18[0xF3]!
+0x0038: What a relief!
+0x0039: The \x18[0xF3] was
+        destroyed? Nice!
+0x003A: We've lost our King…
+0x003B: Deist? It's an island
+        kingdom located east of
+        the snow plains.
+        
+        Take a ship from Paloom
+        and sail south.
+        
+0x003C: His Majesty's…passed way…
+0x003D: I wanna ride a \x18[0xFB] and
+        soar the skies!
+0x003E: Deist is home to \x18[0xFB]s
+        and \x18[0xFA]s.Get there by
+        taking a ship out of
+        Paloom.
+0x003F: Deist? Ask someone else.
+0x0040: Going to Deist? Head back
+        to Paloom and take a ship
+        there.
+0x0041: Josef's dead,isn't he…
+0x0042: The King is not well.
+0x0043: Do we stand a chance
+        against the \x18[0xF3]?
+0x0044: They finally finished the
+        \x18[0xF3]…
+0x0045: I called it!Obviously
+        the task was more than
+        you could handle!
+0x0046: The \x18[0xF3] attacked
+        Altair.Fortunately,the
+        hideout is unscathed.
+        
+        The townspeople have taken
+        refuge here.
+        
+0x0047: If we don't destroy the
+        \x18[0xF3],more people
+        will die.
+0x0048: Cid might know if the
+        \x18[0xF3] has any
+        weaknesses.
+        
+        He's the first person to
+        ever build an \x18[0xF5].
+        
+0x0049: I'm scared…
+0x004A: Please,Lord,save our King.
+0x004B: We'll stay here and hold
+        out until you return.
+0x004C: Where is Prince \x18[0xEB]?
+0x004D: The \x18[0xF3] attacked…
+        At least our hideout is
+        safe.
+0x004E: Everyone who was outside
+        is dead…
+0x004F: The \x18[0xF3] killed
+        them all…
+0x0050: I'm hurt…I don't think I'm
+        gonna make it…
+0x0051: The \x18[0xF3] attacked…
+0x0052: They killed my daughter…
+0x0053: The \x18[0xF3] opened
+        fire and killed everyone…
+0x0054: You must rescue the
+        \x18[0xED]!
+0x0055: \x18[0xED] \x18[0xEF] was
+        captured by the
+        \x18[0xF3]!
+0x0056: The \x18[0xF3] is heading
+        north of \x18[0x2F].
+0x0057: This is all your fault!
+0x0058: The \x18[0xED] is trapped on
+        the \x18[0xF3]!
+0x0059: I tried to stop the
+        \x18[0xED] from boarding the
+        \x18[0xF5]…
+0x005A: If the \x18[0xF3] attacks
+        again,we're finished!
+0x005B: \x18[0xED] \x18[0xEF]…
+0x005C: The Empire has a supply
+        base to the north of \x18[0x2F].
+        The \x18[0xF3] may have
+        docked there.
+0x005D: The \x18[0xED] left on Cid's
+        Airship to meet you at
+        Kashuan.
+0x005E: That's…the \x18[0xF7]!
+0x005F: Use the \x18[0xF7] to blow up
+        the \x18[0xF3]!
+0x0060: Please save \x18[0xED]
+        \x18[0xEF]!
+0x0061: The \x18[0xF3]'s taking
+        on supplies to the north.
+        You should sneak in and
+        save the \x18[0xED]!
+        
+0x0062: \x18[0xED] \x18[0xEF] was
+        captured…
+0x0063: I hear the Empire captured
+        the \x18[0xED] and Cid's
+        \x18[0xF5].
+0x0064: Maybe I oughta join the
+        imperial army.
+0x0065: The Empire captured
+        \x18[0xED] \x18[0xEF] on an
+        \x18[0xF5]!Get back to Altair
+        and tell the rebels!
+0x0066: Prince \x18[0xEB] has led the
+        army strongly since the
+        King's passing.
+0x0067: The \x18[0xFA]s…vanquished?
+0x0068: Why is the \x18[0xED] acting
+        so weird?
+0x0069: Good to see you back
+        safely.
+0x006A: The \x18[0xED] has been
+        acting very strange.
+0x006B: Prince \x18[0xEB] has become a
+        firm leader thanks to his
+        time spent with your lot.
+0x006C: Why does the \x18[0xED] just
+        laugh when I talk to her?
+0x006D: The \x18[0xED] is acting
+        weird.
+0x006E: I've lost sleep over
+        fearing the Empire…
+0x006F: Welcome to the rebel army,
+        Leila.
+0x0070: The \x18[0xED] won't come out
+        of her room…
+0x0071: Poor \x18[0xFB]…
+0x0072: I saw the \x18[0xED] eating
+        a rat!
+0x0073: Will we ever retake Castle
+        \x18[0x2F]?
+0x0074: How are ye?
+0x0075: Did ye see the island near
+        Deist? There's some odd
+        mask-wearin' people in a
+        cave there.
+0x0076: The \x18[0xED] of \x18[0x2F]'s been
+        acting odd lately.
+0x0077: Something's happening in
+        Altair.
+0x0078: The \x18[0xED]…an impostor?
+0x0079: The \x18[0xF0] will attend
+        the tournament.This could
+        be our chance to defeat
+        him.
+0x007A: The \x18[0xED] was a
+        monster!?
+0x007B: Off to the enemy's lair?
+        Be careful!I know it never
+        seemed like it,but I've
+        always liked you kids.
+0x007C: Please save the \x18[0xED]!
+0x007D: \x18[0xF4]? It's south of
+        Kashuan.But there are
+        strong monsters living in
+        the \x18[0xF4]n Desert!
+0x007E: The arena's in \x18[0xF4].
+0x007F: Our \x18[0xED] is not a mere
+        trophy!
+0x0080: There's a prison beneath
+        the arena.The \x18[0xED] is
+        being held there.
+0x0081: Take care,Prince \x18[0xEB].
+0x0082: Minwu still hasn't returned
+        from \x18[0xF8].
+0x0083: Even the \x18[0xFA]s lost to
+        the Empire…
+0x0084: I hope the \x18[0xED] is
+        alright…
+0x0085: Save the \x18[0xED]!
+0x0086: The coliseum be south of
+        Kashuan,at the eastern
+        edge of the \x18[0xF4]n
+        Desert.
+0x0087: How's Leila?
+0x0088: Good luck!
+0x0089: The tournament must be a
+        trap!
+0x008A: Prince \x18[0xEB] and \x18[0xED]
+        \x18[0xEF] are gathering troops
+        near the lake.
+0x008B: The rebels are preparing
+        to reclaim Castle \x18[0x2F]!
+0x008C: The rebel army is rising!
+0x008D: Ye saved the \x18[0xED]?
+        Way to go!
+0x008E: You saved the \x18[0xED]!
+        You guys are amazing!
+0x008F: Castle \x18[0x2F] is ours again,
+        thanks to you!
+0x0090: \x18[0xF8] is on a continent
+        to the south.
+0x0091: We got \x18[0x2F] back?
+0x0092: Ye folks are heroes!
+0x0093: They say the books in
+        \x18[0xF8] hold all the
+        secrets of the world…
+0x0094: The Empire has enslaved
+        the men of Salamand and
+        forced them to work in
+        the cave at Semitt Falls.
+        Please,help them all!
+        
+        
+0x0095: Semitt Falls is beyond
+        the mountains to the
+        south of Salamand.
+        
+        That's where the Empire
+        has been mining \x18[0xF2].
+        
+0x0096: Our husbands are back
+        home safe.Thank you.
+0x0097: Hurry!Take the \x18[0xF2]
+        to Altair and give it to
+        the \x18[0xED]!
+0x0098: Thank you so much for
+        saving us.
+0x0099: You'll need a Snowcraft
+        to get across snowfields.
+        
+        
+        I've heard that Josef
+        hides his Snowcraft in
+        the cavern at Semitt
+        Falls.
+        I remember him saying
+        something about a wall
+        near a blue stone…
+        
+0x009A: …
+0x009B: That Borghen is a
+        buffoon!
+0x009C: Is the \x18[0xEE] ever
+        going to return?
+0x009D: Get back to work!
+        No one wants to work
+        under General Borghen…
+0x009E: General Borghen needs to
+        be more firm with these
+        peasants.
+0x009F: You're with the rebels?
+        You've got to destroy the
+        \x18[0xF3]!
+0x00A0: They're making us work
+        like slaves.I can't
+        remember what it was like
+        when the \x18[0xEE] was
+        in command.
+        
+0x00A1: There's a rebel spy
+        masquerading as an
+        imperial soldier.
+        Go talk to him.
+0x00A2: You'll need a \x18[0x03] to
+        board the \x18[0xF3].
+0x00A3: They've finished the
+        \x18[0xF3].We're doomed…
+0x00A4: The \x18[0xF3] headed
+        for Poft.
+0x00A5: You must tell \x18[0xED]
+        \x18[0xEF] about the
+        \x18[0xF3]!
+0x00A6: We're doomed!
+0x00A7: Thanks for blowing up
+        the \x18[0xF3]!
+0x00A8: Without the \x18[0xF3],
+        the Empire's not so scary!
+0x00A9: You did it!
+0x00AA: Great job!
+0x00AB: We're taking back our
+        castle!
+0x00AC: We've infiltrated the
+        castle!The enemy is in
+        disarray!
+0x00AD: Thanks to you,we reclaimed
+        \x18[0x2F]!
+0x00AE: Have you been to Paul's
+        house yet? He was excited
+        to be back home.
+0x00AF: Thank you!
+0x00B0: We've taken \x18[0x2F] back,but
+        the war isn't over yet.
+        We need Minwu to return
+        from \x18[0xF8]…
+0x00B1: Living here again is like
+        a dream come true.
+0x00B2: I never thought I'd be
+        able to come back to \x18[0x2F]
+        during my lifetime.
+0x00B3: You beat the big bad?
+        Wow…
+0x00B4: The \x18[0xF1] flies high
+        over \x18[0x2F] once more!
+0x00B5: \x18[0x2F] is ours again at
+        last!
+0x00B6: We owe it all to you.
+        Thank you.
+0x00B7: \x18[0xED] \x18[0xEF] and Prince
+        \x18[0xEB] await you in the
+        audience chamber.
+0x00B8: I hope Minwu is alright…
+0x00B9: There are many ancient
+        books in \x18[0xF8].
+0x00BA: A secret connected to the
+        Mysidian Tower lies
+        beneath this castle.
+0x00BB: These steps lead to the
+        Mirror Chamber.
+0x00BC: Please prepare your
+        equipment here.
+0x00BD: This is the second floor
+        of Castle \x18[0x2F].
+0x00BE: We won't rest until peace
+        has been restored.
+0x00BF: The audience chamber is up
+        ahead.
+0x00C0: Prince \x18[0xEB] awaits.
+0x00C1: Everybody's dead…
+0x00C2: A \x18[0xFC] appeared and
+        destroyed everything…
+0x00C3: The \x18[0xF0]'s \x18[0xFC]
+        destroyed many towns…
+0x00C4: \x18[0x2F] is doomed if the
+        \x18[0xFC] comes back.
+0x00C5: It's impossible to enter
+        the \x18[0xFC]!It would tear
+        you to pieces!
+0x00C6: Could the \x18[0xF0] be in
+        the \x18[0xFC]?
+0x00C7: The \x18[0xF0] is too
+        powerful!
+0x00C8: The \x18[0xF0] created the
+        \x18[0xFC]…
+0x00C9: The mirror is on the third
+        floor.
+0x00CA: I don't want to die!
+0x00CB: When will we have peace?
+0x00CC: Is the \x18[0xEE] the
+        new \x18[0xF0]?
+0x00CD: How does one enter
+        \x18[0xF4]?
+0x00CE: \x18[0xF4] is the heart of
+        the Empire.It's surrounded
+        by mountains.
+0x00CF: The imperial forces
+        couldn't have had time to
+        regroup yet.
+0x00D0: Only you can do this!
+0x00D1: The monsters will vanish
+        once the \x18[0xEE] is
+        defeated.
+0x00D2: We must overthrow the
+        \x18[0xEE] and the
+        \x18[0xF4]n Empire!
+0x00D3: Paul often brags about
+        sneaking into Castle
+        \x18[0xF4].
+0x00D4: I'm so tired…
+0x00D5: What's gonna happen to the
+        world?
+0x00D6: The \x18[0xF0] was
+        resurrected…
+0x00D7: Pandaemonium has risen
+        from Hell…
+0x00D8: Castle \x18[0xF4] crumbled,
+        but Pandaemonium rose in
+        its place.The \x18[0xF0] must
+        be there.
+0x00D9: The \x18[0xF0]'s returned from
+        Hell…
+0x00DA: This is horrible…
+0x00DB: Pandaemonium is a castle
+        of illusion.You can't enter
+        it directly.
+        
+        But,I've heard stories of
+        a lake that leads to Hell…
+        
+0x00DC: The \x18[0xF0] can go to
+        Hell!
+0x00DD: The \x18[0xF0]'s soul has
+        risen.
+0x00DE: The world is at its end…
+0x00DF: Oooh,where you comey from?
+0x00E0: Oooh,why you no weary
+        \x18[0xFE]?
+0x00E1: We're retaking Castle
+        \x18[0x2F]! Prince \x18[0xEB] and
+        \x18[0xED] \x18[0xEF] have
+        pitched camp near \x18[0x2F]!
+0x00E2: Chocobo live in the forest
+        south of Kashuan.
+0x00E3: It's empty.
+0x00E4: We're inside Leviathan's
+        stomach…
+0x00E5: Leviathan swallowed us
+        all.
+0x00E6: We were swallowed whole!
+0x00E7: Will we be stuck here
+        forever?
+0x00E8: If the monster wasn't
+        there,you could escape
+        through Leviathan's mouth.
+0x00E9: Ten years I've been living
+        here…
+0x00EA: Leviathan is the beast
+        that protects the tower.
+        It swallows anyone with
+        a Crystal Rod…
+        I brought one too!
+        
+0x00EB: We're trapped here because
+        of that old man's stupid
+        Crystal Rod!
+0x00EC: This is \x18[0xF8],kingdom of
+        mages.
+0x00ED: It's time to break the
+        tower's seal.
+0x00EE: Please read the many
+        ancient books here.
+0x00EF: Three artifacts protect
+        the seal on the tower.
+0x00F0: A wizard named Minwu went
+        to the tower.
+0x00F1: A statue of a goddess
+        beneath the city watches
+        over the Crystal Rods.
+0x00F2: To break the tower's seal,
+        find the two \x18[0xFE]s and go
+        to the cave on this land.
+        You'll find a Crystal Rod.
+0x00F3: The Black \x18[0xFE] is kept on
+        a small island.
+0x00F4: You've succeeded.Head back
+        to \x18[0x2F].The \x18[0xED]
+        awaits.
+0x00F5: Minwu fulfilled his
+        destiny…May he rest in
+        peace.
+0x00F6: The \x18[0xF0]'s \x18[0xFC] is
+        destroying kingdoms!
+        Head back to \x18[0x2F] at once!
+0x00F7: A new power glows within
+        you.
+0x00F8: The \x18[0xF0]'s magical
+        power is insane…
+0x00F9: Return to Castle \x18[0x2F]
+        and summon the \x18[0xFB]
+        from the Mirror Chamber.
+0x00FA: The power of \x18[0xF8] lies
+        with you.
+0x00FB: The \x18[0xFD] appears
+        with the coming of the
+        demons…
+0x00FC: Sta
+0x00FD: Not Josef…
+0x00FE: Honor Josef's wishes!
+        Get that Bell to Kashuan!
+0x00FF: y away from Black \x18[0xFE]
+        at cavey bottom!
+
+item names
+0x0100: 
+0x0101: Ring
+0x0102: Canoe
+0x0103: Pass
+0x0104: Mythril
+0x0105: Snowcraft
+0x0106: \bellGoddess's
+0x0107: Egil'sTorch
+0x0108: Sunfire
+0x0109: Pendant
+0x010A: WyvernEgg
+0x010B: WhiteMask
+0x010C: BlackMask
+0x010D: CrystlRod
+0x010E: Wyvern
+0x010F: ???
+0x0110: \potionPotion
+0x0111: \potionAntidote
+0x0112: \potionG.Needle
+0x0113: \potionCross
+0x0114: \potionMaidKiss
+0x0115: \potionMallet
+0x0116: \potionEyeDrops
+0x0117: \potionPhx.Down
+0x0118: \potionElixir
+0x0119: \potionEther
+0x011A: \potionHi-Potion
+0x011B: Cottage
+0x011C: WindFlute
+0x011D: Gaia Drum
+0x011E: Garlic
+0x011F: UnicrnHrn
+0x0120: ArcticWind
+0x0121: SageWisdm
+0x0122: St.Spirit
+0x0123: HermeShoe
+0x0124: SpidrSilk
+0x0125: BellSilence
+0x0126: Hourglass
+0x0127: DeathIdol
+0x0128: Bchs'sWine
+0x0129: AcidPhial
+0x012A: Slpgrass
+0x012B: ConchShell
+0x012C: BtrayFang
+0x012D: MythMirror
+0x012E: Hellfire
+0x012F: Fynn
+0x0130: Unarmed
+0x0131: \shieldBuckler
+0x0132: \shieldBronze
+0x0133: \shieldMythril
+0x0134: \shieldGolden
+0x0135: \shieldIce
+0x0136: \shieldFlame
+0x0137: \shieldDiamond
+0x0138: \shieldDragon
+0x0139: \shieldAegis
+0x013A: \knifeKnife
+0x013B: \knifeDagger
+0x013C: \knifeMythril
+0x013D: \knifeM.Gauch
+0x013E: \knifeOrchlcm
+0x013F: \knifeRipper
+0x0140: \knifeCatClaw
+0x0141: \staffStaff
+0x0142: \staffMace
+0x0143: \staffMythril
+0x0144: \staffWerebustr
+0x0145: \staffMage
+0x0146: \staffPower
+0x0147: \staffWizard
+0x0148: \staffHealing
+0x0149: \staffDiamond
+0x014A: \spearJavelin
+0x014B: \spearSpear
+0x014C: \spearMythril
+0x014D: \spearTrident
+0x014E: \spearDemon
+0x014F: \spearFlame
+0x0150: \spearIce
+0x0151: \spearThunder
+0x0152: \spearHoly
+0x0153: \swordBroad
+0x0154: \swordLong
+0x0155: \swordMythril
+0x0156: \swordAncient
+0x0157: \swordCrescnt
+0x0158: \swordWing
+0x0159: \swordBlood
+0x015A: \swordGaia
+0x015B: \swordFlame
+0x015C: \swordIce
+0x015D: \swordDefendr
+0x015E: \swordSun
+0x015F: \swordExcalibr
+0x0160: \swordMasamun
+0x0161: \axeAxe
+0x0162: \axeBattle
+0x0163: \axeMythril
+0x0164: \axeDemon
+0x0165: \axeOgreKillr
+0x0166: \axePoison
+0x0167: \axeRune
+0x0168: \bowBow
+0x0169: \bowLong
+0x016A: \bowMythril
+0x016B: \bowDark
+0x016C: \bowFlame
+0x016D: \bowIce
+0x016E: 
+0x016F: \bowYoichi
+0x0170: \helmetLeather
+0x0171: \helmetBronze
+0x0172: \helmetMythril
+0x0173: \helmetGiant's
+0x0174: \helmetFlame
+0x0175: \helmetDiamond
+0x0176: \helmetGenji
+0x0177: \helmetTwist
+0x0178: \helmetGoldpin
+0x0179: \helmetRibbon
+0x017A: \armorClothes
+0x017B: \armorLeather
+0x017C: \armorBronze
+0x017D: \armorMythril
+0x017E: \armorGold
+0x017F: \armorKnight's
+0x0180: \armorFlame
+0x0181: \armorIce
+0x0182: \armorDiamond
+0x0183: \armorDragon
+0x0184: \armorGenji
+0x0185: \cuirassBronze
+0x0186: \cuirassSilver
+0x0187: \cuirassRuby
+0x0188: \cuirassGold
+0x0189: \cuirassDiamond
+0x018A: \armorWhtRobe
+0x018B: \armorBlkRobe
+0x018C: \armorPower
+0x018D: \armorBlkGarb
+0x018E: \gloveLeather
+0x018F: \gloveBronze
+0x0190: \gloveMythril
+0x0191: \gloveThief's
+0x0192: \gloveGiant's
+0x0193: \gloveIce
+0x0194: \gloveDiamond
+0x0195: \gloveGenji
+0x0196: \gloveProtect
+0x0197: \glovePower
+0x0198: \bookFire
+0x0199: \bookThunder
+0x019A: \bookBlizzard
+0x019B: \bookScourge
+0x019C: \bookDrain
+0x019D: \bookOsmose
+0x019E: \bookFlare
+0x019F: \bookSleep
+0x01A0: \bookStun
+0x01A1: \bookStop
+0x01A2: \bookConfuse
+0x01A3: \bookBlind
+0x01A4: \bookCurse
+0x01A5: \bookToad
+0x01A6: \bookBreak
+0x01A7: \bookDeath
+0x01A8: \bookWarp
+0x01A9: \bookBerserk
+0x01AA: \bookHaste
+0x01AB: \bookAura
+0x01AC: \bookCure
+0x01AD: \bookLife
+0x01AE: \bookBasuna
+0x01AF: \bookEsuna
+0x01B0: \bookBarrier
+0x01B1: \bookBlink
+0x01B2: \bookProtect
+0x01B3: \bookShell
+0x01B4: \bookWall
+0x01B5: \bookDispel
+0x01B6: \bookMini
+0x01B7: \bookSilence
+0x01B8: \bookSap
+0x01B9: \bookFog
+0x01BA: \bookSlow
+0x01BB: \bookSwap
+0x01BC: \bookFear
+0x01BD: \bookHoly
+0x01BE: \bookTeleport
+0x01BF: \bookUltima
+
+spell names
+0x01C0: Fire
+0x01C1: Thundr
+0x01C2: Blizzrd
+0x01C3: Scrg
+0x01C4: Drain
+0x01C5: Osmse
+0x01C6: Flare
+0x01C7: Sleep
+0x01C8: Stun
+0x01C9: Stop
+0x01CA: Cnfse
+0x01CB: Blind
+0x01CC: Curse
+0x01CD: Toad
+0x01CE: Break
+0x01CF: Death
+0x01D0: Warp
+0x01D1: Bsrk
+0x01D2: Haste
+0x01D3: Aura
+0x01D4: Cure
+0x01D5: Life
+0x01D6: Ba\xEF\xF0\xF1
+0x01D7: E\xEF\xF0\xF1
+0x01D8: Barrier 
+0x01D9: Blink
+0x01DA: Prtec
+0x01DB: Shell
+0x01DC: Wall
+0x01DD: Dspel
+0x01DE: Mini
+0x01DF: Silenc
+0x01E0: Sap
+0x01E1: Fog
+0x01E2: Slow
+0x01E3: Swap
+0x01E4: Fear
+0x01E5: Holy
+0x01E6: Telept
+0x01E7: Ultima
+0x01E8: Treasure:
+0x01E9: Remove
+0x01EA: Exit
+0x01EB: Gordon
+0x01EC: Who will use it?
+0x01ED: Princess
+0x01EE: Dark Knight
+0x01EF: Hilda
+
+key words
+0x01F0: Emperor
+0x01F1: Wild Rose
+0x01F2: Mythril
+0x01F3: Dreadnought
+0x01F4: Palamecia
+0x01F5: Airship
+0x01F6: Goddess's Bell
+0x01F7: Sunfire
+0x01F8: Mysidia
+0x01F9: Ultima Tome
+0x01FA: Dragoon
+0x01FB: Wyvern
+0x01FC: Cyclone
+0x01FD: Jade Passage
+0x01FE: Mask
+0x01FF: Ekmet Teloess
+
+menu text
+0x0200: Nothing there.
+0x0201: Received \x02!
+0x0202: Received \x03 Gil!
+0x0203: You're carrying
+        too much!
+0x0204: You need a key.
+0x0205: What can I do for you?
+0x0206: What would
+        you like?
+0x0207: You don't have enough gil.
+0x0208: You're carrying too much.
+0x0209: Thank you!
+        Anything else?
+0x020A: What will you sell?
+0x020B: I can't take that.
+        Anything else?
+0x020C: I'll give you \x04 Gil
+        for that.OK? 
+        \x16\x08Yes\x16\x16No
+0x020D: Welcome!
+        It will cost \x04 gil
+        to restore your HP and MP.
+        Would you like to stay?
+0x020E: You don't have enough gil.
+0x020F: Pleasant dreams…
+0x0210: Please come again!
+0x0211: You need a ride?
+        32 gil will take you to
+        Poft!
+0x0212: You need a ride?
+        32 gil will take you to
+        Paloom!
+0x0213: Done!Just board the
+        ship in front of town
+        and off you go!
+0x0214: Assistant:Cid's \x18[0xF5]
+        can take you anywhere!
+        But it'll cost ya.
+        Interested?
+0x0215:   Go\x16\x0DBafsk    100
+          where?\x16\x0DSalamand 200
+        \x16\x0DSemitt   300
+        \x16\x0DKashuan  400
+0x0216: Thanks!The \x18[0xF5] will be
+        waiting for you outside.
+0x0217: \x15
+        Buy
+        \x15
+        Sell
+        \x15
+        Exit
+0x0218: \x15
+        Yes
+        \x15
+        No
+0x0219: Oops!Not enough money!
+        Come again!
+0x021A: \x15
+        Ask
+        \x15
+        Learn
+        \x15
+        Items
+0x021B: \x15
+        Item\x15\x06Magic\x15\x0CEquip\x15\x12Stats\x15\x18[0x9C]ave
+0x021C: \x05 Gil
+0x021D:     
+            
+0x021E:       \x10\x02
+               \x10
+        
+        HP \x10\x20/\x10\x21
+        MP  \x10\x22/ \x10\x23
+0x021F:  Items
+0x0220:  Magic
+          \x10\x02
+0x0221:  HP \x10\x20/\x10\x21
+         MP  \x10\x22/ \x10\x23
+0x0222:  Equipment
+          \x10\x02
+0x0223:  Attack:\x10\x24
+        Defense:\x10\x25
+0x0224:  R.Hand\x14\x0AHead\x14\x13Hands
+        \x16\x02\x10\x06\x16\x0B\x10\x03\x16\x14\x10\x05
+         L.Hand\x14\x0ABody\x14\x13Item
+        \x16\x02\x10\x07\x16\x0B\x10\x04\x16\x14\x10\x08
+        \x16\x14\x10\x09
+0x0225: \x17
+        \x1A
+0x0226: \x17\x02\x10\x0A\x14\x07\x10\x38\x17\x0F\x10\x0B\x14\x14\x10\x39
+        \x17\x02\x10\x0C\x14\x07\x10\x3A\x17\x0F\x10\x0D\x14\x14\x10\x3B
+        \x17\x02\x10\x0E\x14\x07\x10in\x17\x0F\x10\x0F\x14\x14\x10th
+        \x17\x02\x10\x10\x14\x07\x10ed\x17\x0F\x10\x11\x14\x14\x10an
+        \x17\x02\x10\x12\x14\x07\x10is\x17\x0F\x10\x13\x14\x14\x10ng
+        \x17\x02\x10\x14\x14\x07\x10er\x17\x0F\x10\x15\x14\x14\x10 a
+        \x17\x02\x10\x16\x14\x07\x10on\x17\x0F\x10\x17\x14\x14\x10ou
+        \x17\x02\x10\x18[0x14]\x07\x10ll\x17\x0F\x10\x19\x14\x14\x10s 
+        \x17\x0F\x0F
+0x0227: \x14\x05\x10\x02\x14\x0EHP \x10\x20/\x10\x21
+        \x14\x0EMP  \x10\x22/ \x10\x23
+        Strength:\x10\x26 \x10
+0x0228:   Save over this file?
+          \x16\x09Yes \x16\x0ENo
+0x0229:   Which file?
+        \x16\x03 1\x16\x06 2\x16\x09 3\x16\x0C 4
+0x022A:   Saved. Remember to hold
+          the Reset button while 
+          turning the power off!
+0x022B:   Restores HP.
+          \x18[0xEC]
+0x022C:   Cures poison.
+          \x18[0xEC]
+0x022D:   Cures stone.
+          \x18[0xEC]
+0x022E:   Cures curse.
+          \x18[0xEC]
+0x022F:   Cures toad.
+          \x18[0xEC]
+0x0230:   Cures silence.
+          \x18[0xEC]
+0x0231:   Cures blind.
+          \x18[0xEC]
+0x0232:   Revives a KO'd person.
+          \x18[0xEC]
+0x0233:   Completely recovers
+          HP and MP.
+          \x18[0xEC]
+0x0234:   Recovers MP.
+          \x18[0xEC]
+0x0235:   Greatly restores HP.
+          \x18[0xEC]
+0x0236:   Recovers HP/MP of the
+          entire party.
+0x0237:  Transports party to
+         previous floor.
+0x0238:   Restores HP.
+          \x18[0xEC]
+0x0239:   Revives a KO'd person.
+          \x18[0xEC]
+0x023A:   Cures status ailments.
+          \x18[0xEC]
+0x023B:  Warps the party out of
+         dungeons.Costs HP.
+0x023C:   Who will learn this
+          spell?
+0x023D:   You already know that
+          spell.
+0x023E:   You have too many
+          spells.
+0x023F: 
+           Nothing to learn.
+0x0240:   You can only save on
+          the world map.
+0x0241: \x17\x05\x1B
+0x0242: \x17
+        \x1A
+0x0243: 
+        
+        \t[11]? 
+0x0244: You can't use this.
+0x0245:     \x14\x07\x10\x02
+            
+0x0246: \x17
+        A\x17\x03B\x17\x05C\x17\x07D\x17\x09E\x17\x0Ca\x17\x0Eb\x17\x10c\x17\x12d\x17\x14e
+        \x17
+        F\x17\x03G\x17\x05H\x17\x07I\x17\x09J\x17\x0Cf\x17\x0Eg\x17\x10h\x17\x12i\x17\x14j
+        \x17
+        K\x17\x03L\x17\x05M\x17\x07N\x17\x09O\x17\x0Ck\x17\x0El\x17\x10m\x17\x12n\x17\x14o
+        \x17
+        P\x17\x03Q\x17\x05R\x17\x07S\x17\x09T\x17\x0Cp\x17\x0Eq\x17\x10r\x17\x12s\x17\x14t
+        \x17
+        U\x17\x03V\x17\x05W\x17\x07X\x17\x09Y\x17\x0Cu\x17\x0Ev\x17\x10w\x17\x12x\x17\x14y
+        \x17
+        Z\x17\x03 \x17\x05 \x17\x07 \x17\x09 \x17\x0Cz\x17\x0E \x17\x10 \x17\x12 \x17\x14 
+0x0247:  An energy field prevents
+         you from warping out.
+0x0248: As you pray,a warm light
+        envelops you and a voice
+        filled with compassion
+        echoes:
+        Soul that wanders in
+        death,return now from that
+        distant land where sorrow
+        and darkness hold way!
+0x0249:  A long-lived peace is over.
+        The \x18[0xF0] of \x18[0xF4] has
+        summoned monsters from Hell
+         to begin his campaign for
+        world conquest.A rebel army
+        arose in the Kingdom of \x18[0x2F]
+         to stop the Empire.However,
+         Castle \x18[0x2F] has fallen,and
+         the rebels escaped to the
+         town of Altair.Four youths
+          from \x18[0x2F],their parents
+         killed by the Empire,flee
+           from imperial forces…
+0x024A:   \x10\x02\x14\x09HP \x10\x20/\x10\x21
+        Speed \x06  MP  \x10\x22/ \x10\x23
+0x024B:  New Game   Speed: \x06
+0x024C: Received \x02!
+        
+        
+        
+        A monster appeared!
+        
+0x024D:   You cannot currently cast
+          magic.
+0x024E: 
+0x024F: 
+0x0250: 
+0x0251: 
+0x0252: 
+0x0253: 
+0x0254: 
+0x0255: 
+0x0256: 
+0x0257: 
+0x0258: 
+0x0259: 
+0x025A: 
+0x025B: 
+0x025C: 
+0x025D: 
+0x025E: 
+0x025F: 
+0x0260: 
+0x0261: 
+0x0262: 
+0x0263: 
+0x0264: 
+0x0265: 
+0x0266: 
+0x0267: 
+0x0268: 
+0x0269: 
+0x026A: 
+0x026B: 
+0x026C: 
+0x026D: 
+0x026E: 
+0x026F: 
+0x0270: 
+0x0271: 
+0x0272: 
+0x0273: 
+0x0274: 
+0x0275: 
+0x0276: 
+0x0277: 
+0x0278: 
+0x0279: 
+0x027A: 
+0x027B: 
+0x027C: 
+0x027D: 
+0x027E: 
+0x027F: 
+0x0280: 
+0x0281: 
+0x0282: 
+0x0283: 
+0x0284: 
+0x0285: 
+0x0286: 
+0x0287: 
+0x0288: 
+0x0289: 
+0x028A: 
+0x028B: 
+0x028C: 
+0x028D: 
+0x028E: 
+0x028F: 
+0x0290: 
+0x0291: 
+0x0292: 
+0x0293: 
+0x0294: 
+0x0295: 
+0x0296: 
+0x0297: 
+0x0298: 
+0x0299: 
+0x029A: 
+0x029B: 
+0x029C: 
+0x029D: 
+0x029E: 
+0x029F: 
+0x02A0: 
+0x02A1: 
+0x02A2: 
+0x02A3: 
+0x02A4: 
+0x02A5: 
+0x02A6: 
+0x02A7: 
+0x02A8: 
+0x02A9: 
+0x02AA: 
+0x02AB: 
+0x02AC: 
+0x02AD: 
+0x02AE: 
+0x02AF: 
+0x02B0: 
+0x02B1: 
+0x02B2: 
+0x02B3: 
+0x02B4: 
+0x02B5: 
+0x02B6: 
+0x02B7: 
+0x02B8: 
+0x02B9: 
+0x02BA: 
+0x02BB: 
+0x02BC: 
+0x02BD: 
+0x02BE: 
+0x02BF: 
+0x02C0: 
+0x02C1: 
+0x02C2: 
+0x02C3: 
+0x02C4: 
+0x02C5: 
+0x02C6: 
+0x02C7: 
+0x02C8: 
+0x02C9: 
+0x02CA: 
+0x02CB: 
+0x02CC: 
+0x02CD: 
+0x02CE: 
+0x02CF: 
+0x02D0: 
+0x02D1: 
+0x02D2: 
+0x02D3: 
+0x02D4: 
+0x02D5: 
+0x02D6: 
+0x02D7: 
+0x02D8: 
+0x02D9: 
+0x02DA: 
+0x02DB: 
+0x02DC: 
+0x02DD: 
+0x02DE: 
+0x02DF: 
+0x02E0: 
+0x02E1: 
+0x02E2: 
+0x02E3: 
+0x02E4: 
+0x02E5: 
+0x02E6: 
+0x02E7: 
+0x02E8: 
+0x02E9: 
+0x02EA: 
+0x02EB: 
+0x02EC: 
+0x02ED: 
+0x02EE: 
+0x02EF: 
+0x02F0: Vnm.
+0x02F1: Sleep
+0x02F2: Siln.
+0x02F3: Mini
+0x02F4: Hold
+0x02F5: Cnf.
+0x02F6: 
+0x02F7: Blind
+0x02F8: Psn.
+0x02F9: Curs
+0x02FA: Amn.
+0x02FB: Toad
+0x02FC: Stn.
+0x02FD: KO'd
+0x02FE: Right
+0x02FF: Left

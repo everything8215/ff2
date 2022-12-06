@@ -1,0 +1,1314 @@
+dialogue (npc $00-$5F)
+0x0000: The door is locked.
+0x0001: \x18[0xEF]:The password is
+        (\x16
+        \x18[0xF1]).
+0x0002: \x18[0xEF]:The \x18[0xF1] is
+        the insignia of the
+        Kingdom of \x18[0x2F].
+        
+        \x11\x02,your brother
+        \x07 is missing? I think
+        he's being held in \x18[0x2F].
+        
+        But \x18[0x2F] is now prowling
+        with the Emperor's beasts…
+        Entering \x18[0x2F] won't be
+        easy.
+0x0003: \x18[0xEF]:That \x18[0x01]…It's
+        Scott's!Is he…alive?
+        
+        
+        \x10\x02:He gave us this
+        \x18[0x01] in \x18[0x2F]…just before
+        he lost the last of his
+        strength.
+        \x18[0xEF]:Did he…say
+        anything?
+        
+        
+        \x10\x02:No…Nothing.Your
+        Highness,please keep
+        this \x18[0x01].
+        
+        \x18[0xEF]:No,you keep it.
+        You infiltrated \x18[0x2F] and
+        returned safely.I
+        underestimated you.
+        Perhaps you can help us?
+        
+        
+        
+        Help us find the rare
+        (\x16
+        \x18[0xF2]) for our army's
+        equipment.
+        
+0x0004: We lost \x18[0x2F] because the
+        Empire had weapons made
+        of \x18[0xF2].
+        
+        A rebel in Salamand named
+        Josef is looking for
+        \x18[0xF2],but he hasn't
+        reported back.
+        Will you go with Minwu to
+        Salamand to look into
+        this?
+        
+0x0005: Minwu is a virtuous white
+        wizard.He will help you.
+0x0006: The Empire also suffered
+        heavy losses during the
+        battle for \x18[0x2F].
+        
+        In Bafsk,they're
+        building the (\x16\x0E\x18[0xF3])
+        to compensate for those
+        losses.
+0x0007: The Empire is using the
+        people of Bafsk to build
+        the \x18[0xF3].
+        
+        The \x18[0xF3] is a
+        massive,heavily armed
+        (\x16
+        \x18[0xF5]).
+        
+0x0008: A man named Cid,former
+        leader of \x18[0x2F]'s White
+        Knights,built an
+        \x18[0xF5].He became
+        obsessed with this \x18[0xF5]
+        and flew away from \x18[0x2F].
+        
+        
+        He now lives in Poft,
+        granting travelers the
+        passage on his \x18[0xF5]
+        for a fee.
+        He uses this money to
+        make further refinements
+        to his \x18[0xF5].
+        
+0x0009: You've found the \x18[0xF2]!
+        Please hand it over to
+        Tobul in the weapon shop.
+        
+        Now we'll be able to
+        fight the Empire with
+        equal strength!
+        
+0x000A: The \x18[0xF3]'s
+        construction is overseen
+        by the \x18[0xEE],
+        a competent adversary.
+        Fortunately,he was
+        called back to Palamecia.
+        
+        
+        The theft of the \x18[0xF2]
+        has likely knocked the
+        Empire off balance.
+        
+        The (\x16\x05\x18[0xF3]) must be
+        destroyed…
+        
+0x000B: We have a man in Bafsk.
+        He's found a way to reach
+        the Dreadnought.It must
+        be destroyed.
+        I have full confidence
+        that with you and \x13\x02
+        on this task,it will be
+        accomplished.
+0x000C: \x18[0xEF]:Many were hurt by
+        the \x18[0xF3]'s attack.
+        
+        
+        My father's condition is
+        worsening from all of
+        the stress…
+        
+        \x11\x02:Is there nothing
+        you can do,\x13\x02?
+        
+        
+        \x13\x02:It is my duty to
+        ease the pain of the
+        wounded.
+        
+        I shall remain here
+        to watch over the King.
+        I take my leave of you.
+        
+        \x10\x02,waste no time in
+        destroying the
+        \x18[0xF3].
+        
+        
+         \x13\x02 leaves the party.
+        
+0x000D: My father's condition is
+        improving thanks to
+        Minwu.
+0x000E: Many lives were taken in
+        the \x18[0xF3]'s attack.
+        That thing is so horrible…
+0x000F: I've heard Scott and
+        \x18[0xEB] mention the Bell.
+        
+        
+        The gates of Kashuan Keep
+        open only to the voice of
+        a Kashuan or the sound of
+        that Bell.
+        The Bell rests deep
+        within a cavern on the
+        snow plains.You plan on
+        going there?
+        If only \x18[0xEB] were here,
+        there would be no need
+        for you to risk such
+        danger…
+        Josef knows the snow
+        plains like the back of
+        his hand.You should seek
+        his counsel.
+0x0010: \x18[0xEF]:\x18[0xF7] is the
+        crest of the Kingdom of
+        Kashuan.
+        
+        Its flame still burns on
+        the ground floor of
+        Kashuan Keep.
+        
+        Scott and \x18[0xEB] have told
+        me that the flame cannot
+        be passed to just any
+        torch.
+        \x10\x02:Perhaps we can
+        use \x18[0xF7] to destroy
+        the \x18[0xF3]?
+        
+        \x18[0xEF]:Ah!Then you must
+        depart for Kashuan Keep
+        at once!Cid's \x18[0xF5]
+        can take you there.
+        But…what can you use to
+        bring the \x18[0xF7] back?
+        
+0x0011: \x13\x02!Good to see you.
+        Please aid \x10\x02.
+0x0012: Please find that \x18[0xF2]
+        as soon as possible.
+0x0013: \x18[0xEF]:We traded that Bell
+        with Josef's life…
+        
+        
+        We can't let his death be
+        in vain.You must take the
+        Bell to Kashuan Keep
+        at once.
+0x0014: \x18[0xEF]:\x18[0xEB]!You should've
+        helped us!Josef died
+        because of you!
+        
+        \x18[0xEB]:\x18[0xEF],I…
+        
+        
+        
+        \x18[0xEF]:Don't speak to me!
+        
+0x0015: \x18[0xEF]:Let's get out of
+        here quick!
+0x0016: Hahaha…
+0x0017: \x18[0xEF]:I need to talk to
+        \x10\x02…
+0x0018: \x18[0xEF]:\x10\x02!\x11\x02!
+        \x12\x02!I owe you my life.
+        You even destroyed the
+        \x18[0xF3]!
+0x0019: Do not fear.I am the true
+        \x18[0xED].
+0x001A: \x13\x02!\x18[0xEB]'s come up
+        with a plan to get our
+        Castle back!
+0x001B: \x18[0xEF]:It's so good to be
+        back.
+        
+        
+        This wouldn't have been
+        possible had we not worked
+        together.Thanks so much.
+        However,Minwu left for
+        \x18[0xF8] and we haven't
+        heard back.Will you please
+        go to (\x16\x07\x18[0xF8]) to look
+        into the matter?
+0x001C: \x18[0xF8] is a land of
+        mages.Without their help,
+        defeating the \x18[0xF0] won't
+        be easy.I've heard that the
+        ultimate magic lies in the
+        \x18[0xF8]n Tower.Obtaining
+        it requires two (\x16\x11\x18[0xFE])s.
+        
+0x001D: According to legend,a
+        passage to Hell opened
+        long ago.Monsters poured
+        through the passage and
+        entered our world.Ultima
+        was the magic that drove
+        them back.
+        
+0x001E: The valiant \x18[0xFA]s of
+        Deist are no more…
+        At least we have you guys.
+0x001F: The Mirror Chamber in this
+        castle has the power to
+        call \x18[0xFB]s.But the
+        \x18[0xFB] has yet to hatch…
+0x0020: The White Mask rests
+        beneath Castle \x18[0x2F].
+        
+        
+        I'll tell you the
+        incantation to open the
+        door,so listen carefully:
+        veve…(\x16\x06\x18[0xFF])…
+0x0021: I don't know the door's
+        location…
+0x0022: \x18[0xEF]:Take the White \x18[0xFE]
+        to \x18[0xF8].The mages there
+        could help.
+0x0023: \x18[0xEF]:A Crystal Rod!
+        You can now enter the
+        \x18[0xF8]n Tower!
+0x0024: \x18[0xEF]:You were swallowed
+        by Leviathan? Thank God
+        you're safe.I hope Minwu
+        is safe too…
+0x0025: \x18[0xEF]:Are you…a \x18[0xFA]?
+        
+        
+        
+        \x13\x02:\x13\x02 Highwind,
+        \x18[0xFA] of Deist.An honor
+        to meet you.
+        
+        When Deist was attacked,
+        I left to find \bookUltima.
+        
+        
+        I met \x10\x02 and his
+        friends during that
+        journey.
+        
+0x0026: Have you tried summoning
+        the \x18[0xFB] from the Mirror
+        Chamber?
+        
+        No,of course not.It's still
+        just an egg.
+        
+0x0027: \x18[0xEF]:The \x18[0xF0] created
+        a Cyclone and has already
+        destroyed Altair,Gatrea,
+        Paloom and Poft…
+        The (\x16\x05\x18[0xFC]) is now
+        headed towards \x18[0x2F]…
+        
+0x0028: Reflecting light from the
+        \x18[0x09] into the castle's
+        Mirror can summon \x18[0xFB]s.
+0x0029: The \x18[0xF0] is controlling
+        the \x18[0xFC].
+0x002A: \x18[0xEF]:A \x18[0xFB]!It's quite
+        young,but it'll do!
+0x002B: You could fly into the
+        \x18[0xFC] on the \x18[0xFB].
+0x002C: I hope those small wings
+        can withstand the \x18[0xFC].
+0x002D: \x18[0xEF]:\x07?
+        The \x18[0xEE]? But he
+        was your friend…
+        
+        \x11\x02:I'll go to him.
+        He's my brother…He must be
+        under the \x18[0xF0]'s spell!
+        
+        \x18[0xEF]:But since he took
+        the throne…then he must be
+        in (\x16\x04\x18[0xF4])!
+        
+0x002E: \x18[0xEF]:Castle \x18[0xF4]
+        is in the mountains.It
+        can't be reached by foot.
+0x002F: \x18[0xEF]:Once,the monsters
+        of Hell poured forth into
+        the world.
+        
+        They entered through the
+        (\x16
+        \x18[0xFD]).
+        
+0x0030: It is near \x18[0xF8].
+0x0031: Minwu:Proceed to \x18[0x2F].
+        It will be your first step
+        towards fulfilling your
+        fate.
+0x0032: Ah!You know the password.
+        Heed well the information
+        it will bring you.
+0x0033: Minwu:Take my canoe and
+        let us be on our way.
+0x0034: Minwu:The King's illness
+        is severe.There is little
+        I can do.
+0x0035: The \x18[0xF3] is a
+        massive \x18[0xF5].It is
+        likely they function
+        similarly.
+0x0036: Cid gave up all he had
+        for his \x18[0xF5].His
+        rank,his honor,his
+        family…everything.
+0x0037: \x18[0xEB] would know where
+        the Bell is kept…but I
+        haven't seen him lately.
+        
+        Someone close to Scott or
+        \x18[0xEB] may know where to
+        find it.
+        
+0x0038: Every three years they
+        celebrate a Festival of
+        the Flame in Kashuan.
+        
+        The \x18[0xF7] is passed to
+        Egil's Torch while its
+        brazier is cleansed.
+        
+0x0039: Minwu:The \x18[0xED] wanted
+        to meet up with you at
+        Kashuan to thank you
+        for your help.
+0x003A: The \x18[0xF3] will have
+        to land at some point to
+        replenish its supplies.
+0x003B: Minwu:You've come at last!
+        The seal on this door is
+        extremely strong.I'll give
+        it all I've got.Stand back!
+0x003C: I'm \x18[0xEB].I was once a
+        prince of Kashuan…Now
+        I'm nothing but a coward.
+        
+        I abandoned my kingdom and
+        my brother,Scott,and
+        fled here…
+        
+0x003D: You're going to join the
+        rebellion? I'm so afraid
+        \x18[0xEF] will turn me away
+        that I haven't even
+        asked.Instead,I sulk
+        around here…
+        
+0x003E: In Kashuan,Scott had
+        inherited a \x18[0xF2] sword
+        that had been handed down
+        through the ages.
+        It was truly a
+        magnificent blade.
+        
+        
+0x003F: I've heard the rumors…
+        
+        
+        
+        If the \x18[0xF3] is
+        completed,it will destroy
+        everything.But what can I
+        do to stop it?
+        I couldn't even save my
+        own brother…
+        
+0x0040: So you found \x18[0xF2]!
+        You're certainly brave,
+        and you have a girl with
+        you…
+        Now I realize just how
+        pathetic I am…
+        
+0x0041: You're off to destroy the
+        \x18[0xF3]!? There has
+        to be something I can do.
+        
+        If I were only half as
+        strong as you…
+        
+0x0042: \x18[0xEB]:I came to retrieve
+        the \x18[0xF7].I thought I
+        was the only one left who
+        could open the door.
+        I'm looking for
+        Egil's Torch,but it's a
+        monster's den in here.
+        
+        I can't return empty-
+        handed…But I don't know
+        what to do next…
+        
+        \x11\x02:But you know your
+        way around the keep,right?
+        
+        
+        \x18[0xEB]:The keep is riddled
+        with secrets even I don't
+        understand.
+        
+        I can't guide you,but can
+        I come with you?
+        
+        
+        
+         \x18[0xEB] joins the party!
+        
+0x0043: Gordon:When the \x18[0xF0]
+        raided Deist,it was just a
+        small incident.
+        
+        But the \x18[0xF0],fearful of
+        the (\x16\x05\x18[0xFA])s,meant to
+        exterminate them.
+        
+0x0044: Some say the \x18[0xFA]s can
+        speak the language of the
+        (\x16
+        \x18[0xFB])s.
+0x0045: You might find a \x18[0xFB] at
+        Deist.It would be a great
+        ally.Take a ship from
+        Paloom to Deist.
+0x0046: \x18[0xEB]:So the \x18[0xFA]s are
+        gone…What are you doing
+        here? Get that egg to the
+        Life Spring!
+0x0047: \x18[0xEB]:\x18[0xEF]'s been acting
+        strange.I don't know what I
+        can do to help her…Will
+        you speak to her for me?
+0x0048: I hope the egg hatches
+        soon.
+0x0049: While we hold the imperial
+        forces at bay,you'll slip
+        in and kill the castellan.
+0x004A: \x18[0xEB]:Thanks to you all,
+        we have regained Castle
+        \x18[0x2F].But Minwu has not
+        returned.
+        Please go and search for
+        him in (\x16\x08\x18[0xF8]).
+        
+0x004B: The \x18[0xF8]n Tower is said
+        to hold the (\x16\x0D\x18[0xF9]),
+        a text containing the
+        ultimate magic.
+0x004C: I'm certain it would help
+        us defeat the \x18[0xF0].
+0x004D: \x18[0xEF] knows this castle
+        best.But,Paul,the greatest
+        thief in the world,might
+        know some secrets too!
+0x004E: \x18[0xEB]:The \x18[0xF0] has
+        been laying low,but I'm
+        sure he's planning
+        something.
+        Find the \x18[0xF9] as
+        soon as possible.
+        
+0x004F: \x18[0xEB]:A \x18[0xFA]!Let us
+        rid the world of the
+        \x18[0xF0]!
+0x0050: \x18[0xEB]:\bookUltima is in our
+        hands,but what good does
+        it do for us?
+        
+        The (\x16\x05\x18[0xFC]) will defeat
+        us regardless…
+        
+0x0051: We would need to fly to
+        get in there…
+0x0052: The center of the \x18[0xFC]
+        is clear of wind.
+0x0053: \x18[0xEB]:You're not going to
+        fight \x11\x02's brother,are
+        you?
+        
+        \x10\x02:We're the only ones
+        who can get to him…
+        
+        
+        \x18[0xEB]:Well…be careful.
+        
+0x0054: It's an impregnable
+        fortress.Paul might have
+        snuck in before.
+0x0055: \x18[0xEB]:The castle that
+        appeared when the \x18[0xF0]
+        was resurrected…I've no
+        doubt it was Pandaemonium,
+        the fortress of the lord
+        of Hell.
+        
+0x0056: Kashuan myths say that the
+        portal to Hell is near
+        \x18[0xF8].
+0x0057: I'm Paul,the legendary
+        thief!The imperial
+        coffers have kept my purse
+        bulging with gil!
+0x0058: I never steal from the
+        rebels.I'm from \x18[0x2F],
+        too,but I had to flee
+        from the Empire…
+0x0059: Paul:\x10\x02!Thank
+        goodness you're here!
+        
+        
+        This is Josef's daughter,
+        Nelly.That bastard
+        Borghen held her hostage
+        to threaten Josef.
+        I came here to look for
+        \x18[0xF2],but ended up
+        getting caught!
+        
+        So long!I'll help
+        everyone here escape.
+        Thanks for saving us!
+        
+0x005A: Paul:\x10\x02!
+        How've you been?
+0x005B: Secret door in Castle
+        \x18[0x2F]? 'Course I know!What's
+        inside? A White \x18[0xFE]?
+        Sounds like nothing
+        special.To find the secret
+        door,look in the upper
+        right corner of the
+        audience chamber.What do
+        you need a mask like that
+        for?
+        
+0x005C: Paul:How do you fight a
+        \x18[0xFC]?
+0x005D: You're gonna go INTO that
+        thing!? You're mad!
+        Well I've got some things
+        that might help.
+        Check the wall by the bed.
+        
+0x005E: Paul:Now we have to deal
+        with the \x18[0xEE]…
+0x005F: Paul:That was Cid's will,
+        y'know…
+        
+        
+        He knew he didn't have
+        much time left.He wanted
+        you to have his \x18[0xF5].
+        
+        He loved his \x18[0xF5] with
+        all his heart…and he
+        entrusted it to you.
+        
+0x0060: I've been there.I used a
+        kite to land on the roof.
+        You can get there…from the
+        sky!Like with an \x18[0xF5]!
+0x0061: Paul:\x10\x02…Promise me
+        that you'll come back
+        safe.
+0x0062: Josef:You have business
+        with me?
+0x0063: A little short in the
+        tooth,aren't you?
+        You kids can't fool me.
+0x0064: \x18[0xF2]? I haven't found
+        any.I do have a few
+        leads,but…
+        
+        I'm gonna need you to
+        prove you are who you say
+        you are before I tell ya.
+        
+        There's a bunch of people
+        from Salamand who are
+        being forced to work in
+        the cave at Semitt Falls.
+        Rescue them,and we'll
+        talk.
+        
+        
+0x0065: Of course I've heard of
+        that ugly \x18[0xF5]!
+0x0066: I know an \x18[0xF5] expert.
+        But why should I tell you
+        who he is?
+0x0067: Josef:You saved my
+        daughter.Thank you.
+        
+        
+        That cowardly Borghen had
+        been threatening Nelly to
+        get to me…
+        
+        If there's anything I can
+        do to help,just ask.
+        
+0x0068: The cave behind Semitt
+        Falls used to be an old
+        \x18[0xF2] mine.
+        
+        The deepest parts of the
+        cave still have \x18[0xF2]
+        deposits.
+        
+0x0069: Since the \x18[0xEE]
+        took over,construction
+        has sped up.I hear it's
+        close to completion.
+0x006A: Cid is the leading expert
+        on \x18[0xF5]s.
+0x006B: You'd better get that
+        \x18[0xF2] back to Altair.
+0x006C: You need my Snowcraft to
+        reach the snow cavern.
+        It's hidden in the mine.
+        
+        Look for a blue stone on
+        the first floor,and head
+        right to the secret room.
+        Let's go!
+        
+          Josef joins the party!
+        
+0x006D: Leila:Lookin' for ride to
+        Deist,are ye? Well,this be
+        yer lucky day!Me ship was
+        about to leave for Deist.
+        Be ye wantin' a ride?
+        
+        
+        
+        \x11\x02:Something's fishy…
+        
+        
+        
+        \x10\x02:It's fine!It's a free
+        ride.We'll take up your
+        offer!
+        
+        Leila:Alrighty.I'll be
+        waitin' outside the city
+        for ye!
+        
+0x006E: Leila:Ye don't need to
+        be worryin' about us!
+0x006F: Leila:Together!
+        Let me join ye!
+        
+        
+        
+          Leila joins the party!
+        
+0x0070: Leila:I thought ye were
+        dead for sure.Glad ye'all
+        are safe!
+0x0071: The \x18[0xED] ran off!
+0x0072: Leila:The \x18[0xEE] went
+        and claimed the throne
+        fer himself.
+0x0073: Paul's always braggin'
+        bout how he snuck in
+        there before…
+0x0074: Leila:The \x18[0xF0] sold
+        his soul to the devil.
+0x0075: There's a narrow strait
+        east of \x18[0xF8].That area
+        is the Jade Sea.
+0x0076: And who are you guys?
+0x0077: I've been to \x18[0xF8].
+0x0078: How'd you know about that?
+0x0079: \x18[0xFB]s? Why ask?
+        Who are you?
+0x007A: Yes…I'm a \x18[0xFA].
+        
+        
+        
+        What? They've been
+        destroyed? That's absurd!
+        
+0x007B: So you came for \bookUltima
+        too? Let me join you.
+        
+        
+        There's a boat up ahead,
+        but a monster is blocking
+        the way.
+        
+        
+          Ricard the \x18[0xFA]
+          joins the party!
+        
+0x007C: King:An arrow struck me.
+        My daughter,\x18[0xEF],is
+        in charge now.
+0x007D: King:So we've lost
+        Scott…He was going to
+        propose to \x18[0xEF],you know.
+        
+        I always thought he'd
+        make a fine husband for
+        her…
+        
+0x007E: What? Borghen betrayed
+        us? Curse him!
+0x007F: Long ago,\x18[0xF2] was in
+        common use.
+        
+        
+        \x18[0xF2] was mined in the
+        north near Semitt Falls.
+        
+0x0080: The Empire is building
+        WHAT? No one told me of
+        that!
+        
+        I see…They didn't tell me
+        for fear of worrying me…
+        
+0x0081: King:So many perished
+        in the (\x16\x08\x18[0xF3])'s
+        attack…Perhaps we should
+        surrender…
+0x0082: Cid is the expert on
+        \x18[0xF5]s.He was such a
+        fine knight once…
+0x0083: The whereabouts of the
+        Bell are known only to
+        the Kashuan royal family.
+0x0084: Scott sealed the gates of
+        Kashuan Keep to protect
+        the \x18[0xF7] in case they
+        were defeated in battle.
+        You will need the
+        (\x16
+        \x18[0xF6]) to break
+        the seal.
+        
+0x0085: King:Please…rescue my
+        daughter…
+0x0086: Cid:You here to ride the
+        (\x16
+        \x18[0xF5])? If you've got
+        cash,there's no place I
+        can't take ya.
+0x0087: Hmph.That oversized
+        garbage scow? \x18[0xF5]s
+        aren't about how big ya
+        build 'em.
+0x0088: You want on the (\x16\x11\x18[0xF5]),
+        you pay the guy behind
+        me.
+0x0089: You need to blow up the
+        engine to destroy that
+        ugly thing.
+0x008A: \x18[0xF5]s are powered by
+        (\x16
+        \x18[0xF7]).
+        The \x18[0xF3] is no
+        different.
+0x008B: Controlling \x18[0xF7] is
+        tricky.Let the flames
+        get too high,then it'll
+        blow up.
+0x008C: Cid:I'll head for the
+        \x18[0xF5] with the \x18[0xED].
+        You find that engine and
+        toss the \x18[0xF7] in!
+        The \x18[0xF3] will blow
+        up,and I'll have my \x18[0xF5]
+        ready for takeoff!
+        
+0x008D: Cid:That \x18[0xFC] hit me
+        bad in Paloom…Urngh…
+0x008E: 
+0x008F: Nelly:Sob…
+0x0090: Nelly:Thanks for saving
+        me.
+0x0091: Nelly:Come back soon,
+        Daddy!
+0x0092: Nelly:Daddy…
+0x0093: Borghen:Work!
+        The sooner we finish,
+        the greater my glory!
+0x0094: Borghen:Curses!The \x18[0xF0]
+        will never forgive me!If I
+        go back,he'll kill me!
+        
+        If I'm going to die,
+        you're coming with me!
+        
+0x0095: \x18[0xFB]:Sss…Yraa…
+0x0096: \x10\x02:Please,help us
+        fight!
+        
+        
+        \x18[0xFB]:The Empire has
+        poisoned me.I won't
+        live much longer.
+        
+0x0097: Shortly before the battle
+        with the Empire,a \x18[0xFA]
+        named Ricard set out to
+        find the ultimate magic.
+0x0098: Please hear my final wish.
+        
+        
+        
+        Take this egg to the cave
+        north of here and place it
+        in the Life Spring.This is
+        the last \x18[0xFB] Egg.If it
+        is not submerged in the
+        Life Spring,it will wither
+        and die.
+        
+        Received the Wyvern Egg!
+        
+0x0099: \x18[0xFB]:The egg…Take it to
+        the Life Spring…I beg you…
+0x009A: Customers aren't allowed
+        behind the counter!
+        
+        
+        Bleedin imperials are
+        nothing but an ill-bred
+        rabble…
+        
+0x009B: Aha!You're with the
+        rebels!There's a secret
+        door in this wall.A
+        wounded soldier is inside.
+0x009C: If you're…going to turn
+        me over to the Empire…
+        kill me first…
+0x009D: So…you're rebels…right?
+        I'm Prince Scott of
+        Kashuan…
+        
+        \x10\x02:Prince Scott? We
+        were told you didn't make
+        it…
+        
+        Scott:I'm barely alive…
+        I have…a favor to ask.Tell
+        my brother,\x18[0xEB],that he's
+        strong…and needs more
+        faith…in himself…
+        Also,the king must know
+        that…the reason \x18[0x2F] lost
+        is because…Count Borghen
+        betrayed us.He's now…a
+        general in…the imperial
+        army…
+        
+        And tell \x18[0xEF] that I love
+        her.No.No,don't deliver
+        that last…message.The
+        confessions of a dying
+        man…They would only
+        bring her pain.
+        
+        
+        \x11\x02:My…my brother,
+        \x07.Have you heard news
+        of him?
+        
+        Scott:I'm sorry…but I
+        have not.
+        
+        
+        Here.I want you to…to
+        take my \x18[0x01].I'm sure it
+        will be of use.
+        
+        I've grown extremely
+        tired.If you'll excuse
+        me,I…just need to rest…
+        for a little while…
+        
+          Received Scott's \x18[0x01]…
+        
+0x009E: Tobul:I'm just a batty
+        old man…
+0x009F: Or am I?
+        I'm Tobul,the best
+        blacksmith around!
+0x00A0: If I had some \x18[0xF2],I
+        could make finer
+        equipment.
+0x00A1: That's \x18[0xF2]!I'll start
+        making new equipment!
+0x00A2: No time to talk.
+        There's work to be done!
+0x00A3: Child:Go away!Don't come
+        any closer!
+0x00A4: Child:I'm gonna tell my
+        mom!
+0x00A5: As the clear tone of the
+        Bell rings out,the lock
+        opens without a sound.
+0x00A6: Child:You're not the bad
+        guys?
+0x00A7: When I grow up,I wanna be
+        a \x18[0xFA] just like my dad
+        was!
+0x00A8: The \x18[0xFB]'s in that room.
+        Mommy says it's gonna die
+        soon,is that true?
+0x00A9: The \x18[0xFB] died…
+0x00AA: Child:Are you a \x18[0xFA]?
+        \x13\x02:Yes.I was a friend
+        of your father's.I promise
+        to avenge him.When the
+        \x18[0xF0] is defeated,I'll
+        come back and raise you
+        to be a \x18[0xFA].
+        
+        Child:Okay!You get that
+        \x18[0xF0]!
+        
+0x00AB: Why isn't that \x18[0xFA] man
+        with you guys?
+0x00AC: I hope my son hasn't
+        bothered you.I apologize.
+        
+        
+        My husband was a \x18[0xFA].
+        He and the others were
+        killed by the imperials.
+        
+        In the room behind us is
+        the last \x18[0xFB].It's trying
+        to tell us something,but I
+        don't speak its tongue.
+        Every \x18[0xFA] carries a
+        \x18[0x09].I've heard one
+        was lost in the cavern
+        north of here.
+        With that \x18[0x09],we
+        could speak with the
+        (\x16
+        \x18[0xFB]).Can you find it?
+        
+0x00AD: The \x18[0xFA]s fought
+        valiantly,but the Empire
+        poisoned the \x18[0xFB]'s
+        water.With their \x18[0xFB]s
+        dead,the (\x16\x0A\x18[0xFA])s were
+        wiped out by the Empire…
+        
+0x00AE: Deep within the cavern is
+        the Life Spring,the place
+        the \x18[0xFB]s used as a
+        hatchery.
+0x00AF: The last \x18[0xFB] has died,
+        but the egg you placed in
+        the spring will one day
+        hatch.Thank you so much…
+0x00B0: Mother:\x13\x02!
+        \x13\x02:Elina!Where are
+        the others?
+        Elina:They were killed…
+        \x13\x02:Elina,be strong.
+        When the war is over,I'll
+        come back.
+        
+0x00B1: Ricard's gone…I'm sure he
+        was…proud that he could…
+        d-die in the name of
+        honor…
+0x00B2: We'll leave Deist behind.
+        There are too many painful
+        memories here…
+        
+        I almost forgot.This is
+        the \x18[0xFA]'s most prized
+        weapon.It's meant for noble
+        warriors like you.
+        Received \x18[0x5F]!
+        
+0x00B3: The crystal responds:
+        I bestow power upon thee.
+        
+        
+        Strength increased!
+        
+0x00B4: The crystal responds:
+        I bestow speed upon thee.
+        
+        
+        Agility increased!
+        
+0x00B5: The crystal responds:
+        I bestow purity upon thee.
+        
+        
+        Spirit increased!
+        
+0x00B6: The crystal responds:
+        I bestow knowledge upon
+        thee.
+        
+        Intellect increased!
+        
+0x00B7: The crystal responds:
+        I bestow upon thee the
+        ultimate magic.
+        
+        Received the \x18[0xF9]!
+        
+0x00B8: Giant Beaver:Snook!Chit!
+0x00B9: Giant Beaver:Snook chit?
+        
+        
+        
+        \x12\x02:\x12\x02 speak beaver.
+        
+0x00BA: Guy:Secret path in wall
+        to right.Monster guard
+        Bell.Bell in wall.
+0x00BB: Many old books line the
+        shelves.
+0x00BC: Strong and easy to forge.
+        Responsive to magic.
+0x00BD: The King of \x18[0xF4]
+        declared that any man who
+        could enter his castle
+        could marry his daughter.
+        Many failed attempts were
+        made,but a man with a
+        bag of hot air landed on
+        the roof.
+        The \x18[0xED] and the man
+        floated away together.
+        
+0x00BE: Technological advances
+        produced the \x18[0xF5].
+        Technology could one day
+        replace magic.
+0x00BF: Long ago,a king asked for
+        an indestructible lock and
+        key.Three were made.The
+        first two were broken in
+        two days.The third key
+        remained unbroken,so the
+        king hid the key in a
+        snowy cavern.
+        That key was
+        the \x18[0xF6].
+        
+0x00C0: Long ago,a star fell to
+        what became Kashuan.A man
+        took flame from the star
+        and built an altar for it.
+0x00C1: The mages knew they were
+        too powerful,so they
+        founded \x18[0xF8] to remain
+        secluded.
+0x00C2: Eons ago,Pandaemonium,the
+        palace from Hell,emerged
+        unto our land.
+        
+        The mages conjured a
+        mighty spell and banished
+        it.
+        
+        The mages feared the great
+        power of the spell,so they
+        sealed it within a tower.
+        
+0x00C3: Deist was the home of the
+        \x18[0xFB]s.Haan,the first
+        \x18[0xFA],spent thirty years
+        alongside them.
+0x00C4: The \x18[0xFB] was trained to
+        fly with \x18[0xFA]s.Though
+        smaller than dragons,a
+        \x18[0xFB] can carry up to
+        five people.
+        
+0x00C5: Give the White \x18[0xFE] to the
+        Goddess underground.
+        If thou art pure of heart,
+        the doppelganger will
+        cease to move.Fit the
+        Black \x18[0xFE] upon him,then
+        he and his defiled heart
+        shall fade.
+0x00C6: The \x18[0xFD] leads to
+        Pandaemonium,the palace of
+        Hell.
+0x00C7: Fools!If the \x18[0xEE]
+        sees me talking to you,
+        I could get killed!
+0x00C8: We can goof off more with
+        lazy Borghen in charge.
+        
+        
+        Oops!
+        Um,you didn't hear that.
+        
+0x00C9: You're one of us!
+        I had to keep my cover
+        while the \x18[0xEE] was
+        commander.
+0x00CA: So you want to destroy
+        the \x18[0xF3]…
+        I'm on your side.
+        
+        There's an entrance to
+        the sewers up ahead.It
+        leads to the \x18[0xF3].
+        Good luck!
+0x00CB: Guard:What do you want?
+0x00CC: Welcome aboard.
+0x00CD: Rebel curs!
+0x00CE: It's a perfectly polished
+        mirror.
+0x00CF: A young \x18[0xFB] shimmers
+        in the mirror.
+        
+        
+        The last \x18[0xFB] egg has
+        finally hatched!
+        
+0x00D0: The mirror absorbs the 
+        \x18[0x09]'s light.
+0x00D1: The \x18[0xF7] blazes
+        brightly.
+0x00D2: The \x18[0xF7] passes to
+        Egil's Torch!
+0x00D3: It's the \x18[0xF3]'s
+        engine.
+        
+        
+        \x11\x02:Let's blow it up!
+        \x10\x02:Not yet.We need to
+        rescue the \x18[0xED] first!
+        
+0x00D4: It's the \x18[0xF3]'s
+        engine.
+0x00D5: The \x18[0xF7] is thrown into
+        the \x18[0xF3]'s engine!
+0x00D6: It's the Life Spring.
+0x00D7: The \x18[0xFB] Egg is gently
+        dropped into the spring.
+0x00D8: It's the Life Spring.
+        The \x18[0xFB] Egg rests at
+        the bottom.
+0x00D9: It's the Goddess Statue.
+0x00DA: The White \x18[0xFE] was placed
+        on the statue.
+0x00DB: \x10\x02:Out of our way!
+0x00DC: The doppelganger is
+        motionless.The purity of
+        \x10\x02's heart is binding
+        its movement!
+0x00DD: The Black \x18[0xFE] is placed
+        on the doppelganger.
+0x00DE: I love Josef,but I know
+        that when I'm around I
+        just get in his way…
+0x00DF: Poor Josef…I'll look
+        after Nelly.I know that
+        would make him happy.
+0x00E0: A mysterious force blocks
+        the way.
+0x00E1: \x18[0xEE]:Don't just
+        stand there!
+0x00E2: \x18[0xEE]:You fools
+        thought I'd return to
+        \x18[0xF4] before the
+        \x18[0xF3] was finished?
+        Surrender before it's too
+        late.Consider my words.
+        We will meet again.
+        
+0x00E3: \x07:I knew you'd come,
+        \x10\x02!You really think
+        you can stop me?
+0x00E4: There's something set in
+        the wall…It's the
+        \x18[0xF6]!
+0x00E5: \x12\x02:This wall different!
+0x00E6: This is the path to Hell.
+0x00E7: A secret door!
+0x00E8: Slave:Help!
+0x00E9: A rock is in the way.
+0x00EA: \x13\x02 turns a small rock
+        and a passage appears.
+        
+        
+        \x13\x02:The Snowcraft's
+        in here.
+        
+0x00EB: It's the corpse of a
+        \x18[0xFA].Huh?
+        
+        
+        
+           You find a \x18[0x09].
+        
+0x00EC: A gate blocks the way.
+0x00ED: \x10\x02:\x18[0xED] \x18[0xEF]!
+0x00EE: You caught a Chocobo!
+0x00EF: The gate opens!
+0x00F0: I'm a farmer.
+0x00F1: Cid will know what the
+        \x18[0xF3]'s weakness is!
+0x00F2: The bars opened!
+0x00F3: I'll never hand over
+        the \x18[0xF2]!
+0x00F4: It's the guardian of the
+        \x18[0xF6],
+        Adamantoise!
+0x00F5: \x13\x02:It's the guardian
+        of Egil's Torch,a
+        Red Soul!
+0x00F6: There's a Chimera in front
+        of the spring!
+0x00F7: Gottos:Rebels…here!?
+0x00F8: It's Big Horn,guardian of
+        the Black \x18[0xFE]!
+0x00F9: The Roundworm blocks the
+        ship!
+0x00FA: Mage:Well done…
+        
+        
+        
+        The mage began to grow!
+        
+0x00FB: That \x18[0x01] was my brother
+        Scott's!
+0x00FC: Can't hold any more.
+0x00FD: \x10\x02,\x11\x02,or \x12\x02
+        must be alive to advance.
+0x00FE: Nothing out of the
+        ordinary.
+0x00FF: Can't hold any more.
